@@ -1,0 +1,102 @@
+//-----corners--------------------------------------------
+.item-corner1, .item-corner2, .item-corner3, .item-corner4{
+    position: absolute;
+    width: 0.5em;
+}
+
+.menu__item .item-corners, 
+.submenu .item-corners, 
+.submenu__item .item-corners {
+    opacity: 0%;
+
+    @media (min-width: 660px) {
+    opacity: 100%;
+
+    }
+}
+
+.item-corner1 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(90deg);   
+}
+
+.item-corner2 {
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.item-corner3 {
+    bottom: 0;
+    right: 0;
+    transform: rotate(270deg);
+}
+
+.item-corner4 {
+    bottom: 0;
+    left: 0;
+}
+
+//submenu hover a active - posun rohu
+
+.submenu:hover .item-corner3 {
+    @media (min-width: 660px) {
+    right: -5px;
+    bottom: -87px;
+    }    
+}
+
+.submenu:active #subcorner3 {
+    @media (min-width: 660px) {
+    right: -10px;
+    bottom: -92px;
+    }    
+}
+
+.submenu:hover .item-corner4 {
+    @media (min-width: 660px) {
+    left: -5px;
+    bottom: -87px;
+    }    
+}
+
+.submenu:active #subcorner4 {
+    @media (min-width: 660px) {
+    left: -10px;
+    bottom: -92px;
+    }    
+}
+
+//  aktivni tlacitko - posun rohu
+.menu__item:active .item-corner1,
+.submenu:active .item-corner1 {
+    @media (min-width: 660px) {
+    top: -5px;
+    left: -5px;
+    }
+}
+
+.menu__item:active .item-corner2,
+.submenu:active .item-corner2 {
+    @media (min-width: 660px) {
+    top: -5px;
+    right: -5px;
+    }
+}
+
+.menu__item:active .item-corner3,
+.submenu:active .item-corner3 {
+    @media (min-width: 660px) {
+    bottom: -5px;
+    right: -5px;
+    }
+}
+
+.menu__item:active .item-corner4,
+.submenu:active .item-corner4 {
+    @media (min-width: 660px) {
+    bottom: -5px;
+    left: -5px;
+    }
+}
