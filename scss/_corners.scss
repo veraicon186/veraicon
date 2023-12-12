@@ -15,6 +15,17 @@
     }
 }
 
+// // invert
+// .item-corners--invert {
+//     opacity: 0%;
+
+//     @media (min-width: 660px) {
+//     opacity: 100%;
+//     // fill: white;
+//     }
+// }
+
+//--------------------
 .item-corner1 {
     top: 0px;
     left: 0px;
@@ -43,32 +54,113 @@
 .submenu:hover .item-corner3 {
     @media (min-width: 660px) {
     right: -5px;
-    bottom: -87px;
+    bottom: -107px;
     }    
 }
 
 .submenu:active #subcorner3 {
     @media (min-width: 660px) {
     right: -10px;
-    bottom: -92px;
+    bottom: -109px;
     }    
 }
 
 .submenu:hover .item-corner4 {
     @media (min-width: 660px) {
     left: -5px;
-    bottom: -87px;
+    bottom: -107px;
     }    
 }
 
 .submenu:active #subcorner4 {
     @media (min-width: 660px) {
     left: -10px;
-    bottom: -92px;
+    bottom: -109px;
     }    
 }
 
+// gd a vv
+
+.submenu--vv:hover .item-corner3,
+.submenu--gd:hover .item-corner3 {
+    @media (min-width: 660px) {
+    right: -5px;
+    bottom: -53px;
+    }    
+}
+
+.submenu--vv:active #subcorner3,
+.submenu--gd:active #subcorner3 {
+    @media (min-width: 660px) {
+    right: -5px;
+    bottom: -53px;
+    }    
+}
+
+.submenu--vv:hover .item-corner4,
+.submenu--gd:hover .item-corner4 {
+    @media (min-width: 660px) {
+    left: -5px;
+    bottom: -53px;
+    }    
+}
+
+.submenu--vv:active #subcorner4,
+.submenu--gd:active #subcorner4 {
+    @media (min-width: 660px) {
+    left: -5px;
+    bottom: -53px;
+    }    
+}
+
+
+
+
+
 //  aktivni tlacitko - posun rohu
+.menu__item--active .item-corner1,
+.submenu--active .item-corner1,
+.submenu--gd .item-corner1,
+.submenu--vv .item-corner1 {
+    @media (min-width: 660px) {
+    top: -5px;
+    left: -5px;
+    }
+}
+
+.menu__item--active .item-corner2,
+.submenu--active .item-corner2,
+.submenu--gd .item-corner2,
+.submenu--vv .item-corner2 {
+    @media (min-width: 660px) {
+    top: -5px;
+    right: -5px;
+    }
+}
+
+.menu__item--active .item-corner3,
+.submenu--active .item-corner3,
+.submenu--gd .item-corner3,
+.submenu--vv .item-corner3 {
+    @media (min-width: 660px) {
+    bottom: -5px;
+    right: -5px;
+    }
+}
+
+.menu__item--active .item-corner4,
+.submenu--active .item-corner4,
+.submenu--gd .item-corner4,
+.submenu--vv .item-corner4 {
+    @media (min-width: 660px) {
+    bottom: -5px;
+    left: -5px;
+    }
+}
+
+
+
+// //  aktivni tlacitko - posun rohu
 .menu__item:active .item-corner1,
 .submenu:active .item-corner1 {
     @media (min-width: 660px) {

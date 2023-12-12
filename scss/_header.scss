@@ -2,37 +2,136 @@
 
 // site-header na homepage, o mne, kontakt
 
+
 .site-header {
-    max-width: 100%;
+    width: 100%;
     height: 50px;
     margin: 0 auto;
     background-color: colors.$grey-superlight;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // position: fixed;
+
+    :first-child {
+        order: 2;
+    }
+
+    :nth-child(2) {
+        order: 1;
+    }
+
+    :nth-child(3) {
+        order: 3;
+    }
 
     @media (min-width: 660px) {
         max-width: 800px;
         height: 100px;
         display: flex;
         justify-content: space-between;
+   
+      
+
+        :first-child {
+            order: 1;
+        }
+    
+        :nth-child(2) {
+            order: 2;
+        }
+    
+        :nth-child(3) {
+            order: 3;
+        }
     }
 }
 
+
 .site-header__logo {
+    display: flex;
     width: 150px;
-    padding: 20px 10px 20px 25px;
-    display: none;
+    padding: 20px;
+    align-items: center;
 
     @media (min-width: 660px) {
-            display: initial;
-        }
+        padding: 20px 20px 20px 30px;
+        width: 200px;
+    }    
+
 }
+// ----- vv 
+#site-header--vv {
+    @media (min-width: 660px) {
+    margin: 0;
+    max-width: 100%;
+    height: 70px;
+    background-color: rgba(247, 247, 247, 0.9);
+    position: fixed;
+    } 
+}
+
+#site-header--vv  .site-header__logo{
+    @media (min-width: 660px) {
+        flex: 1 0 50%;  
+}
+}
+
+#site-header--vv  .nav{
+    @media (min-width: 660px) {
+        flex: 1 0 40%;  
+}
+}
+
+.nav .menu-vv {
+    @media (min-width: 660px) {
+    justify-content: flex-end;
+}
+}
+
+// ----- gd 
+#site-header--gd {
+    background-color: rgba(24, 24, 24, 0.9);
+
+    @media (min-width: 660px) {
+    margin: 0;
+    max-width: 100%;
+    height: 70px;
+    position: fixed;
+    }
+    
+}
+
+#site-header--gd  .site-header__logo{
+    fill: white;
+    @media (min-width: 660px) {
+        flex: 1 0 50%;
+       
+}
+}
+
+#site-header--gd  .nav{
+
+    @media (min-width: 660px) {
+        flex: 1 0 40%;  
+}
+}
+
+.nav .menu-gd {
+    @media (min-width: 660px) {
+    justify-content: flex-end;
+}
+}
+
+#hamburger-menu-gd {
+    fill: white;
+}
+
 
 // language --------------
 .language {
     text-decoration: none;
-    padding: 20px 20px 20px 0px;
+    padding: 15px 20px 0px 0px;
     color: colors.$grey-dark;
     font-size: 15px;
     font-weight: 600;
@@ -41,6 +140,23 @@
     @media (min-width: 660px) {
         font-size: 14px; 
         flex-shrink: 1;
+       
+    } 
+
+}
+
+.language--gd {
+    text-decoration: none;
+    padding: 15px 20px 0px 0px;
+    color: rgb(195, 195, 195);
+    font-size: 15px;
+    font-weight: 400;
+    align-self: flex-start;
+
+    @media (min-width: 660px) {
+        font-size: 14px; 
+        flex-shrink: 1;
+       
     } 
 
 }

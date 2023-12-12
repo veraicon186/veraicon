@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(38, 38, 38);
+    background-image: url(/images/wall\ jing\ jang_web_1mb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.body--gd {
+    background-image: url(/images/gd_wall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//     @media (min-width: 660px) {
+//     background-color: rgb(38, 38, 38);
+//     background-image: url(/images/space-gd.jpg);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     }
+// }
+
+.body--vv {
+    background-image: url(/images/vv_wall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//     @media (min-width: 660px) {
+//     background-image: url(/images/space-vv.jpg);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     }
+// }

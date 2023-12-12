@@ -1,0 +1,52 @@
+
+.main-regular {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background-image: url(/images/wall_white_top.png);
+    background-size: cover;
+
+    @media (min-width: 660px) {
+     max-width: 800px;
+
+    }
+}
+
+
+.main-gd, .main-vv {
+    width: 100%;
+    padding: 0 20px 20px 20px;
+
+    @media (min-width: 660px) {
+        padding: 0;
+    }
+    
+
+}
+
+.grid-portfolio {
+    @media (min-width: 660px) {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-row: 50px auto;
+    }    
+}
+
+.aside {
+    @media (min-width: 660px) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-top: 80px;
+        // position: fixed;
+    }
+}
+
+.vv-content, .gd-content  {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-top: 50px;
+}
+
+section {
+    padding: 20px;
+}
