@@ -1,6 +1,14 @@
 @use 'colors';
 @use 'corners';
+@use 'mixin';
 
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
+
+// ----------------------------
 
 .nav {
     flex-grow: 0;
@@ -12,20 +20,20 @@
 }
 
 .menu__checkbox:checked ~ .menu {
-    @media (max-width: 659px) {
+    @media (max-width: 839px) {
     display: block;
     }
 }
 
 .hamburger-menu {
-    width: 30px;
-    padding: 0 0 0 10px;
+    width: 48px;
+    padding: 7px 0 0 20px;
 }
 
 
 .menu__toggler {
     width: 30px;
-    @media (min-width: 660px) {
+    @include tablet {
         display: none;
     }   
 }
@@ -60,7 +68,7 @@
     
    
 
-    @media (min-width: 660px) {
+    @include tablet {
         position: initial;
         display: flex;
         justify-content: space-evenly;
@@ -78,7 +86,7 @@
     font-size: 16px;
     border-top: 2px solid white;
 
-    @media (min-width: 660px) {
+    @include tablet {
         background-color: colors.$grey-superlight;
         border-top: 0;
         margin: 0 10px;
@@ -94,7 +102,7 @@
     font-size: 16px;
     border-top: 2px solid white;
 
-    @media (min-width: 660px) {
+    @include tablet {
         background-color: rgba(255, 255, 255, 0);
         color: white;
         border-top: 0;
@@ -110,13 +118,13 @@
 }
 
 .menu .menu__item--invert:hover {
-    @media (min-width: 660px) {
+    @include tablet {
         fill: white;
 }
 }
 
 .menu .menu__item--invert:active {
-    @media (min-width: 660px) {
+    @include tablet {
         background-color: white;
         fill: white;
 }
@@ -141,7 +149,7 @@
 }
 
 .menu__link, .submenu-category__link {
-    @media (min-width: 660px) {
+    @include tablet {
     color: #616161;
     }
 }
@@ -155,7 +163,7 @@
 }
 
 .menu__link--invert:hover { 
-    @media (min-width: 660px) { 
+    @include tablet { 
         color: white;
     }
 
@@ -165,7 +173,7 @@
 // 
 
 .menu .menu__item-corners {  
-    @media (min-width: 660px) { 
+    @include tablet { 
     opacity: 0%;
     }
 }
@@ -175,20 +183,20 @@
 // hover menu - min-width: 660px---------------------------------------------------------------
 
 .menu__item:hover, .submenu:hover .submenu-category__link, .submenu:hover .item-corners {
-    @media (min-width: 660px) {
+    @include tablet {
     fill: black;
     color: black;
     }
 }
 
 .menu__item:hover .menu__link, .submenu:hover .menu__link {
-            @media (min-width: 660px) {
+    @include tablet {
             color: black;
         } 
 }
 
 .menu__item--invert:hover .menu__link, .submenu:hover .menu__link {
-    @media (min-width: 660px) {
+    @include tablet {
     color: white;
 } 
 }
@@ -199,14 +207,14 @@
 .menu__item.menu__item:active, .menu__item.menu__item--active  {
     background-color: black;
     color: white;
-    @media (min-width: 660px) {
+    @include tablet {
         padding: 10px 15px;
         fill: black;     
 }
 }
 
 .menu__item:active .menu__link, .menu__item:active .menu__link:hover, .menu__item--active .menu__link, .menu__item--active .menu__link:hover {
-    @media (min-width: 660px) {
+    @include tablet {
         color: white; 
     }
 }
@@ -215,14 +223,14 @@
 // :active  menu__item - gd stranka
 
 .menu__item.menu__item--invert:active {
-    @media (min-width: 660px) { 
+    @include tablet { 
         background-color: white;
         fill: white;
     }
 }
 
 .menu__item--invert:active .menu__link {
-    @media (min-width: 660px) { 
+    @include tablet { 
         color: black;
     }
 }
@@ -233,14 +241,14 @@
 .submenu {
     padding-bottom: 0;
 
-    @media (min-width: 660px) {
+    @include tablet {
         position: relative;   
     }
 }
 
 .submenu-category {
     padding-bottom: 20px;
-    @media (min-width: 660px) {
+    @include tablet {
     padding: 0;
     }
 }
@@ -259,7 +267,7 @@
     border-top: 1px solid white;
     line-height: 1.3; 
     
-    @media (min-width: 660px) {
+    @include tablet {
         position: relative;
         font-size: 15px;
         font-weight: 500;
@@ -267,8 +275,15 @@
         margin: 3px 0;
         padding: 5px 0px;
         border-top: 0;
-    }    
+    } 
+    
+    &--none {
+        @include tablet {
+                display: none;
+            }
+        }
 }
+
 
 
 
@@ -287,8 +302,11 @@
     color: white;   
     }
 
+
+
+
 .submenu-category__content {
-    @media (min-width: 660px) {
+    @include tablet {
         display: none;
         position: absolute;
         left: 0;
@@ -297,7 +315,7 @@
 }
 
 .submenu-category__content .submenu__link {
-    @media (min-width: 660px) {
+    @include tablet {
         float: left;
         color: #000000;
         text-decoration: none;
@@ -305,7 +323,7 @@
 }
 
 .submenu:hover .submenu-category__content {
-    @media (min-width: 660px) {
+    @include tablet {
         display:inherit;
     }
 }
@@ -329,7 +347,7 @@
 // submenu active
 
 .menu .submenu--gd {
-    @media (min-width: 660px) {
+    @include tablet {
     background-color: colors.$gd;
     fill: colors.$gd;
     }
@@ -340,7 +358,7 @@
 }
 
 .menu .submenu--vv {
-    @media (min-width: 660px) {
+    @include tablet {
     background-color: colors.$vv;
     fill: colors.$vv;
     }

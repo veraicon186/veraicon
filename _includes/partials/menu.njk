@@ -256,15 +256,28 @@
             </div>
 
         <div class="submenu-category__content">
-            {% if page.fileSlug !== 'gd' %}
-                <a class="submenu__link" id="link-gd" href="/gd/">grafický design</a>
+
+
+            
+            <a class="submenu__link {{ 'submenu__link--none' if page.fileSlug === 'gd'}} " id="link-gd" href="/gd/">grafický design</a>
+          
+
+            <a class="submenu__link {{ 'submenu__link--none' if page.fileSlug === 'vv'}} " id="link-vv" href="/vv/">výtvarné vzdělávání</a>
+           
+
+            <!-- {% if page.fileSlug !== 'gd' %}
+            <a class="submenu__link" id="link-gd" href="/gd/">grafický design</a>
             {% endif %}
 
             {% if page.fileSlug !== 'vv' %}
                 <a class="submenu__link" id="link-vv" href="/vv/">výtvarné vzdělávání</a>
-            {% endif %}
+            {% endif %} -->
+
+
 
         </div>
+
+
 
     </div>
     

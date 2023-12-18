@@ -2,36 +2,59 @@
 layout: layouts/page-vv.njk
 title: Výtvarné vzdělávání
 ---
-<div class="grid-portfolio"> 
+
    
-    {% include 'partials/aside-vv.njk' %}
-    
-    <div class="vv-content"> 
+    {% include 'partials/aside/aside-vv.njk' %}
+
+    <section class="category">
+
+        <a name="link-vv-projects"><h2 class="category__name">výtvarné projekty</h2></a>
+       
+      
+
+        <!-- v oceanu -->
+        {% include 'components/3_project-vv.njk' %}
+
+        <!-- rozdilne videni -->
+        {% include 'components/2_project-vv.njk' %}
+
+         <!-- zdravi a nemoc -->
+        {% include 'components/1_project-vv.njk' %}
+      
+       
         
-        <section class="vv-workshops">
+  
+    
+    </section>
+    
+    <section class="category">
 
-             <a name="link-vv-workshops"><h2>výtvarné workshopy</h2></a>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum omnis alias quas necessitatibus nam. Laboriosam iste ad repellat voluptates quod similique architecto illum nesciunt veritatis culpa? Odio fugit ratione debitis.
-            </p>
+        <a name="link-vv-workshops"><h2 class="category__name">výtvarné workshopy</h2></a>
+       
+       <!-- Mestrovic -->
+        {% include 'components/7_project-vv.njk' %}
+        
+    
+    </section>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum omnis alias quas necessitatibus nam. Laboriosam iste ad repellat voluptates quod similique architecto illum nesciunt veritatis culpa? Odio fugit ratione debitis.
-            </p>
 
-        </section>
+    <section class="category">
 
-        <section class="vv-materials">
+        <a name="link-vv-materials"><h2 class="category__name">edukační materiály</h2></a>
+         
+        <!-- online edukace 2 -->
+          {% include 'components/5_project-vv.njk' %}
 
-            <a name="link-vv-materials"><h2>edukační materiály</h2></a>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum omnis alias quas necessitatibus nam. Laboriosam iste ad repellat voluptates quod similique architecto illum nesciunt veritatis culpa? Odio fugit ratione debitis.
-            </p>
+          <!-- online edukace 1 -->
+         {% include 'components/4_project-vv.njk' %}
+    
+    </section>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum omnis alias quas necessitatibus nam. Laboriosam iste ad repellat voluptates quod similique architecto illum nesciunt veritatis culpa? Odio fugit ratione debitis.
-            </p>
+  
 
-        </section>
-    </div>  
+ 
 
-</div>
+
 
 
 

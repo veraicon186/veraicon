@@ -4,7 +4,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("images");
     // Zkopírovat css/ to _site/css/
     eleventyConfig.addPassthroughCopy("css");
-    eleventyConfig.addPassthroughCopy("siema.min.js");
+    eleventyConfig.addPassthroughCopy("siema.min.js"); 
+    eleventyConfig.addPassthroughCopy("fslightbox.js");
 
    
    return {

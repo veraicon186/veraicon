@@ -1,0 +1,369 @@
+@use 'colors';
+@use 'mixin';
+@use 'corners';
+
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
+
+
+
+//portfolio
+
+.category {
+    padding: 0;
+    margin: 0;
+    @include tablet { 
+    margin-left: 300px;
+}
+}
+
+
+
+// project vv - specifika
+.project--vv {
+    position: relative;
+    margin: 30px 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 1px 15px rgba(colors.$vv, 0.5);
+    
+
+   @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 30px;
+    // max-width: 550px;
+    }
+
+}
+.project--vv .item-corners {
+    fill: colors.$vv;
+}
+
+
+//project gd - specifika 
+
+.project--gd {
+    position: relative;
+    margin: 30px 20px;
+    padding: 20px;
+    background-color: rgba(27, 27, 27, 0.8);
+    box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
+
+
+
+   @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 30px;
+    max-width: 1200px;
+    }
+
+}
+.project--gd .item-corners {
+    fill: colors.$gd;
+}  
+
+
+// vv gallery  flexbox overflow > flexbox ------------------------------------
+.container-gallery {
+    display: flex;
+    overflow-x: auto;
+    // padding-bottom: 5px;
+    // border-top: 1px solid rgb(201, 201, 201);
+    // border-bottom: 1px solid rgb(201, 201, 201);
+ 
+
+    @include tablet { 
+    overflow-x: none;
+    border-top: none;
+    border-bottom: none;
+    margin: 0 0 20px 0;
+    padding-left: 0px;
+    // flex: 0 0 100%
+ 
+  
+    }
+}
+
+.gallery__item-preview {
+    padding: 5px;
+     width: 210px;
+     height: 150px;
+     flex-shrink: 0;
+     flex-grow: 1;
+ }
+ 
+ .gallery__item-preview img {
+    
+     // @include tablet {
+     object-fit: cover;
+     width: 100%;
+     height: 100%;
+     // }
+ }
+
+// ------------------------------------------------
+
+// gd gallery   flexbox overflow > grid------------------------------------
+
+.grid-gallery {
+    display: flex;
+    overflow-x: auto;
+    // padding-bottom: 5px;
+    // border-top: 1px solid rgb(201, 201, 201);
+    // border-bottom: 1px solid rgb(201, 201, 201);
+ 
+
+    @include tablet { 
+    overflow-x: none;
+    border-top: none;
+    border-bottom: none;
+    display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(6, minmax(150px, 200px));
+    grid-template-rows: repeat(1, minmax(150px, 200px));
+    margin: 0 0 20px 0;
+    padding-left: 0px;
+    }
+
+    :first-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    :nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    :nth-child(3) {
+        grid-column: 3 / 5;
+        grid-row: 1 / 2;
+    }
+
+    :nth-child(4) {
+        grid-column: 5 / 7;
+        grid-row: 1 / 2;
+    }
+}
+
+
+.gallery__item-preview--grid {
+    padding: 5px;
+   
+}
+
+.gallery__item-preview--grid img {
+   
+    // @include tablet {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    // }
+}
+
+//--------------------------------------------
+
+
+.project__introduction {
+    flex: 1 1 60%;
+}
+
+// title vv ------------------
+
+.project__title--vv {
+    padding: 20px 0 5px 0;
+    color: colors.$vv2;
+    
+    @include tablet { 
+    padding: 0px 30px 5px 20px;
+    }
+}
+
+
+.project__line-title--vv  {
+    border-top: 1px solid colors.$vv;
+    margin-left: -50px;
+}
+
+
+//  title gd ----------------
+.project__title--gd {
+    padding: 20px 0 5px 0;
+    color: white;
+    
+    @include tablet { 
+    padding: 0px 30px 5px 20px;
+    }
+}
+
+.project__line-title--gd  {
+    border-top: 1px solid white;
+    margin-left: -50px;
+}
+
+
+
+.project__description {
+    padding: 10px 0;
+    margin: 0;
+
+    @include tablet {
+    margin: 0 20px;
+    }
+}
+
+.project__line-description {
+    border-top: 1px solid rgb(201, 201, 201);
+    margin: 1px;
+
+
+    @include tablet {
+    margin-left: 20px;
+    display: none;
+    }
+}
+
+.project__details {
+    margin: 0 0 20px 0;
+    @include tablet {
+    border-left: 1px solid rgb(201, 201, 201);
+    flex: 1 1 40%;
+    }
+}
+
+.project__details--gd {
+    margin: 0 0 20px 0;
+    @include tablet {
+    // border-left: 1px solid rgb(201, 201, 201);
+    flex: 1 1 40%;
+    }
+}
+
+.project__details-title {
+    padding: 0;
+    margin: 20px 0 0 0 ;
+    color: colors.$grey-middle;
+    line-height: 1.2;
+    font-size: 14px;
+
+    @include tablet { 
+    padding: 0;
+    margin: 0 0 0 20px;
+    
+    
+    }
+}
+.project__details-text {
+    color: colors.$grey-middle;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
+
+    @include tablet { 
+    margin: 0 20px 15px 20px;
+    
+    }
+}
+
+
+//  project video links -----------------------
+
+
+.video {
+    min-width: 300px;
+    max-width: 500px;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.container-video-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet { 
+    margin-left: 20px;
+    }
+}
+
+.project__video-link {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid rgba(colors.$vv, 0.2);
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 20px 0 0;
+
+    @include tablet { 
+        margin: 0px 10px 10px 0px;
+        }
+
+   
+
+    &:hover {
+        background: colors.$vv;
+        color: white;
+        fill: white;
+    }
+
+    &:active {
+         border: none;
+        box-shadow: 1px 1px 5px rgba(colors.$vv, 0.5);
+       
+    }
+
+}
+
+.project__video-link:hover .project__icon-play,
+.project__video-link:hover .project__text-link {
+        fill: white;
+        color: white;
+        }
+
+.project__icon-play {
+    height: 20px;
+    fill: colors.$vv;
+    margin: 0 10px 0 0;
+}
+
+
+.project__text-link {
+    color: colors.$vv;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+
+// ----------------------------------------
+
+
+// project details gd  -------------------
+.square {
+    width: 10px;
+    fill: white;
+}
+
+
+.project__details-type {
+    display: flex;
+    margin: 10px 20px 10px 5px;
+}
+
+.project__details-type .project__details-text {
+    margin: 0 0 0 10px;
+}
+
+
+

@@ -1,4 +1,6 @@
-body {
+@use 'mixin';
+
+.body {
     background-color: rgb(38, 38, 38);
     background-image: url(/images/wall\ jing\ jang_web_1mb.png);
     background-repeat: no-repeat;
@@ -13,8 +15,10 @@ body {
 
 .body--gd {
     background-image: url(/images/gd_wall.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    padding: 0;
+    margin: 0;
+
 }
 //     @media (min-width: 660px) {
 //     background-color: rgb(38, 38, 38);
@@ -27,8 +31,10 @@ body {
 
 .body--vv {
     background-image: url(/images/vv_wall.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    padding: 0;
+    margin: 0;
+    
 }
 //     @media (min-width: 660px) {
 //     background-image: url(/images/space-vv.jpg);

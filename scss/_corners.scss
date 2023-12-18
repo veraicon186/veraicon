@@ -1,3 +1,11 @@
+@use 'mixin';
+
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
+
 //-----corners--------------------------------------------
 .item-corner1, .item-corner2, .item-corner3, .item-corner4{
     position: absolute;
@@ -9,7 +17,7 @@
 .submenu__item .item-corners {
     opacity: 0%;
 
-    @media (min-width: 660px) {
+    @include tablet {
     opacity: 100%;
 
     }
@@ -52,28 +60,28 @@
 //submenu hover a active - posun rohu
 
 .submenu:hover .item-corner3 {
-    @media (min-width: 660px) {
+    @include tablet {
     right: -5px;
     bottom: -107px;
     }    
 }
 
 .submenu:active #subcorner3 {
-    @media (min-width: 660px) {
+    @include tablet {
     right: -10px;
     bottom: -109px;
     }    
 }
 
 .submenu:hover .item-corner4 {
-    @media (min-width: 660px) {
+    @include tablet {
     left: -5px;
     bottom: -107px;
     }    
 }
 
 .submenu:active #subcorner4 {
-    @media (min-width: 660px) {
+    @include tablet {
     left: -10px;
     bottom: -109px;
     }    
@@ -83,7 +91,7 @@
 
 .submenu--vv:hover .item-corner3,
 .submenu--gd:hover .item-corner3 {
-    @media (min-width: 660px) {
+    @include tablet {
     right: -5px;
     bottom: -53px;
     }    
@@ -91,7 +99,7 @@
 
 .submenu--vv:active #subcorner3,
 .submenu--gd:active #subcorner3 {
-    @media (min-width: 660px) {
+    @include tablet {
     right: -5px;
     bottom: -53px;
     }    
@@ -99,7 +107,7 @@
 
 .submenu--vv:hover .item-corner4,
 .submenu--gd:hover .item-corner4 {
-    @media (min-width: 660px) {
+    @include tablet {
     left: -5px;
     bottom: -53px;
     }    
@@ -107,7 +115,7 @@
 
 .submenu--vv:active #subcorner4,
 .submenu--gd:active #subcorner4 {
-    @media (min-width: 660px) {
+    @include tablet {
     left: -5px;
     bottom: -53px;
     }    
@@ -122,7 +130,7 @@
 .submenu--active .item-corner1,
 .submenu--gd .item-corner1,
 .submenu--vv .item-corner1 {
-    @media (min-width: 660px) {
+    @include tablet {
     top: -5px;
     left: -5px;
     }
@@ -132,7 +140,7 @@
 .submenu--active .item-corner2,
 .submenu--gd .item-corner2,
 .submenu--vv .item-corner2 {
-    @media (min-width: 660px) {
+    @include tablet {
     top: -5px;
     right: -5px;
     }
@@ -142,7 +150,7 @@
 .submenu--active .item-corner3,
 .submenu--gd .item-corner3,
 .submenu--vv .item-corner3 {
-    @media (min-width: 660px) {
+    @include tablet {
     bottom: -5px;
     right: -5px;
     }
@@ -152,7 +160,7 @@
 .submenu--active .item-corner4,
 .submenu--gd .item-corner4,
 .submenu--vv .item-corner4 {
-    @media (min-width: 660px) {
+    @include tablet {
     bottom: -5px;
     left: -5px;
     }
@@ -163,7 +171,7 @@
 // //  aktivni tlacitko - posun rohu
 .menu__item:active .item-corner1,
 .submenu:active .item-corner1 {
-    @media (min-width: 660px) {
+    @include tablet {
     top: -5px;
     left: -5px;
     }
@@ -171,7 +179,7 @@
 
 .menu__item:active .item-corner2,
 .submenu:active .item-corner2 {
-    @media (min-width: 660px) {
+    @include tablet {
     top: -5px;
     right: -5px;
     }
@@ -179,7 +187,7 @@
 
 .menu__item:active .item-corner3,
 .submenu:active .item-corner3 {
-    @media (min-width: 660px) {
+    @include tablet {
     bottom: -5px;
     right: -5px;
     }
@@ -187,8 +195,33 @@
 
 .menu__item:active .item-corner4,
 .submenu:active .item-corner4 {
-    @media (min-width: 660px) {
+    @include tablet {
     bottom: -5px;
     left: -5px;
     }
+}
+
+// project corners
+.project--vv .item-corner1,
+.project--gd .item-corner1 {
+    top: -10px;
+    left: -10px; 
+}
+
+.project--vv .item-corner2,
+.project--gd .item-corner2 {
+    top: -10px;
+    right: -10px; 
+}
+
+.project--vv .item-corner3,
+.project--gd .item-corner3 {
+    bottom: -10px;
+    right: -10px; 
+}
+
+.project--vv .item-corner4,
+.project--gd .item-corner4 {
+    bottom: -10px;
+    left: -10px; 
 }
