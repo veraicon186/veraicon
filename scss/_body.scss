@@ -1,13 +1,13 @@
 @use 'mixin';
 
 .body {
-    background-color: rgb(38, 38, 38);
     background-image: url(/images/wall\ jing\ jang_web_1mb.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
     background-size: 100% 100%;
+    background-color: rgb(226, 226, 226);
     padding: 0;
     margin: 0;
 }
@@ -16,6 +16,7 @@
 .body--gd {
     background-image: url(/images/gd_wall.jpg);
     background-repeat: repeat;
+    background-color: rgb(32, 32, 32);
     padding: 0;
     margin: 0;
 
@@ -32,6 +33,7 @@
 .body--vv {
     background-image: url(/images/vv_wall.jpg);
     background-repeat: repeat;
+    background-color: rgb(226, 226, 226);
     padding: 0;
     margin: 0;
     
