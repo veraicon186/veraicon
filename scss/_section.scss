@@ -9,6 +9,8 @@
 .section-hero {
     padding: 0;
 }
+
+
 .main-regular {
     width: 100%;
     margin: 0 auto;
@@ -25,18 +27,33 @@
 
 .main-gd, .main-vv {
     width: 100%;
-    padding: 0 0px 20px 0px;
+    padding:  0px 20px 0px;
 
 
     @include tablet {
         padding: 0;
+        // margin: 100px 0 0 0;
     }
-    
-
 }
 
 section {
-    padding: 20px;
+    padding: 0px;
+}
+
+//  listovani mezi kategoriemi projektu
+
+.anchor {
+    display: block;
+    height: 40px;
+    visibility: hidden; 
+    
+    @include tablet {
+        height: 70px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 

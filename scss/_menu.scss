@@ -149,6 +149,9 @@
 }
 
 .menu__link, .submenu-category__link {
+    display:inline-block;
+    width:100%;
+    height:100%;
     @include tablet {
     color: #616161;
     }
@@ -199,6 +202,15 @@
     @include tablet {
     color: white;
 } 
+}
+
+
+
+// active menu hamburger -----------
+
+.menu__item:active {
+    background-color: black;
+    color: white;
 }
 
 // active menu   ---------------------------------------------------------

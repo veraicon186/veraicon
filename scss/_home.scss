@@ -10,6 +10,15 @@
 
 // homepage ----------------------------
 
+.section-hero {
+    padding-top: 40px;
+    
+    @include tablet {
+        padding-top: 0px;
+}
+
+}
+
 
 .grid-homepage {
     padding-bottom: 40px;
@@ -114,4 +123,12 @@
         fill: colors.$vv2;
     }
     
+}
+
+.grid-homepage .textbox  { 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0 4px rgba(81, 81, 81, 0.1);
+    max-width: 400px;
+    
+
 }

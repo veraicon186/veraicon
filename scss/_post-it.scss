@@ -1,0 +1,76 @@
+@use 'colors';
+@use 'base';
+@use 'corners';
+@use 'menu';
+@use 'body';
+@use 'aside';
+@use 'section';
+@use 'home';
+@use 'textbox';
+@use 'project';
+@use 'footer';
+@use 'mixin';
+@use 'header';
+@use 'omne';
+
+
+
+
+
+// font-family: 'Big Shoulders Stencil Display', sans-serif;
+// font-family: 'Raleway', sans-serif;
+
+
+
+
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
+
+
+
+
+
+.post-it {
+    min-width: 100px;
+    max-width: 400px;
+    // padding: 40px;
+    // margin: 15px;
+
+    background-color: rgb(255, 255, 245);
+    box-shadow: 0 0 4px rgba(81, 81, 81, 0.3);
+
+    &--rightrotate {
+        rotate: 2deg;
+    }
+
+    &--leftrotate {
+        rotate: -1deg;
+    }
+
+     &__content {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    color: colors.$vv2;
+    margin: 0 0 10px 0;
+    }
+
+    &__content--right-align {
+        text-align: right;
+        font-weight: 300;
+        font-style: italic;
+        color: colors.$vv2;
+        margin: 0;
+    } 
+
+    @include tablet {
+        // margin: 20px 60px 20px 20px;
+        width: 600px;
+
+         
+    }
+}
+

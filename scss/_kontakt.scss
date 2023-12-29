@@ -1,0 +1,169 @@
+@use 'colors';
+@use 'base';
+@use 'corners';
+@use 'menu';
+@use 'body';
+@use 'aside';
+@use 'section';
+@use 'home';
+@use 'textbox';
+@use 'project';
+@use 'footer';
+@use 'mixin';
+@use 'header';
+@use 'omne';
+@use 'post-it';
+@use 'card';
+
+
+
+
+
+
+// font-family: 'Big Shoulders Stencil Display', sans-serif;
+// font-family: 'Raleway', sans-serif;
+
+
+
+
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
+
+
+.section-contact-form {
+    
+    padding: 40px 0 20px 0;
+
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 0 20px 0;
+
+    }
+   
+}
+
+.section__title {
+    align-self: flex-start;
+}
+
+.section__text {
+    margin: 0 20px;
+
+    @include tablet {
+        margin: 0 0 0 170px;
+        max-width: 500px;
+    }
+}
+
+.section-contact-form .section__text {
+    max-width: 500px;
+    margin: 0px 20px 10px 20px;
+
+    @include tablet {
+        margin: 40px 30px;
+    }
+}
+
+.section__text--small {
+    font-size: 12px;
+    margin: 0 20px;
+    max-width: 300px;
+
+    @include tablet {
+        margin: 0 0 0 170px;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 480px;
+    padding: 0 20px;
+
+    @include tablet {
+        margin: 0 0 0 150px;
+    }
+
+
+   
+}
+
+
+
+.contact-form__email, .contact-form__message  {
+  
+    display: block;
+    padding: 1em;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 0px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+    
+
+}
+
+
+.contact-form__submit {
+    align-self: flex-end;
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: colors.$grey-middle;
+    color: white;
+    border: 0px;
+    box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+
+    &:hover {
+        background-color: black;
+    }
+
+    &:active {
+        background-color: black;
+        box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
+
+
+    }
+}
+
+.contact__details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 0 0 20px;
+
+    @include tablet {
+        margin: 0 0 0 150px;
+    }
+
+}
+
+.contact__details .section__text {
+    margin: 0 15px;
+
+   
+}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+

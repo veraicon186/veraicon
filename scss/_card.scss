@@ -13,8 +13,6 @@
 @use 'header';
 @use 'omne';
 @use 'post-it';
-@use 'card';
-@use 'kontakt';
 
 
 
@@ -35,14 +33,22 @@
 
 
 
-.siema {
-    @include tablet {
-    // padding: 0 50px 0 150px;
+.card {
+    background-color: rgba(251, 251, 251, 0.6);
+    padding: 20px;
+    margin: 10px;
+
+    &__text {
+    font-size: 14px;
+    margin: 10px 0px;
+
     }
-
+    @include tablet {
+    max-width: 250px;
+    margin: 0;
+    
+    }
 }
-
-
 
 
 
