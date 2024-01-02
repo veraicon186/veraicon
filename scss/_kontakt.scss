@@ -34,65 +34,37 @@
 
 
 .section-contact-form {
-    
     padding: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0px 0 20px 0;
+    @include tablet { 
+    padding: 0px 0 20px 0;
+}
 
-    }
+    
    
 }
 
-.section__title {
-    align-self: flex-start;
-}
 
 .section__text {
     margin: 0 20px;
+    max-width: 440px;
+    text-decoration: none;
+    display: block;
 
-    @include tablet {
-        margin: 0 0 0 170px;
-        max-width: 500px;
-    }
 }
 
-.section-contact-form .section__text {
-    max-width: 500px;
-    margin: 0px 20px 10px 20px;
-
-    @include tablet {
-        margin: 40px 30px;
-    }
-}
-
-.section__text--small {
-    font-size: 12px;
-    margin: 0 20px;
-    max-width: 300px;
-
-    @include tablet {
-        margin: 0 0 0 170px;
-    }
-}
+// form
 
 .contact-form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 480px;
-    padding: 0 20px;
-
-    @include tablet {
-        margin: 0 0 0 150px;
-    }
-
-
-   
+    padding: 20px 20px 0 20px;
 }
-
 
 
 .contact-form__email, .contact-form__message  {
@@ -136,23 +108,59 @@
     }
 }
 
-.contact__details {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 0 0 20px;
+
+.grid-contact-details {
+    padding: 10px 20px 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 
     @include tablet {
-        margin: 0 0 0 150px;
+    grid-template-columns: 1fr 270px  240px;
+    grid-template-rows: auto;
+    gap: 15px;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    }
+}
+
+.grid-contact-details {
+
+    & :first-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        @include tablet {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        }
+    }
+
+    & :nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        @include tablet {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        }
+    }
+
+    & :nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+
+        @include tablet {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        }
     }
 
 }
 
-.contact__details .section__text {
-    margin: 0 15px;
 
-   
-}
+
 
 
 

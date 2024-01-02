@@ -85,6 +85,7 @@
     background-color: colors.$grey-dark;
     font-size: 16px;
     border-top: 2px solid white;
+    position: relative;
 
     @include tablet {
         background-color: colors.$grey-superlight;
@@ -96,11 +97,15 @@
         }
     }
 
+
+
+
 //invert item---
 .menu .menu__item--invert {
     background-color: colors.$grey-dark;
     font-size: 16px;
     border-top: 2px solid white;
+    position: relative;
 
     @include tablet {
         background-color: rgba(255, 255, 255, 0);
@@ -133,9 +138,27 @@
 //------
 
 
+// rozsireni tlacitka
+
+.menu__link:before,
+.menu__link--invert:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+}
+
+// ------------
+
 
 .menu__link, .submenu-category__link, .submenu__link {  
         text-decoration: none;
+        height: 100%;
+        width: 100%;
         font-family: 'Raleway', sans-serif;
         font-weight: 600;
         color: white;       
@@ -165,12 +188,6 @@
     color: rgb(185, 185, 185); 
 }
 
-.menu__link--invert:hover { 
-    @include tablet { 
-        color: white;
-    }
-
-}
 
 
 // 
@@ -195,6 +212,7 @@
 .menu__item:hover .menu__link, .submenu:hover .menu__link {
     @include tablet {
             color: black;
+
         } 
 }
 
@@ -225,6 +243,12 @@
 }
 }
 
+.menu__item--active:hover .menu__link {
+    color: white;
+
+}
+
+
 .menu__item:active .menu__link, .menu__item:active .menu__link:hover, .menu__item--active .menu__link, .menu__item--active .menu__link:hover {
     @include tablet {
         color: white; 
@@ -241,7 +265,8 @@
     }
 }
 
-.menu__item--invert:active .menu__link {
+.menu__item--invert:active .menu__link--invert:active,
+.menu__item--invert:active .menu__link--invert {
     @include tablet { 
         color: black;
     }

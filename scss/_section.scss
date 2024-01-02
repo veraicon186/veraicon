@@ -12,7 +12,7 @@
 
 
 .main-regular {
-    width: 100%;
+     width: 100%;
     margin: 0 auto;
     padding-bottom: 40px;
     background-image: url(/images/wall_white_top.png);
@@ -23,6 +23,20 @@
 
     }
 }
+
+.main-wide {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    // background-image: url(/images/wall_white_top.png);
+    // background-size: cover;
+
+    @include tablet {
+     max-width: 1100px;
+
+    }
+}
+
 
 
 .main-gd, .main-vv {
@@ -38,6 +52,11 @@
 
 section {
     padding: 0px;
+}
+
+.section__title {
+    text-align: center;
+    padding-bottom: 0;
 }
 
 //  listovani mezi kategoriemi projektu

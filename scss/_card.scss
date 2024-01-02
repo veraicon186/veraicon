@@ -35,20 +35,50 @@
 
 .card {
     background-color: rgba(251, 251, 251, 0.6);
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     margin: 10px;
+
+    &__title {
+        font-size: 18px;
+    }
+
 
     &__text {
     font-size: 14px;
-    margin: 10px 0px;
+    margin: 10px 0 10px 20px;
 
     }
     @include tablet {
-    max-width: 250px;
+    max-width: 600px;
     margin: 0;
     
     }
 }
 
 
+.card__details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 0 0 20px;
+
+    // @include tablet {
+    //     margin: 0 0 0 150px;
+    // }
+
+}
+
+.card__details .card__text {
+    margin: 0 0 2px 10px;
+}
+.card__text--small {
+    font-size: 10px;
+    margin: 10px 20px;
+    max-width: 300px;
+    line-height: 1.4;
+
+    // @include tablet {
+    //     margin: 10px 0 0 170px;
+    // }
+}
 

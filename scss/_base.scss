@@ -46,6 +46,15 @@ h3 {
     text-transform: uppercase;
     padding: 20px;
     margin: 0;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 2px;
+        background-color: colors.$grey-middle;
+        margin: 10px auto;
+    }
 }
 
 h4 {
@@ -56,6 +65,8 @@ h4 {
     padding: 20px;
     margin: 10px;
 }
+
+
 
 
 p, a {

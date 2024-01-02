@@ -1,0 +1,202 @@
+@use 'colors';
+@use 'base';
+@use 'corners';
+@use 'menu';
+@use 'body';
+@use 'aside';
+@use 'section';
+@use 'home';
+@use 'textbox';
+@use 'project';
+@use 'footer';
+@use 'mixin';
+@use 'header';
+@use 'omne';
+@use 'post-it';
+@use 'card';
+@use 'kontakt';
+
+
+
+
+
+
+
+
+// font-family: 'Big Shoulders Stencil Display', sans-serif;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Big Shoulders Stencil Display', sans-serif;
+
+
+
+
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
+
+
+// section title - uzsi --------
+
+.section-co-nabizim {
+    background-color: colors.$grey-superlight;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-co-nabizim .section__title {
+    padding: 20px 0;
+} 
+
+//  GD  -------------------
+
+.offer__container--gd {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    background-image: linear-gradient(240deg, rgba(29, 29, 29, 0.9), rgba(5, 5, 5, 0.9));
+    box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+
+    
+
+    & .item-corners  {
+        fill: colors.$gd;
+    }
+
+   & .offer__category--gd {
+        position: absolute;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        max-width: 1000px;
+        margin-right: 0;
+        padding-left: 470px;
+        left: -200px;
+
+
+   }
+
+ }
+
+
+ //  VV  -------------------
+
+ .offer__container--vv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 40px 0 0 0;
+    max-width: 1200px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+
+    & .item-corners  {
+        fill: colors.$vv;
+    }
+
+    & .offer__category--vv {
+        position: absolute;
+        border-bottom: 2px solid colors.$vv;
+        max-width: 1000px;
+        font-size: 30px;
+        padding-right: 380px;
+        padding-left: 0;
+        right: -200px;
+        }
+ }
+
+
+ // details -------------
+
+.offer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__text--gd {
+        color: white;
+        font-size: 20px;
+        margin: 40px 20px 0px 20px;
+        max-width: 450px;
+        text-align: center;
+    }
+
+    &__text--vv {
+        color: colors.$grey-dark;
+        font-size: 20px;
+        margin: 40px 20px 0px 20px;
+        max-width: 550px;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+//  buttons ----------------------
+
+.button-contact--gd {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: colors.$gd;
+    color: white;
+    border: 0px;
+    box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+
+    &:hover {
+        background-color: colors.$gd2;
+    }
+
+    &:active {
+        background-color: colors.$gd;
+        box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
+    }
+
+    & a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+    }
+}
+
+
+.button-contact--vv {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: colors.$vv;
+    color: white;
+    border: 0px;
+    box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+
+    &:hover {
+        background-color: colors.$vv2;
+    }
+
+    &:active {
+        background-color: colors.$vv;
+        box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
+    }
+
+    & a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
+}
+
+
+ 
