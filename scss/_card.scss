@@ -34,12 +34,16 @@
 
 
 .card {
-    background-color: rgba(251, 251, 251, 0.6);
+    background-color: rgba(251, 251, 251, 0.8);
     padding: 20px 20px 20px 0;
     margin: 10px;
 
     &__title {
         font-size: 18px;
+        border-bottom: 1.3px solid transparent;
+        border-image: linear-gradient(0.25turn, rgba(240, 38, 226), rgba(240, 38, 226), rgba(75, 38, 240), rgba(75, 38, 240, 0.8));
+        border-image-slice: 1;
+        width:100%;
     }
 
 

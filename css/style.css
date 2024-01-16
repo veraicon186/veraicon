@@ -1254,7 +1254,7 @@ html {
 
 .textbox {
   position: relative;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
   margin: 10px auto;
   min-width: 150px;
   max-width: 400px;
@@ -1300,7 +1300,6 @@ html {
   margin: 30px 20px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 1px 1px 15px rgba(75, 38, 240, 0.5);
 }
 @media screen and (min-width: 840px) {
   .project--vv {
@@ -1320,7 +1319,6 @@ html {
   margin: 30px 20px;
   padding: 20px;
   background-color: rgba(27, 27, 27, 0.8);
-  box-shadow: 1px 1px 15px rgba(240, 38, 226, 0.2);
 }
 @media screen and (min-width: 840px) {
   .project--gd {
@@ -1552,8 +1550,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border: 1px solid rgba(75, 38, 240, 0.2);
-  border-radius: 5px;
   height: 40px;
   padding: 5px 10px 5px 10px;
   margin: 10px 20px 0 0;
@@ -1585,9 +1581,6 @@ html {
   margin: 0 10px 0 0;
 }
 
-.video-button--vv {
-  border: 1px solid rgba(240, 38, 226, 0.6);
-}
 .video-button--vv:hover {
   background: rgb(197, 32, 186);
   color: white;
@@ -1650,7 +1643,6 @@ html {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  background-image: url(/images/o-mne_picture2.png);
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -1662,8 +1654,8 @@ html {
 .hero-o-mne .textbox {
   padding: 20px;
   margin: 20px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7));
   max-width: 600px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7));
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
 }
 .hero-o-mne .textbox p {
@@ -1868,7 +1860,7 @@ button:hover .next-corner {
 .post-it {
   min-width: 100px;
   max-width: 400px;
-  background-color: rgb(255, 255, 245);
+  background-color: rgb(241, 241, 241);
   box-shadow: 0 0 4px rgba(81, 81, 81, 0.3);
 }
 .post-it--rightrotate {
@@ -1896,12 +1888,17 @@ button:hover .next-corner {
 }
 
 .card {
-  background-color: rgba(251, 251, 251, 0.6);
+  background-color: rgba(251, 251, 251, 0.8);
   padding: 20px 20px 20px 0;
   margin: 10px;
 }
 .card__title {
   font-size: 18px;
+  border-bottom: 1.3px solid transparent;
+  -o-border-image: linear-gradient(0.25turn, rgb(240, 38, 226), rgb(240, 38, 226), rgb(75, 38, 240), rgba(75, 38, 240, 0.8));
+     border-image: linear-gradient(0.25turn, rgb(240, 38, 226), rgb(240, 38, 226), rgb(75, 38, 240), rgba(75, 38, 240, 0.8));
+  border-image-slice: 1;
+  width: 100%;
 }
 .card__text {
   font-size: 14px;
@@ -2075,7 +2072,7 @@ button:hover .next-corner {
 .offer__container--gd {
   position: relative;
   padding: 0 0 30px 0;
-  background-image: linear-gradient(240deg, rgba(29, 29, 29, 0.9), rgba(5, 5, 5, 0.9));
+  background-image: linear-gradient(240deg, rgb(29, 29, 29), rgb(5, 5, 5));
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
 }
 @media screen and (min-width: 840px) {
@@ -2086,9 +2083,9 @@ button:hover .next-corner {
 
 .offer__container--vv {
   position: relative;
-  margin: 40px 0 0 0;
+  margin: 20px 0 0 0;
   padding: 0 0 30px 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
 }
 @media screen and (min-width: 840px) {
@@ -2118,10 +2115,9 @@ button:hover .next-corner {
 .offer__item {
   padding: 20px;
   margin: 0 0 20px 0;
-  background-color: rgba(27, 27, 27, 0.8);
-  box-shadow: 0px 0px 7px rgba(240, 38, 226, 0.5);
+  background-color: rgba(39, 39, 39, 0.8);
+  box-shadow: 0px 0px 3px rgba(97, 97, 97, 0.3);
   max-width: 500px;
-  border: 1px solid rgba(240, 38, 226, 0.5);
 }
 @media screen and (min-width: 840px) {
   .offer__item {
@@ -2132,8 +2128,7 @@ button:hover .next-corner {
 
 .offer__item--vv {
   background-color: rgba(244, 244, 244, 0.8);
-  border: 1px solid rgba(75, 38, 240, 0.2);
-  box-shadow: 1px 1px 15px rgba(75, 38, 240, 0.2);
+  box-shadow: 1px 1px 3px rgba(97, 97, 97, 0.2);
 }
 
 .offer__description--gd {
@@ -2146,21 +2141,14 @@ button:hover .next-corner {
   padding: 10px 20px;
   margin: 0;
   min-height: 50px;
-  background-image: linear-gradient(160deg, rgba(241, 183, 236, 0.2), rgba(251, 77, 251, 0.1));
-  position: relative;
 }
-.offer__description--gd::after {
-  content: "";
-  background: rgba(240, 38, 226, 0.9);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 70%;
-  height: 1px;
+.offer__description--gd .border-bottom {
+  width: 100%;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.9);
 }
 
 .offer__description--vv {
-  color: rgb(54, 26, 177);
+  color: black;
   font-size: 18px;
   font-weight: 500;
   width: 100%;
@@ -2169,12 +2157,6 @@ button:hover .next-corner {
   padding: 10px 20px;
   margin: 0;
   min-height: 50px;
-  background-image: linear-gradient(160deg, rgba(61, 36, 131, 0.093), rgba(245, 241, 255, 0.179));
-}
-
-.border-bottom {
-  width: 200px;
-  border-bottom: 2px solid rgba(75, 38, 240, 0.5);
 }
 
 .offer__mark--gd {
@@ -2203,9 +2185,9 @@ button:hover .next-corner {
   margin-bottom: 20px;
 }
 .offer__invite .offer__invite-text--gd {
-  color: white;
-  font-weight: 600;
-  font-size: 20px;
+  color: rgb(240, 38, 226);
+  font-weight: 300;
+  font-size: 22px;
   line-height: 1.5;
   margin: 0 20px 0px 20px;
   max-width: 450px;
@@ -2217,13 +2199,13 @@ button:hover .next-corner {
   }
 }
 .offer__invite .offer__invite-text--vv {
-  color: #3c3c3c;
-  font-size: 20px;
+  color: rgb(75, 38, 240);
+  font-size: 22px;
   line-height: 1.5;
   margin: 0px 20px 0px 20px;
   max-width: 550px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 300;
 }
 @media screen and (min-width: 840px) {
   .offer__invite .offer__invite-text--vv {
@@ -2234,22 +2216,24 @@ button:hover .next-corner {
 
 .button-contact--gd {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   margin: 5px 0;
-  background-color: rgb(240, 38, 226);
+  background-color: #616161;
   color: white;
   border: 0px;
   box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
 }
 .button-contact--gd:hover {
-  background-color: rgb(197, 32, 186);
+  background-color: rgb(240, 38, 226);
+  color: white;
 }
 .button-contact--gd:active {
-  background-color: rgb(240, 38, 226);
+  background-color: rgb(197, 32, 186);
+  color: white;
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
 }
 .button-contact--gd a {
@@ -2261,22 +2245,22 @@ button:hover .next-corner {
 
 .button-contact--vv {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   margin: 5px 0;
-  background-color: rgb(75, 38, 240);
+  background-color: #616161;
   color: white;
   border: 0px;
   box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
 }
 .button-contact--vv:hover {
-  background-color: rgb(54, 26, 177);
+  background-color: rgb(75, 38, 240);
 }
 .button-contact--vv:active {
-  background-color: rgb(75, 38, 240);
+  background-color: rgb(54, 26, 177);
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
 }
 .button-contact--vv a {

@@ -28,7 +28,7 @@
     margin: 30px 20px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 1px 1px 15px rgba(colors.$vv, 0.5);
+    // box-shadow: 1px 1px 15px rgba(colors.$vv, 0.5);
     
 
    @include tablet {
@@ -52,7 +52,7 @@
     margin: 30px 20px;
     padding: 20px;
     background-color: rgba(27, 27, 27, 0.8);
-    box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
+    // box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
 
 
 
@@ -298,6 +298,8 @@
 .container-video-buttons {
     display: flex;
     flex-wrap: wrap;
+  
+
 
     @include tablet { 
     margin-left: 20px;
@@ -307,6 +309,8 @@
 .container-video-buttons--gd {
     display: flex;
     flex-wrap: wrap;
+  
+
 
     @include tablet { 
     margin-left: 0px;
@@ -318,11 +322,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid rgba(colors.$vv, 0.2);
-    border-radius: 5px;
+    // border: 1px solid rgba(colors.$vv, 0.2);
+    // border-radius: 5px;
     height: 40px;
     padding: 5px 10px 5px 10px;
     margin: 10px 20px 0 0;
+
 
     @include tablet { 
         margin: 0px 10px 10px 0px;
@@ -358,7 +363,8 @@
 }
 
 .video-button--vv {
-    border: 1px solid rgba(colors.$gd, 0.6);
+    // border: 1px solid rgba(colors.$gd, 0.6);
+
 
     &:hover {
         background: colors.$gd2;
