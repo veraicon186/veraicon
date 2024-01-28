@@ -21,7 +21,7 @@ h2 {
     font-size: 20px;
     font-weight: 500;
     display: inline-block;
-    border-bottom: 2px solid colors.$gd;
+    border-bottom: 1px solid colors.$gd;
     padding: 10px 0px 10px 30px;
     text-transform: uppercase;
 }
@@ -32,11 +32,16 @@ h2 {
 }
 
 .main-gd h2 {
-    color: white;
+    color: colors.$gd;
+    font-weight: 300;
+    border-bottom: 1px solid colors.$gd;
+  
 }
 
 .main-vv h2 {
-    border-bottom: 2px solid colors.$vv;
+    color: colors.$vv;
+    font-weight: 300;
+    border-bottom: 1px solid colors.$vv;
 }
 
 h3 {
@@ -87,10 +92,6 @@ strong {
 
 }
 
-mark {
-    background-color: rgba(255, 255, 255, 0.4);
-
-}
 
 // body na homepage, o mne, kontakt
 

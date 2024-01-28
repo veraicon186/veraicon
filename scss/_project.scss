@@ -20,6 +20,10 @@
 }
 }
 
+.category__name--gd, .category__name--vv {
+    font-size: 22px;
+}
+
 
 
 // project vv - specifika
@@ -184,7 +188,7 @@
 
 .project__title--vv {
     padding: 20px 0 5px 0;
-    color: colors.$vv2;
+    color: colors.$grey-dark;
    
     
     @include tablet { 
@@ -194,7 +198,7 @@
 
 
 .project__line-title--vv  {
-    border-top: 1px solid colors.$vv;
+    border-top: px solid colors.$vv;
     margin-left: -50px;
 }
 
@@ -212,7 +216,7 @@
 }
 
 .project__line-title--gd  {
-    border-top: 1px solid white;
+    border-top: 0px solid white;
     margin-left: -50px;
 }
 

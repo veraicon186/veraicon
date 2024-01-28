@@ -50,3 +50,12 @@
     padding: 20px 0 10px 0;
 } 
 
+
+.section-offer-container {
+   
+    @include tablet {
+       display: flex;
+
+       
+    }
+}

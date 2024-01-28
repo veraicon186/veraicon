@@ -9,14 +9,43 @@
   }
 }
 
-// conyainer -------------------
+// container ------------------
+
+
+.offer__container--gd {
+  position: relative;
+  padding: 0 0 30px 0;
+  background-image: linear-gradient(240deg, rgba(29, 29, 29, 1), rgba(5, 5, 5, 1));
+  box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+  
+ 
+
+  @include tablet { 
+    max-width: 550px;
+    }
+
+}
+
+.offer__container--vv {
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0 0 30px 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+
+    @include tablet { 
+      max-width: 550px;
+    }
+   
+  }
+
+// kategorie
+
 
 .offer__category--gd {
   position: absolute;
-  max-width: 1000px;
-  margin-right: 0;
-  padding-left: 250px;
-  left: -200px;
+  left: -50px;
+  padding-left: 100px;
   color: rgb(255, 255, 255);
   font-size: 25px;
 
@@ -29,66 +58,31 @@
 
 .offer__category--vv {
   position: absolute;
+  right: -50px;
+  padding-left: 0;
+  padding-right: 100px;
   border-bottom: 2px solid colors.$vv;
-  padding-right: 280px;
-  padding-left: 0px;
-  right: -200px;
-  max-width: 900px;
   font-size: 23px;
 
     @include tablet { 
     font-size: 30px;
-    right: -200px;
-    max-width: 1000px;
-
-    
-
-    
-    }
-}
-
-.offer__container--gd {
-    position: relative;
-    padding: 0 0 30px 0;
-    background-image: linear-gradient(240deg, rgba(29, 29, 29, 1), rgba(5, 5, 5, 1));
-    box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
-
-    @include tablet { 
-      max-width: 1200px;
-    }
   
-  }
 
-  .offer__container--vv {
-      position: relative;
-      margin: 20px 0 0 0;
-      padding: 0 0 30px 0;
-      background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
-      box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+    
 
-      @include tablet { 
-        max-width: 1200px;
-      }
-     
+    
     }
-
-.offer__container .item-corners {
-  position: absolute;
 }
+
 //--------------------------------
 
 // offer items div - vsechny polozky
 
 
 .offer__items {
-  display: flex;
-  flex-direction: column;
-  align-items:   center;
   padding: 100px 20px 0 20px;
 
   @include tablet { 
-    flex-direction: row;
-    align-items: stretch;
     padding: 120px 20px 0 20px;
 
   }
@@ -101,7 +95,6 @@
   background-color: rgba(39, 39, 39, 0.8);
   box-shadow: 0px 0px 3px rgba(colors.$grey-middle, 0.3);
   max-width: 500px;
-  // border: 1px solid rgba(colors.$gd, 0.5);
 
   @include tablet { 
     margin: 0 5px 20px 5px;
@@ -113,8 +106,6 @@
 
 .offer__item--vv {
   background-color: rgba(244, 244, 244, 0.8);
-  // border: 1px solid rgba(colors.$vv, 0.2);
-  // box-shadow: 1px 1px 15px rgba(colors.$vv, 0.2);
   box-shadow: 1px 1px 3px rgba(colors.$grey-middle, 0.2);
 
 }
@@ -131,8 +122,6 @@
   padding: 10px 20px;
   margin: 0;
   min-height: 50px;
-  // border-top: 2px solid rgba(colors.$gd, 0.5);
-  // border-bottom: 2px solid rgba(colors.$gd, 0.5);
   
   // background-image: linear-gradient(160deg, rgba(241, 183, 236, 0.2), rgba(251, 77, 251, 0.1));
   // position: relative;
@@ -169,8 +158,6 @@
   padding: 10px 20px;
   margin: 0;
   min-height: 50px;
-  // border-top: 2px solid rgba(colors.$vv, 0.5);
-  // border-bottom: 2px solid rgba(colors.$vv, 0.5);
   //  background-image: linear-gradient(160deg, rgba(61, 36, 131, 0.093), rgba(245, 241, 255, 0.179));
 
 }
@@ -182,24 +169,6 @@
 
 
 
- 
-  
-.offer__mark {
- &--gd {
-  color: white;
-  background-color: rgba(245, 69, 254, 0.7);
-  padding: 2px 10px;
- }
-}
-
-//  &--vv {
-//   color: white;
-//   color: colors.$vv;
-//   background-color: rgba(colors.$vv, 0.5);
-//   padding: 2px;
-//  }
-
-
 .offer__item img {
     width: 100%;
     height: 100%;
@@ -208,7 +177,7 @@
     
 
     @include tablet {
-      height: 200px;
+      height: 300px;
     }
 
 
