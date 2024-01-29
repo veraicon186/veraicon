@@ -319,7 +319,9 @@
     display: inline-block;
     width: 200px;
     padding: 10px;
-    background-image: linear-gradient(110deg, rgba(240, 38, 226), rgba(75, 38, 240));
+    // background-image: linear-gradient(110deg, rgba(240, 38, 226), rgba(75, 38, 240));
+    background-image: linear-gradient(110deg,rgb(155, 165, 167), rgb(157, 176, 180));
+
     color: white;
     border: 0px;
     box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);

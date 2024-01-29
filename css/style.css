@@ -10,7 +10,7 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: rgb(240, 38, 226);
+  color: rgb(172, 203, 209);
   padding: 30px;
   margin: 0;
   text-align: center;
@@ -21,7 +21,7 @@ h2 {
   font-size: 20px;
   font-weight: 500;
   display: inline-block;
-  border-bottom: 1px solid rgb(240, 38, 226);
+  border-bottom: 1px solid rgb(172, 203, 209);
   padding: 10px 0px 10px 30px;
   text-transform: uppercase;
 }
@@ -32,15 +32,15 @@ h2 {
 }
 
 .main-gd h2 {
-  color: rgb(240, 38, 226);
+  color: rgb(172, 203, 209);
   font-weight: 300;
-  border-bottom: 1px solid rgb(240, 38, 226);
+  border-bottom: 1px solid rgb(172, 203, 209);
 }
 
 .main-vv h2 {
-  color: rgb(75, 38, 240);
+  color: rgb(79, 125, 136);
   font-weight: 300;
-  border-bottom: 1px solid rgb(75, 38, 240);
+  border-bottom: 1px solid rgb(79, 125, 136);
 }
 
 h3 {
@@ -312,14 +312,14 @@ strong {
 .offer__container--gd .item-corner2,
 .offer__container--gd .item-corner3,
 .offer__container--gd .item-corner4 {
-  fill: rgb(240, 38, 226);
+  fill: rgb(172, 203, 209);
 }
 
 .offer__container--vv .item-corner1,
 .offer__container--vv .item-corner2,
 .offer__container--vv .item-corner3,
 .offer__container--vv .item-corner4 {
-  fill: rgb(75, 38, 240);
+  fill: rgb(79, 125, 136);
 }
 
 .nav {
@@ -594,13 +594,13 @@ strong {
 
 #link-gd:hover, #link-gd:active {
   font-weight: 600;
-  background-color: rgb(240, 38, 226);
+  background-color: rgb(172, 203, 209);
   color: white;
 }
 
 #link-vv:hover, #link-vv:active {
   font-weight: 600;
-  background-color: rgb(75, 38, 240);
+  background-color: rgb(79, 125, 136);
   color: white;
 }
 
@@ -628,19 +628,19 @@ strong {
 }
 
 .submenu--gd:hover .item-corners {
-  background-color: rgb(240, 38, 226);
-  fill: rgb(240, 38, 226);
+  background-color: rgb(172, 203, 209);
+  fill: rgb(172, 203, 209);
 }
 
 .submenu--vv:hover .item-corners {
-  background-color: rgb(240, 38, 226);
-  fill: rgb(75, 38, 240);
+  background-color: rgb(172, 203, 209);
+  fill: rgb(79, 125, 136);
 }
 
 @media screen and (min-width: 840px) {
   .menu .submenu--gd {
-    background-color: rgb(240, 38, 226);
-    fill: rgb(240, 38, 226);
+    background-color: rgb(172, 203, 209);
+    fill: rgb(172, 203, 209);
   }
 }
 
@@ -650,8 +650,8 @@ strong {
 
 @media screen and (min-width: 840px) {
   .menu .submenu--vv {
-    background-color: rgb(75, 38, 240);
-    fill: rgb(75, 38, 240);
+    background-color: rgb(79, 125, 136);
+    fill: rgb(79, 125, 136);
   }
 }
 
@@ -922,7 +922,7 @@ strong {
 }
 
 .title__gd {
-  fill: rgb(240, 38, 226);
+  fill: rgb(172, 203, 209);
   max-width: 250px;
   align-self: center;
   padding: 20px 0 30px 0;
@@ -938,7 +938,7 @@ strong {
 }
 
 .title__vv {
-  fill: rgb(75, 38, 240);
+  fill: rgb(79, 125, 136);
   max-width: 300px;
   align-self: center;
   padding: 20px 0 30px 0;
@@ -1005,12 +1005,12 @@ strong {
 }
 
 .aside-item--vv:hover .aside-item__icon-vv {
-  fill: rgb(75, 38, 240);
-  stroke: rgb(75, 38, 240);
+  fill: rgb(79, 125, 136);
+  stroke: rgb(79, 125, 136);
 }
 
 .aside-item--vv:hover .aside-item__category-vv {
-  color: rgb(75, 38, 240);
+  color: rgb(79, 125, 136);
 }
 
 .aside-item--vv:active {
@@ -1019,11 +1019,11 @@ strong {
 }
 
 .aside-item--vv:active .aside-item__icon-gd {
-  fill: rgb(54, 26, 177);
+  fill: rgb(50, 71, 77);
 }
 
 .aside-item--vv:active .aside-item__category-gd {
-  color: rgb(54, 26, 177);
+  color: rgb(50, 71, 77);
 }
 
 .aside-item--gd {
@@ -1041,11 +1041,11 @@ strong {
 }
 
 .aside-item--gd:hover .aside-item__icon-gd {
-  fill: rgb(240, 38, 226);
+  fill: rgb(172, 203, 209);
 }
 
 .aside-item--gd:hover .aside-item__category-gd {
-  color: rgb(240, 38, 226);
+  color: rgb(172, 203, 209);
 }
 
 .aside-item--gd:active {
@@ -1054,11 +1054,11 @@ strong {
 }
 
 .aside-item--gd:active .aside-item__icon-gd {
-  fill: rgb(197, 32, 186);
+  fill: rgb(158, 215, 224);
 }
 
 .aside-item--gd:active .aside-item__category-gd {
-  color: rgb(197, 32, 186);
+  color: rgb(158, 215, 224);
 }
 
 .inside-link {
@@ -1214,17 +1214,17 @@ html {
 }
 
 #gd-stencil:hover {
-  fill: rgb(240, 38, 226);
+  fill: rgb(172, 203, 209);
 }
 #gd-stencil:active {
-  fill: rgb(197, 32, 186);
+  fill: rgb(158, 215, 224);
 }
 
 #vv-stencil:hover {
-  fill: rgb(75, 38, 240);
+  fill: rgb(79, 125, 136);
 }
 #vv-stencil:active {
-  fill: rgb(54, 26, 177);
+  fill: rgb(50, 71, 77);
 }
 
 .grid-homepage .textbox {
@@ -1296,7 +1296,7 @@ html {
 }
 
 .project--vv .item-corners {
-  fill: rgb(75, 38, 240);
+  fill: rgb(79, 125, 136);
 }
 
 .project--gd {
@@ -1316,7 +1316,7 @@ html {
 }
 
 .project--gd .item-corners {
-  fill: rgb(240, 38, 226);
+  fill: rgb(172, 203, 209);
 }
 
 .container-gallery {
@@ -1414,7 +1414,7 @@ html {
 }
 
 .project__line-title--vv {
-  border-top: px solid rgb(75, 38, 240);
+  border-top: px solid rgb(79, 125, 136);
   margin-left: -50px;
 }
 
@@ -1545,13 +1545,13 @@ html {
   }
 }
 .project__video-link:hover {
-  background: rgb(75, 38, 240);
+  background: rgb(79, 125, 136);
   color: white;
   fill: white;
 }
 .project__video-link:active {
   border: none;
-  box-shadow: 1px 1px 5px rgba(75, 38, 240, 0.5);
+  box-shadow: 1px 1px 5px rgba(79, 125, 136, 0.5);
 }
 
 .project__video-link:hover .project__icon-play,
@@ -1562,19 +1562,19 @@ html {
 
 .project__icon-play {
   height: 20px;
-  fill: rgb(75, 38, 240);
+  fill: rgb(79, 125, 136);
   margin: 0 10px 0 0;
 }
 
 .video-button--vv:hover {
-  background: rgb(197, 32, 186);
+  background: rgb(158, 215, 224);
   color: white;
   fill: white;
 }
 .video-button--vv:active {
   border: none;
-  background: rgb(240, 38, 226);
-  box-shadow: 1px 1px 5px rgba(240, 38, 226, 0.5);
+  background: rgb(172, 203, 209);
+  box-shadow: 1px 1px 5px rgba(172, 203, 209, 0.5);
 }
 
 .video-button--vv .project__icon-play {
@@ -1582,7 +1582,7 @@ html {
 }
 
 .project__text-link {
-  color: rgb(75, 38, 240);
+  color: rgb(79, 125, 136);
   font-size: 16px;
   font-weight: 500;
   margin: 0;
@@ -1808,7 +1808,7 @@ html {
 
 button:hover .preview-corner,
 button:hover .next-corner {
-  fill: rgb(54, 26, 177);
+  fill: rgb(50, 71, 77);
   cursor: pointer;
 }
 
@@ -1861,13 +1861,13 @@ button:hover .next-corner {
 .post-it__content {
   font-size: 16px;
   font-family: "Cutive Mono", monospace;
-  color: rgb(54, 26, 177);
+  color: rgb(50, 71, 77);
   margin: 10px;
 }
 .post-it__content--right-align {
   text-align: right;
   font-family: "Cutive Mono", monospace;
-  color: rgb(54, 26, 177);
+  color: rgb(50, 71, 77);
   margin: 0;
 }
 @media screen and (min-width: 840px) {
@@ -1896,8 +1896,8 @@ button:hover .next-corner {
 .card__title {
   font-size: 18px;
   border-bottom: 1.3px solid transparent;
-  -o-border-image: linear-gradient(0.25turn, rgb(240, 38, 226), rgb(240, 38, 226), rgb(75, 38, 240), rgba(75, 38, 240, 0.8));
-     border-image: linear-gradient(0.25turn, rgb(240, 38, 226), rgb(240, 38, 226), rgb(75, 38, 240), rgba(75, 38, 240, 0.8));
+  -o-border-image: linear-gradient(0.25turn, rgb(158, 215, 224), rgb(149, 188, 185));
+     border-image: linear-gradient(0.25turn, rgb(158, 215, 224), rgb(149, 188, 185));
   border-image-slice: 1;
   width: 100%;
 }
@@ -2071,7 +2071,7 @@ button:hover .next-corner {
   position: absolute;
   font-size: 25px;
   color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(240, 38, 226);
+  border-bottom: 2px solid rgb(172, 203, 209);
 }
 @media screen and (min-width: 840px) {
   .offer__category--gd {
@@ -2084,7 +2084,7 @@ button:hover .next-corner {
 .offer__category--vv {
   position: absolute;
   font-size: 25px;
-  border-bottom: 2px solid rgb(75, 38, 240);
+  border-bottom: 2px solid rgb(79, 125, 136);
 }
 @media screen and (min-width: 840px) {
   .offer__category--vv {
@@ -2172,7 +2172,7 @@ button:hover .next-corner {
   margin-bottom: 20px;
 }
 .offer__invite .offer__invite-text--gd {
-  color: rgb(240, 38, 226);
+  color: rgb(172, 203, 209);
   font-weight: 300;
   font-size: 22px;
   line-height: 1.5;
@@ -2186,7 +2186,7 @@ button:hover .next-corner {
   }
 }
 .offer__invite .offer__invite-text--vv {
-  color: rgb(75, 38, 240);
+  color: rgb(79, 125, 136);
   font-size: 22px;
   line-height: 1.5;
   margin: 0px 20px 0px 20px;
@@ -2215,11 +2215,11 @@ button:hover .next-corner {
   font-weight: 400;
 }
 .button-contact--gd:hover {
-  background-color: rgb(240, 38, 226);
+  background-color: rgb(172, 203, 209);
   color: white;
 }
 .button-contact--gd:active {
-  background-color: rgb(197, 32, 186);
+  background-color: rgb(158, 215, 224);
   color: white;
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
 }
@@ -2249,10 +2249,10 @@ button:hover .next-corner {
   font-weight: 400;
 }
 .button-contact--vv:hover {
-  background-color: rgb(75, 38, 240);
+  background-color: rgb(79, 125, 136);
 }
 .button-contact--vv:active {
-  background-color: rgb(54, 26, 177);
+  background-color: rgb(50, 71, 77);
   box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
 }
 .button-contact--vv a {
@@ -2278,7 +2278,7 @@ button:hover .next-corner {
     display: inline-block;
     width: 200px;
     padding: 10px;
-    background-image: linear-gradient(110deg, rgb(240, 38, 226), rgb(75, 38, 240));
+    background-image: linear-gradient(110deg, rgb(155, 165, 167), rgb(157, 176, 180));
     color: white;
     border: 0px;
     box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
@@ -2291,7 +2291,7 @@ button:hover .next-corner {
     background-image: linear-gradient(110deg, rgb(240, 38, 226), rgba(75, 38, 240, 0.8));
   }
   .button-contact--vv_gd:active {
-    background-color: rgb(54, 26, 177);
+    background-color: rgb(50, 71, 77);
     box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
   }
   .button-contact--vv_gd a {
