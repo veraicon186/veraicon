@@ -104,11 +104,11 @@
 #gd-stencil {
 
     &:hover {
-        fill: colors.$gd;
+        fill: rgb(111, 190, 202);
     }
 
     &:active{
-        fill: colors.$gd2;
+        fill: colors.$vv;
     }
     
 }
@@ -116,11 +116,11 @@
 #vv-stencil {
 
     &:hover {
-        fill: colors.$vv;
+        fill: rgb(111, 190, 202);
     }
 
     &:active{
-        fill: colors.$vv2;
+        fill: colors.$vv;
     }
     
 }
