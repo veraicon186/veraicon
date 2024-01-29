@@ -2047,6 +2047,8 @@ button:hover .next-corner {
 @media screen and (min-width: 840px) {
   .offer__container--gd {
     max-width: 550px;
+    flex: 1 1 50%;
+    padding: 0 0 60px 0;
   }
 }
 
@@ -2060,32 +2062,35 @@ button:hover .next-corner {
 @media screen and (min-width: 840px) {
   .offer__container--vv {
     max-width: 550px;
+    flex: 1 1 50%;
+    padding: 0 0 60px 0;
   }
 }
 
 .offer__category--gd {
   position: absolute;
-  left: -50px;
-  padding-left: 100px;
-  color: rgb(255, 255, 255);
   font-size: 25px;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(240, 38, 226);
 }
 @media screen and (min-width: 840px) {
   .offer__category--gd {
+    left: -50px;
+    padding-left: 100px;
     font-size: 30px;
   }
 }
 
 .offer__category--vv {
   position: absolute;
-  right: -50px;
-  padding-left: 0;
-  padding-right: 100px;
+  font-size: 25px;
   border-bottom: 2px solid rgb(75, 38, 240);
-  font-size: 23px;
 }
 @media screen and (min-width: 840px) {
   .offer__category--vv {
+    right: -50px;
+    padding-right: 100px;
+    padding-left: 0;
     font-size: 30px;
   }
 }
@@ -2101,7 +2106,7 @@ button:hover .next-corner {
 
 .offer__item {
   padding: 20px;
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px auto;
   background-color: rgba(39, 39, 39, 0.8);
   box-shadow: 0px 0px 3px rgba(97, 97, 97, 0.3);
   max-width: 500px;
@@ -2110,6 +2115,7 @@ button:hover .next-corner {
   .offer__item {
     margin: 0 5px 20px 5px;
     flex: 1 0 25%;
+    min-height: 410px;
   }
 }
 
@@ -2223,6 +2229,11 @@ button:hover .next-corner {
   height: 100%;
   color: white;
 }
+@media screen and (min-width: 840px) {
+  .button-contact--gd {
+    display: none;
+  }
+}
 
 .button-contact--vv {
   display: inline-block;
@@ -2250,6 +2261,46 @@ button:hover .next-corner {
   height: 100%;
   color: white;
 }
+@media screen and (min-width: 840px) {
+  .button-contact--vv {
+    display: none;
+  }
+}
+
+.button-contact--vv_gd {
+  display: none;
+}
+@media screen and (min-width: 840px) {
+  .button-contact--vv_gd {
+    position: absolute;
+    left: 41%;
+    top: -80px;
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    background-image: linear-gradient(110deg, rgb(240, 38, 226), rgb(75, 38, 240));
+    color: white;
+    border: 0px;
+    box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .button-contact--vv_gd:hover {
+    background-image: linear-gradient(110deg, rgb(240, 38, 226), rgba(75, 38, 240, 0.8));
+  }
+  .button-contact--vv_gd:active {
+    background-color: rgb(54, 26, 177);
+    box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
+  }
+  .button-contact--vv_gd a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+}
 
 .section-co-nabizim {
   background-color: #F6F6F6;
@@ -2271,4 +2322,8 @@ button:hover .next-corner {
   .section-offer-container {
     display: flex;
   }
+}
+
+.section-napiste-mi {
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
