@@ -79,7 +79,9 @@
          
 .nav--gd {
     padding:  0;
-    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));
+    // background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));   
+    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(130, 202, 212, 0.2), rgba(255, 0, 251, 0));
+
     // box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
 
         @include tablet {
@@ -90,7 +92,8 @@
  
 .nav--vv { 
  padding: 30px 0;
-background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
+// background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
+background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(130, 198, 205, 0.2), rgba(54, 26, 177, 0));
 // box-shadow: 1px 1px 5px rgba(colors.$vv, 0.3);
 
 
@@ -164,13 +167,15 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
     fill: colors.$gd;
     max-width: 250px;
     align-self: center;
-    padding: 20px 0 30px 0;
+    // padding: 20px 0 30px 0;
+    padding: 0 0 30px 0;
     margin: 0 10px;
 
 
     @include tablet {
     width: 180px;
-    padding: 15px 0;
+    // padding: 15px 0;
+    padding: 0 0 15px 0;
     margin: 0 0 0 5px;
     rotate: 0deg;
     }
@@ -180,13 +185,15 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
     fill: colors.$vv;
     max-width: 300px;
     align-self: center;
-    padding: 20px 0 30px 0;
+    // padding: 20px 0 30px 0;
+    padding: 10px 0 30px 0;
     margin: 0 10px;
 
 
 
     @include tablet {
-    padding: 15px 0 0 0;
+    // padding: 15px 0 0 0;
+    padding: 0 0 15px 0;
     rotate: 0deg;
     }
 
