@@ -890,7 +890,8 @@ strong {
 .aside-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: 0;
 }
 @media screen and (min-width: 840px) {
   .aside-nav {
@@ -926,7 +927,7 @@ strong {
   stroke: rgb(172, 203, 209);
   max-width: 200px;
   align-self: center;
-  padding: 10px 0 30px 0;
+  padding: 10px 0 20px 0;
   margin: 0 10px;
 }
 @media screen and (min-width: 840px) {
@@ -935,15 +936,16 @@ strong {
     padding: 0 0 15px 0;
     margin: 0 0 0 5px;
     rotate: 0deg;
+    position: static;
   }
 }
 
 .title__vv {
   fill: rgb(58, 107, 119);
   stroke: rgb(58, 107, 119);
-  max-width: 200px;
+  max-width: 210px;
   align-self: center;
-  padding: 10px 0 30px 0;
+  padding: 10px 0 20px 0;
   margin: 0 10px;
 }
 @media screen and (min-width: 840px) {
@@ -958,7 +960,7 @@ strong {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 5px;
   padding: 15px;
   border-radius: 5px;
 }
@@ -1030,6 +1032,7 @@ strong {
 
 .aside-item--gd {
   fill: white;
+  margin: 20px 10px;
 }
 
 .aside-item__category-gd {
