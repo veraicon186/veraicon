@@ -12,74 +12,16 @@
 
 .section-hero {
     padding-top: 40px;
+
     
     @include tablet {
         padding-top: 0px;
-}
+        background-image: none;        
 
 }
 
-
-.grid-homepage {
-    padding-bottom: 40px;
-    margin: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    gap: 5px;
-
-    & :first-child {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-
-    & :nth-child(2) {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
-
-    & :nth-child(3) {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-    }
-
-    & :nth-child(4) {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-    }
-
-    @include tablet {
-        grid-template-columns: 100px 1fr 2fr 1fr 100px ;
-        grid-template-rows: repeat(2, auto);
-        gap: 5px;
-        margin: 0 40px;
-        
-    & :first-child {
-        grid-column: 2 / 4;
-        grid-row: 1 / 2;
-    }
-
-    & :nth-child(2) {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        margin: auto 0;   
-    }
-
-    & :nth-child(3) {
-        grid-column: 3 / 5;
-        grid-row: 2 / 3;
-    }
-
-    & :nth-child(4) {
-        grid-column: 5 / 6;
-        grid-row: 2 / 3;
-        margin: auto 0; 
-    }
-        
-    }
-
 }
-   
+
 
 .main-photo img {
     width: 100%;
@@ -87,6 +29,8 @@
     object-fit: cover;
     min-width: 500px;
     max-width: 600px;
+    padding: 0 0 20px 0;
+    
    
 }
 
@@ -94,41 +38,86 @@
     display: flex;
     flex-shrink: 0;
     justify-content: center;
-}
+    background-image: url(/images/vv_wall-upto800.png);
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
 
-.button-stencil {
-    width: 100px;
-    margin: 0 auto;
-}
-
-#gd-stencil {
-
-    &:hover {
-        fill: colors.$gd;
+    @include tablet { 
+        background-image: none;
     }
 
-    &:active{
-        fill: colors.$gd2;
+}
+
+// container 
+.container-homepage {
+    display: flex;
+    flex-direction: column;
+
+
+    @include tablet { 
+    flex-direction: row;
+}
+}
+
+
+.box-gd {
+    display: flex;  
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @include tablet { 
+        flex-direction: column;
+        max-width: 400px; 
     }
+}
+
+   
+   
+
+.box-vv {
+   
+    background-image: url(/images/vv_wall-upto800.png);
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
+    padding: 70px 0 0 0 ;
+
+    @include tablet { 
+        background-image: none;
+        max-width: 400px;
+
+
+    }
+}
+
     
+
+
+// cedule / sipky
+.button-sign__gd-link img {
+    height: 70px;
+
+    @include tablet { 
+    margin-right: 120px;
+    }
+  
 }
 
-#vv-stencil {
+.button-sign__vv-link img {
+    max-height: 70px;
+}
 
-    &:hover {
-        fill: colors.$vv;
-    }
+.button-sign__gd, .button-sign__vv {
+    transition: 0.3s;
+} 
 
-    &:active{
-        fill: colors.$vv2;
-    }
+ .button-sign__gd:hover { 
+       transform: translate(-10px, 0);
+    }  
     
-}
+    .button-sign__vv:hover { 
+        transform: translate(10px, 0);
+     } 
+
 
 .grid-homepage .textbox  { 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-    box-shadow: 0 0 4px rgba(81, 81, 81, 0.1);
     max-width: 400px;
-    
 
 }

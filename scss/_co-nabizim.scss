@@ -36,7 +36,7 @@
 // section title - uzsi --------
 
 .section-co-nabizim {
-    background-color: colors.$grey-superlight;
+    // background-color: colors.$grey-superlight;
     padding: 40px 0 0 0;
 
     @include tablet {
@@ -52,8 +52,11 @@
 
 
 .section-offer-container {
+    background-image: url(/images/gd_wall-upto800.jpg);
+    background-repeat: repeat;
    
     @include tablet {
+        background-image: none; 
        display: flex;
 
        

@@ -20,9 +20,8 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 500;
-    display: inline-block;
-    border-bottom: 1px solid colors.$gd;
-    padding: 10px 0px 10px 30px;
+    display: inline;
+    padding: 10px 0px 0px 20px;
     text-transform: uppercase;
 }
 
@@ -51,15 +50,16 @@ h3 {
     text-transform: uppercase;
     padding: 20px;
     margin: 0;
+   
 
-    &::after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 2px;
-        background-color: colors.$grey-middle;
-        margin: 10px auto;
-    }
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     width: 80px;
+    //     height: 2px;
+    //     background-color: colors.$grey-middle;
+    //     margin: 10px auto;
+    // }
 }
 
 h4 {

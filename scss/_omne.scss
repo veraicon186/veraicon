@@ -18,6 +18,7 @@
 
 
 
+
 // font-family: 'Big Shoulders Stencil Display', sans-serif;
 // font-family: 'Raleway', sans-serif;
 
@@ -36,37 +37,34 @@
 
 
 .hero-o-mne {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    // background-image: url(/images/o-mne_picture2.png);
     background-repeat: no-repeat;
     background-position: center top;
-    // background-size: cover;
     
     
     @include tablet {
         margin-top: 0px;
+        justify-content: left;
         
 
     }
 
-    // & img {
-    // width: 100%;
-    // max-height: 300px;
-    // object-fit: cover;  
-    // }
-
+   
     & .textbox {
-        padding: 20px;
-        margin: 20px;
+        padding: 90px 0 0 0;
+        margin: 20px 0 0 0 ;
+        min-width: 300px;
         max-width: 600px;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7));
-        box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
+        color: white;
 
-        // background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-        // box-shadow: 0 0 4px rgba(81, 81, 81, 0.1);
+        @include tablet {
+            padding: 90px 20px 0 0px;
+        }
 
+     
   
     & p {
         margin: 0;
@@ -74,242 +72,82 @@
       
        
     }
+}
+}
+
+ .GD-VV_icon {
+    padding: 20px;
+    position: absolute;
+    width: 180px;
+    left: 0px;
+    top: 0px;
+
+    @include tablet {
+        left: -85px;
+        top: 0px;
+    }
+
+
 
 }
 
-}   
-
-.textbox .stencil-2v1 {
-    width: 40%;
-    margin: 10px 30%;
-    min-width: 100px;
-    max-width: 200px;
-    // fill: linear-gradient(0.25turn, rgba(240, 38, 226), rgba(240, 38, 226), rgba(75, 38, 240), rgba(75, 38, 240, 0.8));
-}
-
+ 
 
 
 
 // grid --------------------
 
 .grid-o-mne {
-    padding: 10px 20px 40px 20px;
+    padding: 10px 0 0 0;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (6, auto);
 
     @include tablet {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, auto) 20px 20px auto;
-    gap: 15px;
-    margin: 0 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+    margin: 0;
     padding: 0;
+    }
+}
+
+.hero-o-mne {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include tablet {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
     }
 }
 
   
-.grid-o-mne {
+.cv-o-mne {
+    margin: 0;
+    padding: 120px 0 0 0;
+    background-image: url(/images/vv_wall-upto800.png);
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
 
-    // siema
-    & :first-child {
+  
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+        @include tablet {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
-
-        @include tablet {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
+        background-image: none;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
-    }
-    // prev
-    & :nth-child(2) {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-
-        @include tablet {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        }
-    }
-
-    // next
-    & :nth-child(3) {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-
-        @include tablet {
-        grid-column: 6 / 7;
-        grid-row: 1 / 2;
-        }
-    }
-    // section title - zkusenosti
-    & :nth-child(4) {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        align-self: center;
-
-        @include tablet {
-        grid-column: 2 / 6;
-        grid-row: 2 / 3;
-        }
-    }
-    // pracovni zkusenosti 
-    & :nth-child(5) {
-        grid-column: 2 / -2;
-        grid-row: 3 / 4;
-
-        @include tablet {
-        grid-column: 1 / 3;
-        grid-row: 3 / 7;
-        }
-    }
-
-    // vzdelani
-
-    & :nth-child(6) {
-        grid-column: 2 / -2;
-        grid-row: 4 / 5;
-
-        @include tablet {
-        grid-column: 3 / 5;
-        grid-row: 5 / 7;
-        }
-    }
-
-    // dalsi znalosti
-    & :nth-child(7) {
-        grid-column: 2 / -2;
-        grid-row: 5 / 6;
-
-        @include tablet {
-        grid-column: 5 / 7;
-        grid-row: 4 / 7;
-        }
-    }
-
- 
 }
 
 
-
-.siema {
-    margin: 0;
-
-    @include tablet {
-    padding: 0;
-    margin: 0 auto;
-    width: 600px;
-    }
+.cv-o-mne {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    padding-top: 200px;
 
 }
-
-.post-it {
-    min-width: 200px;
-    max-width: 400px;
-    padding: 40px;
-    margin: 15px auto;
-
-    background-color: colors.$grey-superlight;
-    box-shadow: 0 0 10px rgba(240, 38, 226, 0.3);
-
-    &--rightrotate {
-        rotate: 2deg;
-    }
-
-    &--leftrotate {
-        rotate: -1deg;
-    }
-
-     &__content {
-        font-size: 16px;
-        // font-weight: 300;
-        // font-style: italic;
-        color: colors.$grey-dark;
-        margin: 0 0 10px 0;
-    }
-
-    &__content--right-align {
-        text-align: right;
-        // font-weight: 300;
-        // font-style: italic;
-        margin: 0;
-    } 
-
-    @include tablet {
-        max-width: 400px;
-
-         
-    }
-}
-
-.card {
-    background-color: rgba(154, 107, 107, 0.952);
-    padding: 20px;
-    margin: 10px;
-
-    &__text {
-    font-size: 14px;
-    margin: 10px 0px;
-
-    }
-    @include tablet {
-    max-width: 250px;
-    margin: 0;
-    
-    }
-}
-
-// button sipky --------------------
-
-.preview-corner {
-    width: 20px;
-    transform: rotate(45deg);
-    fill: rgb(120, 120, 120);
-}
-
-button:hover .preview-corner,
-button:hover .next-corner {
-        fill: colors.$vv2;
-        cursor: pointer;
-}
-
-
-.next-corner {
-    width: 20px;
-    transform: rotate(225deg);
-    fill: colors.$grey-middle;
-}
-
-
-// button reset --------------------
-.next {
-    margin: 0;
-    border: none;
-    color: inherit;
-    background-color: transparent;
-
-    @include tablet {
-    margin-right: 30px;
-    }
-}
-
-
-.prev  {
-    margin: 0;
-    border: none;
-    color: inherit;
-    background-color: transparent;
-
-
-    @include tablet {
-    margin-left: 30px;
-    }
-}
-
-
-
-
-
-
-
-

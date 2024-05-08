@@ -12,14 +12,16 @@
 
 
 .main-regular {
-     width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 40px;
-    background-image: url(/images/wall_white_top.png);
-    background-size: cover;
+    background-image: url(/images/gd_wall-upto800.jpg);
+    background-size: repeat;
+
 
     @include tablet {
      max-width: 800px;
+     background-image: none;
 
     }
 }
@@ -57,8 +59,22 @@ section {
 .section__title {
     text-align: center;
     padding-bottom: 0;
+    color: white;
 }
 
+.section__title-box {
+    position: relative;
+    margin-top: 40px;
+}
+
+.section__title-box .item-corner3{
+    bottom: -5px;
+    right: 10px;
+    fill: white;
+}
+
+
+ 
 //  listovani mezi kategoriemi projektu
 
 .anchor {

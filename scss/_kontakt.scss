@@ -13,7 +13,7 @@
 @use 'header';
 @use 'omne';
 @use 'post-it';
-@use 'card';
+
 
 
 
@@ -34,17 +34,17 @@
 
 
 .section-contact-form {
-    padding: 40px 0 20px 0;
+    padding: 40px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @include tablet { 
-    padding: 0px 0 20px 0;
-}
-
     
-   
+    & :first-child {
+        align-self: flex-start;
+    }
+    
+ 
+  
 }
 
 
@@ -56,13 +56,15 @@
 
 }
 
+
+
 // form
 
 .contact-form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 480px;
+    max-width: 550px;
     padding: 20px 20px 0 20px;
 }
 
@@ -72,11 +74,11 @@
     display: block;
     padding: 1em;
     margin: 5px 0;
-    border-radius: 8px;
+    border-radius: 1em;
     border: 0px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 0 4px rgba(59, 59, 30, 0.3);
     
 
@@ -84,20 +86,22 @@
 
 
 .contact-form__submit {
-    align-self: flex-end;
+    align-self: flex-start;
     display: inline-block;
     width: 100px;
     padding: 10px;
     margin: 5px 0;
-    background-color: colors.$grey-middle;
+    background-color: rgba(59, 59, 30, 0);
     color: white;
-    border: 0px;
+    border: 1px solid white;
+    border-radius: 2em;
     box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 
     &:hover {
         background-color: black;
+        border:  1px solid  rgba(59, 59, 30, 0);
     }
 
     &:active {
@@ -110,29 +114,37 @@
 
 
 .grid-contact-details {
-    padding: 10px 20px 40px 20px;
+    padding: 80px 20px 40px 20px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 
     @include tablet {
-    grid-template-columns: 1fr 270px  240px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 15px;
-    margin: 0 20px 20px 20px;
+    margin: 0 auto;
     padding: 0;
     }
 }
 
 .grid-contact-details {
+    background-image: url(/images/vv_wall-upto800.png);
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
+
+    @include tablet {
+        background-image: none;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);   
+     }
+
 
     & :first-child {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
 
         @include tablet {
-        grid-column: 1 / 2;
+        grid-column: 4 / 5;
         grid-row: 1 / 4;
         }
     }
@@ -142,18 +154,8 @@
         grid-row: 2 / 3;
 
         @include tablet {
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
-        }
-    }
-
-    & :nth-child(3) {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-
-        @include tablet {
-        grid-column: 3 / 4;
-        grid-row: 2 / 4;
+        grid-column: 4 / 5;
+        grid-row: 4 / 5;
         }
     }
 
