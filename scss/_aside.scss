@@ -79,7 +79,9 @@
          
 .nav--gd {
     padding:  0;
-    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));
+    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(246, 246, 246, 0.2), rgba(255, 0, 251, 0));
+    box-shadow: 1px 1px 15px rgba(white, 0.2);
+    //  background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));
     // box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
 
         @include tablet {
@@ -90,7 +92,9 @@
  
 .nav--vv { 
  padding: 30px 0;
-background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
+ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(154, 154, 154, 0.2), rgba(173, 173, 173, 0));
+box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
+// background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
 // box-shadow: 1px 1px 5px rgba(colors.$vv, 0.3);
 
 
@@ -161,7 +165,7 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
 // title pod logem -------------------------
 
 .title__gd {
-    fill: colors.$gd;
+    fill: white;
     max-width: 250px;
     align-self: center;
     padding: 20px 0 30px 0;
@@ -177,7 +181,7 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
 }
 
 .title__vv {
-    fill: colors.$vv;
+    fill: black;
     max-width: 300px;
     align-self: center;
     padding: 20px 0 30px 0;
@@ -200,18 +204,19 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
 
 .aside-item {
     &--vv, &--gd {
-        max-width: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        max-width: 150px;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
         margin: 20px;
-        padding: 15px;
+        padding: 10px 15px 15px 15px;
         border-radius: 5px;
+        position: relative;
 
     
         @include tablet {
-        width: 200px;
-        padding: 15px;
+        width: 140px;
+        padding: 10px;
         margin: 10px auto;
         flex-direction: row;
         align-items: flex-start;      
@@ -240,10 +245,21 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
         display: block;
 
         @include tablet {
-          margin: 10px 0 10px 15px;  
+          margin: 10px 0 10px 10px;  
           text-align: left;
     }
     }
+}
+
+.aside-item--vv .item-corner3, .aside-item--gd .item-corner3{
+    right: 7px;
+    bottom: 7px;
+
+    @include tablet {
+    right: 10px;
+    bottom: 10px; 
+
+}
 }
 
 .aside-item__description {
@@ -269,7 +285,7 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240
 
 .aside-item--vv:hover .aside-item__icon-vv {
     fill: colors.$vv;
-    stroke: colors.$vv;;  
+    stroke: colors.$vv;
 }
 
 .aside-item--vv:hover .aside-item__category-vv {

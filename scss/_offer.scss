@@ -9,8 +9,20 @@
   }
 }
 
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+      @content;
+  }
+}
+
 // container ------------------
 
+.section-offer-container {
+  margin: 0;
+  @include tablet {
+  display: flex;
+  }
+}
 
 .offer__container--gd {
   padding: 80px 0 30px 0px;
@@ -18,118 +30,152 @@
  
 
     @include tablet { 
+      padding: 40px 0 0 0;
+      display: grid;
+      grid-template-columns:  1fr 1fr 1fr 200px;
+      grid-template-rows: repeat(8, 100px);
+      gap: 15px;
       background-image: none;
-      max-width: 550px;
+      // max-width: 550px;
       flex: 1 1 50%;
-      padding:  80px 0 0 0;
+      position: relative;
+
+      :first-child {
+        grid-column: 3 / 5;
+        grid-row: 1 / 2;
       }
 
-}
+      :nth-child(2) {
+        grid-column: 3 / 5;
+        grid-row: 2 / 7;
+      }
 
-.button-sign__gd {
-  padding:  0 0 0 20px;
- 
-  @include tablet { 
-  text-align: right;
-}
+
+    }
+
+    @include desktop { 
+     
+    }
+
 }
 
 
 
 .offer__container--vv {
     margin: 0 0 0 0;
-    padding: 0 0 30px 0;
-    background-image: url(/images/vv_wall-upto800.png);
-    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+    padding: 100px 0 0 0;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
   
 
     @include tablet { 
+      padding: 80px 0 0 0;
+      display: grid;
+      grid-template-columns:  200px 1fr 1fr 1fr;
+      grid-template-rows: repeat(12, 80px);
+      gap: 15px;
+      background-color: rgb(255, 248, 248, 0);
       background-image: none;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
-      max-width: 550px;
+      // max-width: 550px;
       flex: 1 1 50%;
-    }
-   
-  }
-
-// kategorie
-
-
-
-  
-
-
-//--------------------------------
-
-// offer images
-
-.offer__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  
-
-  
-
-
-}
-
-// offer item button
-.slide-img {
-margin-top: -100%;
-opacity: 0;
-
-  @include tablet { 
-    display: none;
-}
-}
-
-
-.offer__image {
-  overflow: hidden;
-}
-
-#offer-button-gd1:hover .slide-img, #offer-button-gd1:active .slide-img, #offer-button-gd2:hover .slide-img, #offer-button-gd2:active .slide-img, #offer-button-gd3:hover .slide-img, #offer-button-gd3:active .slide-img {
-    opacity: 1;
-    margin-top: 0px
-
-  }
-
-  .pop-gd-img--1 {
-    @include tablet { 
-     position: absolute;
+      position: relative;
       
-  }
-  } 
+      :first-child {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+
+      :nth-child(2) {
+        grid-column: 1 / 3;
+        grid-row: 2 / 7;
+      }
+
+    }
+
+    @include desktop { 
+      margin-left: 120px;
+    }
+}
+
+
+
+// kategorie -------------------
+
+.sign-gd-offer {
+  text-align: center;
+ 
+  @include tablet { 
+    display: inline-block;
+    text-align: right;
+    padding: 40px 0 0 80px;
+    max-width: 80px;
+    
+
+}
+}
+
+.sign-vv-offer {
+  padding:  0 0 0 180px;   
+  
+  @include tablet { 
+    padding: 40px 30px 0 20px;
+      text-align: left;
+}
+}
+
+  
+
+// offer images  mobile, tablet -----------------
+
 
 
 .slide-img {
+  margin-top: -100%;
+  opacity: 0;
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
+
+    @include tablet { 
+      margin-right: -100%;
 
 
-// offer images square - ipad, desktop
-.offer__images--gd {
-  display: none;
-  @include tablet {
-    display: inherit;
-    position: relative;
+
+  }
+  }
+
+
+
+// offer  button  mobile ipad --------------------
+
+#offer-button-gd1:hover .slide-img, #offer-button-gd1:active .slide-img, #offer-button-gd2:hover .slide-img, #offer-button-gd2:active .slide-img, #offer-button-gd3:hover .slide-img, #offer-button-gd3:active .slide-img, #offer-button-vv1:hover .slide-img, #offer-button-vv1:active .slide-img, #offer-button-vv2:hover .slide-img, #offer-button-vv2:active .slide-img, #offer-button-vv3:hover .slide-img, #offer-button-vv3:active .slide-img  {
+  opacity: 1;
+  margin-top: 0px;
+
+  @include tablet { 
+    width: 300px;
+    height: 100%;
 }
 }
 
+.offer__image {
+  overflow: hidden;
+  width: 100%;
+}
 
 // offer items div - vsechny polozky
 
 
 .offer__items {
-  padding: 100px 20px 0 20px;
+  padding: 30px 20px 0 20px;
 
   @include tablet { 
-    padding: 120px 20px 0 20px;
+
+    padding: 20px 30px 0 0;
+    max-width: 300px;
 
   }
 
@@ -138,39 +184,39 @@ opacity: 0;
 .offer__item {
   position: relative;
   padding: 20px;
-  margin: 0 0 20px 0;
-  background-color: rgba(39, 39, 39, 0.8);
+  margin: 0 auto 20px auto;
+  background-color: rgba(39, 39, 39, 0.6);
   box-shadow: 0px 0px 3px rgba(colors.$grey-middle, 0.3);
   max-width: 500px;
 
   @include tablet { 
-    margin: 0 5px 20px 5px;
-    flex: 1 0 25%;
-   
-
+    background-color: rgba(39, 39, 39, 0);
+    box-shadow: 0px 0px 3px rgba(colors.$grey-middle, 0);
+    margin: 0 auto;
   }
 }
 
 .offer__item--vv {
-  background-color: rgba(244, 244, 244, 0.8);
+  background-color: rgba(244, 244, 244, 0.6);
   box-shadow: 1px 1px 3px rgba(colors.$grey-middle, 0.2);
 
+  @include tablet { 
+    background-color: rgba(244, 244, 244, 0);
+  box-shadow: 1px 1px 3px rgba(colors.$grey-middle, 0);
+  }
 }
-
 
 
 .offer__description--gd {
   color: white;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   width: 100%;
   line-height: 1.3;
   text-align: left;
   padding: 0 0 5px 0;
   margin: 0;
   
-
-
 }
 
 
@@ -178,60 +224,78 @@ opacity: 0;
 .offer__description--vv {
   color: black;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   width: 100%;
   line-height: 1.3;
-  text-align: center;
-  padding: 10px 20px;
+  text-align: right;
+  padding: 0 5x 0 0;
   margin: 0;
   min-height: 50px;
+
+}
  
 
-
-
-
-
-
-
-
 // invite -------------
+
+#offer__slogan-gd {
+  grid-column: 2 / 5;
+  grid-row: 8 / 10;
+
+  @include desktop {
+    grid-column: 1 / 5;
+    grid-row: 7 / 9;
+
+  }
+}
+
+#offer__slogan-vv {
+  grid-column: 1 / 4;
+  grid-row: 10 / 11;
+
+  @include desktop {
+    grid-column: 1 / 5;
+    grid-row: 9 / 11;
+
+  }
+}
 
 .offer__invite {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
-
-
-  .offer__invite-text--gd {
-      color: colors.$gd;
-      font-weight: 300;
-      font-size: 22px;
-      line-height: 1.5;
-      margin: 0 20px 0px 20px;
-      max-width: 450px;
-      text-align: center;
-
-      @include tablet {
-        font-size: 23px;
-     }
-  }
-
-  .offer__invite-text--vv {
-      color: colors.$vv;
-      font-size: 22px;
-      line-height: 1.5;
-      margin: 0px 20px 0px 20px;
-      max-width: 550px;
-      text-align: center;
-      font-weight: 300;
-
-      @include tablet {
-        font-size: 23px;
-        max-width: 600px;
-     }
-  }
 }
+
+
+.offer__invite-text--gd{
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 20px 0px 20px;
+    max-width: 450px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 23px;
+    }
+}
+
+.offer__invite-text--vv {
+    color: black;
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0px 20px 0px 20px;
+    max-width: 550px;
+    text-align: center;
+    font-weight: 300;
+
+    @include tablet {
+      font-size: 23px;
+      max-width: 600px;
+    }
+}
+
 
 //  buttons ----------------------
 
@@ -240,9 +304,10 @@ opacity: 0;
   width: 120px;
   padding: 10px;
   margin: 5px 0;
-  background-color: colors.$grey-middle;
+  background-color: rgb(214, 214, 214, 0);
   color: white;
-  border: 0px;
+  border: 1px solid white;
+  border-radius: 2em;
   box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -250,12 +315,13 @@ opacity: 0;
 
 
   &:hover {
-      background-color: colors.$gd;
+      background-color: black;
+      border: 1px solid rgb(16, 15, 15, 0);
       color: white;
   }
 
   &:active {
-      background-color: colors.$gd2;
+      background-color: colors.$grey-middle;
       color: white;
       box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
   }
@@ -274,20 +340,25 @@ opacity: 0;
   width: 120px;
   padding: 10px;
   margin: 5px 0;
-  background-color: colors.$grey-middle;
-  color: white;
-  border: 0px;
+  background-color:rgb(80, 78, 78, 0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 2em;
   box-shadow: 0 0 2px rgba(59, 59, 30, 0.6);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 400;
 
   &:hover {
-      background-color: colors.$vv;
+      background-color: black;
   }
+  &:hover a{
+    color: white;
+}
 
   &:active {
-      background-color: colors.$vv2;
+      background-color: colors.$grey-middle;
+      border: 1px solid rgb(0, 0, 0, 0);
       box-shadow: 0 0 4px rgba(59, 59, 30, 0.9);
   }
 
@@ -295,8 +366,10 @@ opacity: 0;
       text-decoration: none;
       width: 100%;
       height: 100%;
-      color: white;
+      color: rgb(0, 0, 0);
   }
+ 
 }
-}
+
+
 

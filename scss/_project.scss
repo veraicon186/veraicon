@@ -21,7 +21,24 @@
 }
 
 .category__name--gd, .category__name--vv {
-    font-size: 22px;
+    font-weight: 100;
+    font-size: 30px;
+
+    @include tablet { 
+        font-size: 45px;
+    }
+
+}
+
+.category__name--gd {
+    color: rgb(134, 134, 134);
+    border-bottom: 1px solid  rgb(134, 134, 134);
+
+}
+
+.category__name--vv {
+    color: rgb(134, 134, 134);
+    border-bottom: 1px solid  rgb(134, 134, 134);
 }
 
 
@@ -209,9 +226,10 @@
     color: white;
     size: 20px;
     
+    
     @include tablet { 
-   
-    padding: 0px 30px 5px 20px;
+        padding: 0px 30px 5px 10px;
+        margin-bottom: 10px;
     }
 }
 

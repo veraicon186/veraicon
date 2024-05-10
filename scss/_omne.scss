@@ -54,21 +54,22 @@
 
    
     & .textbox {
-        padding: 90px 0 0 0;
+        padding: 90px 20px 20px 20px;
         margin: 20px 0 0 0 ;
-        min-width: 300px;
-        max-width: 600px;
+        min-width: 200px;
+        max-width: 650px;
         color: white;
 
-        @include tablet {
-            padding: 90px 20px 0 0px;
-        }
+     
 
      
   
     & p {
-        margin: 0;
-        padding: 0 20px 20px 20px;
+        padding: 0 20px 20px 50px;
+
+        @include tablet {
+            padding: 0 20px 20px 30px;
+        }
       
        
     }
@@ -79,7 +80,7 @@
     padding: 20px;
     position: absolute;
     width: 180px;
-    left: 0px;
+    left: -45px;
     top: 0px;
 
     @include tablet {
@@ -127,7 +128,8 @@
 .cv-o-mne {
     margin: 0;
     padding: 120px 0 0 0;
-    background-image: url(/images/vv_wall-upto800.png);
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
     clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
 
   
@@ -137,6 +139,7 @@
         @include tablet {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+        background-color: rgb(196, 196, 196, 0);
         background-image: none;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
