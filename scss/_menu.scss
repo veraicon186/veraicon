@@ -163,7 +163,7 @@
 
 
 .menu__link-new, .submenu-category__link-new, .submenu__link-new {  
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     height: 100%;
     width: 100%;
@@ -173,6 +173,7 @@
 
     @include tablet {
     color: colors.$grey-middlelight;   
+    font-size: 16px;
     }    
 } 
 
@@ -330,7 +331,7 @@
 
 
 .submenu__link-new {
-    font-size: 16px;
+    font-size: 18px;
     background-color: colors.$grey-dark;
     padding: 20px 20px 20px 20px;
     margin: 0;
