@@ -1692,7 +1692,6 @@ html {
   -webkit-clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
   padding: 70px 0 0 0;
-  align-items: center;
 }
 @media screen and (min-width: 840px) {
   .box-vv {
@@ -1728,7 +1727,7 @@ html {
 
 .box-vv .button-sign__vv, .box-gd .button-sign__gd {
   max-width: 250px;
-  margin-left: 50px;
+  margin: 0 auto;
 }
 
 .grid-homepage .textbox {

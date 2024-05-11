@@ -75,11 +75,11 @@
    
 
 .box-vv {
-   
     background-image: url(/images/vv_wall-upto800.png);
     clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
     padding: 70px 0 0 0 ;
-    align-items: center;
+
+
 
 
     @include tablet { 
@@ -90,7 +90,6 @@
     }
 }
 
-    
 
 
 // cedule / sipky
@@ -105,6 +104,8 @@
 
 .button-sign__vv-link img {
     max-height: 70px;
+
+
 }
 
 .button-sign__gd, .button-sign__vv {
@@ -121,7 +122,8 @@
 
 .box-vv .button-sign__vv, .box-gd .button-sign__gd {
     max-width: 250px;
-    margin-left: 50px;
+    margin:0 auto;
+
 }
 
 .grid-homepage .textbox  { 
