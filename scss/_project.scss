@@ -209,15 +209,15 @@
    
     
     @include tablet { 
-    padding: 0px 30px 5px 20px;
+    padding: 0px 30px 20px 20px;
     }
 }
 
 
-.project__line-title--vv  {
-    border-top: px solid colors.$vv;
-    margin-left: -50px;
-}
+// .project__line-title--vv  {
+//     border-top: px solid colors.$vv;
+//     margin-left: -50px;
+// }
 
 
 //  title gd ----------------
@@ -228,15 +228,20 @@
     
     
     @include tablet { 
+<<<<<<< HEAD
         padding: 0px 30px 5px 10px;
         margin-bottom: 10px;
+=======
+   
+    padding: 0px 30px 20px 20px;
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     }
 }
 
-.project__line-title--gd  {
-    border-top: 0px solid white;
-    margin-left: -50px;
-}
+// .project__line-title--gd  {
+//     border-top: 0px solid rgb(53, 53, 53);
+//     margin-left: -50px;
+// }
 
 
 
@@ -250,7 +255,7 @@
 }
 
 .project__line-description {
-    border-top: 1px solid rgb(201, 201, 201);
+    border-top: 0px solid rgb(201, 201, 201);
     margin: 1px;
 
 

@@ -41,6 +41,7 @@
     background-image: url(/images/vv_wall-upto800.png);
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
 
+<<<<<<< HEAD
     @include tablet { 
         background-image: none;
     }
@@ -67,6 +68,21 @@
     @include tablet { 
         flex-direction: column;
         max-width: 400px; 
+=======
+.button-stencil {
+    width: 100px;
+    margin: 0 auto;
+}
+
+#gd-stencil {
+
+    &:hover {
+        fill: rgb(111, 190, 202);
+    }
+
+    &:active{
+        fill: colors.$vv;
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     }
 }
 
@@ -104,6 +120,7 @@
     max-height: 70px;
 }
 
+<<<<<<< HEAD
 .button-sign__gd, .button-sign__vv {
     transition: 0.3s;
 } 
@@ -111,6 +128,15 @@
  .button-sign__gd:hover { 
        transform: translate(-10px, 0);
     }  
+=======
+    &:hover {
+        fill: rgb(111, 190, 202);
+    }
+
+    &:active{
+        fill: colors.$vv;
+    }
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     
     .button-sign__vv:hover { 
         transform: translate(10px, 0);

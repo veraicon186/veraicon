@@ -18,6 +18,7 @@
 
 .aside {
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     margin: 0;
@@ -68,7 +69,8 @@
 .aside-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 0;
     // background-image: color-gradient(rgba(255, 0, 251,0.8), rgba(255, 0, 251, 0.1));
 
     @include tablet {
@@ -79,9 +81,15 @@
          
 .nav--gd {
     padding:  0;
+<<<<<<< HEAD
     background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(246, 246, 246, 0.2), rgba(255, 0, 251, 0));
     box-shadow: 1px 1px 15px rgba(white, 0.2);
     //  background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));
+=======
+    // background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));   
+    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(130, 202, 212, 0.2), rgba(255, 0, 251, 0));
+
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     // box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
 
         @include tablet {
@@ -92,9 +100,14 @@
  
 .nav--vv { 
  padding: 30px 0;
+<<<<<<< HEAD
  background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(154, 154, 154, 0.2), rgba(173, 173, 173, 0));
 box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
 // background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
+=======
+// background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
+background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 199, 0.28), rgba(54, 26, 177, 0));
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
 // box-shadow: 1px 1px 5px rgba(colors.$vv, 0.3);
 
 
@@ -165,32 +178,50 @@ box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
 // title pod logem -------------------------
 
 .title__gd {
+<<<<<<< HEAD
     fill: white;
     max-width: 250px;
+=======
+    fill: colors.$gd;
+    stroke: colors.$gd;
+    max-width: 200px;
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     align-self: center;
-    padding: 20px 0 30px 0;
+    padding: 10px 0 20px 0;
+    // padding: 0 0 30px 0;
     margin: 0 10px;
+
 
 
     @include tablet {
     width: 180px;
-    padding: 15px 0;
+    // padding: 15px 0;
+    padding: 0 0 15px 0;
     margin: 0 0 0 5px;
     rotate: 0deg;
+    position: static;
     }
 }
 
 .title__vv {
+<<<<<<< HEAD
     fill: black;
     max-width: 300px;
+=======
+    fill: colors.$vv;
+    stroke: colors.$vv;
+    max-width: 210px;
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     align-self: center;
-    padding: 20px 0 30px 0;
+    // padding: 20px 0 30px 0;
+    padding: 10px 0 20px 0;
     margin: 0 10px;
 
 
 
     @include tablet {
-    padding: 15px 0 0 0;
+    // padding: 15px 0 0 0;
+    padding: 0 0 15px 0;
     rotate: 0deg;
     }
 
@@ -204,12 +235,21 @@ box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
 
 .aside-item {
     &--vv, &--gd {
+<<<<<<< HEAD
         max-width: 150px;
         // display: flex;
         // flex-direction: column;
         // align-items: center;
         margin: 20px;
         padding: 10px 15px 15px 15px;
+=======
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        padding: 15px;
+>>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
         border-radius: 5px;
         position: relative;
 
@@ -317,6 +357,7 @@ box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
 
 .aside-item--gd {
     fill: white;
+    margin: 20px 10px;
 }
 
 .aside-item__category-gd {
