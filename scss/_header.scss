@@ -17,7 +17,7 @@
     width: 100%;
     height: 50px;
     margin: 0 auto;
-    // background-color: colors.$grey-superlight;
+    background-color: colors.$grey-superlight;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,11 +66,11 @@
     width: 100%;
     height: 50px;
     margin: 0 auto;
-    // background-color: colors.$grey-superlight;
+    background-image: url(/images/gd_wall-upto800.jpg);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // position: fixed;
+    position: fixed;
 
     :first-child {
         order: 2;
@@ -86,11 +86,13 @@
 
     @include tablet {
         max-width: 800px;
-        height: 200px;
+        height: 150px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         position: relative;
+        background-image: none;
+
    
       
 
@@ -110,6 +112,88 @@
     }
 }
 
+//site-header-new-homepage
+
+// homepage --------
+
+
+.site-header-new--homepage {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-image: url(/images/vv_wall-upto800.png);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+    :first-child {
+        order: 2;
+    }
+
+    :nth-child(2) {
+        order: 1;
+    }
+
+    :nth-child(3) {
+        order: 3;
+    }
+
+    @include tablet {
+        max-width: 800px;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        background-image: none;
+
+   
+      
+
+        :first-child {
+            order: 3;
+            flex: 1 1 100%;
+        }
+    
+        :nth-child(2) {
+            order: 1;
+            flex: 0 1 50%;
+        }
+    
+        :nth-child(3) {
+            order: 2;
+        }
+    }
+}
+
+// hamburgermenu homepage
+
+.site-header-new--homepage .hamburger-menu {
+    fill: black;
+}
+
+
+.site-header-new--homepage .logo-new-black {
+    @include tablet { 
+        display: none;
+
+    }
+
+}
+
+.site-header-new--homepage .logo-new-white {
+    display: none;
+    @include tablet { 
+        display: inherit;
+
+    }
+
+}
+
 // logo s ruzkem ----------
 .site-header__homelink {
     position: relative;
@@ -120,7 +204,7 @@
         @include tablet {
             display: block;
             position: absolute;
-            top: 15px;
+            top: 5px;
             left: 200px;
             fill: white;
             }
@@ -133,7 +217,7 @@
     align-items: center;
 
     @include tablet {
-        padding: 20px 20px 20px 0px;
+        padding: 10px 10px 10px 0px;
         width: 200px;
     }    
 
@@ -158,11 +242,13 @@
     position: fixed;
     z-index: 1;
     top: 0;
+
     @include tablet {
     margin: 0;
     max-width: 100%;
     height: 70px;
     background-color: rgba(247, 247, 247, 0.9);
+
     
     } 
 }
@@ -184,6 +270,8 @@
     justify-content: flex-end;
 }
 }
+
+
 
 // ----- gd 
 #site-header--gd {
@@ -234,10 +322,15 @@
     font-weight: 500;
     align-self: flex-start;
 
+    //nevidelny
+    opacity: 0;
+
+
     @include tablet {
         font-size: 14px; 
         flex-shrink: 1;
         color: black;
+
        
     } 
 
@@ -250,6 +343,10 @@
     font-size: 15px;
     font-weight: 400;
     align-self: flex-start;
+
+    //nevidelny
+    opacity: 0;
+
 
     @include tablet {
         font-size: 14px; 

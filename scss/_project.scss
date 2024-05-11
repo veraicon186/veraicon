@@ -228,20 +228,15 @@
     
     
     @include tablet { 
-<<<<<<< HEAD
         padding: 0px 30px 5px 10px;
         margin-bottom: 10px;
-=======
-   
-    padding: 0px 30px 20px 20px;
->>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     }
 }
 
-// .project__line-title--gd  {
-//     border-top: 0px solid rgb(53, 53, 53);
-//     margin-left: -50px;
-// }
+.project__line-title--gd  {
+    border-top: 0px solid rgb(53, 53, 53);
+    margin-left: -50px;
+}
 
 
 
@@ -363,15 +358,16 @@
    
 
     &:hover {
-        background: colors.$vv;
+        background-color: colors.$grey-middle;
+
         color: white;
         fill: white;
     }
 
     &:active {
         border: none;
-        box-shadow: 1px 1px 5px rgba(colors.$vv, 0.5);
-       
+        box-shadow: 1px 1px 5px colors.$grey-middle;
+
     }
 
 }
@@ -384,7 +380,7 @@
 
 .project__icon-play {
     height: 20px;
-    fill: colors.$vv;
+    fill: colors.$grey-dark;
     margin: 0 10px 0 0;
 
 }
@@ -394,15 +390,15 @@
 
 
     &:hover {
-        background: colors.$gd2;
+        background-color: colors.$grey-dark;
         color: white;
         fill: white;
     }
 
     &:active {
         border: none;
-        background: colors.$gd;
-        box-shadow: 1px 1px 5px rgba(colors.$gd, 0.5);
+        background-color: colors.$grey-middle;
+        box-shadow: 1px 1px 5px rgba(colors.$grey-middle, 0.5);
        
     }
 }
@@ -417,7 +413,7 @@
 
 
 .project__text-link {
-    color: colors.$vv;
+    color: colors.$grey-dark;
     font-size: 16px;
     font-weight: 500;
     margin: 0;

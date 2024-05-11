@@ -62,6 +62,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
         // position: fixed;
     }
 }
@@ -74,41 +75,30 @@
     // background-image: color-gradient(rgba(255, 0, 251,0.8), rgba(255, 0, 251, 0.1));
 
     @include tablet {
-        justify-content: center;
+        justify-content: right;
         margin: 0;
     }
 }
          
 .nav--gd {
     padding:  0;
-<<<<<<< HEAD
-    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(246, 246, 246, 0.2), rgba(255, 0, 251, 0));
-    box-shadow: 1px 1px 15px rgba(white, 0.2);
-    //  background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));
-=======
-    // background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(255, 0, 251, 0.2), rgba(255, 0, 251, 0));   
-    background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(130, 202, 212, 0.2), rgba(255, 0, 251, 0));
+    // background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(246, 246, 246, 0.2), rgba(255, 0, 251, 0));
+    // box-shadow: 1px 1px 15px rgba(white, 0.2);
 
->>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
-    // box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
+   
 
         @include tablet {
         background-image: none;
         box-shadow: none;
+        margin-top: 20px;
+
         }
 }
  
 .nav--vv { 
  padding: 30px 0;
-<<<<<<< HEAD
- background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(154, 154, 154, 0.2), rgba(173, 173, 173, 0));
-box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
-// background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
-=======
-// background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(75, 38, 240, 0.2), rgba(54, 26, 177, 0));
-background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 199, 0.28), rgba(54, 26, 177, 0));
->>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
-// box-shadow: 1px 1px 5px rgba(colors.$vv, 0.3);
+//  background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(154, 154, 154, 0.2), rgba(173, 173, 173, 0));
+//  box-shadow: 1px 1px 5px rgba(rgba(182, 182, 182, 0.383), 0.3);
 
 
     @include tablet {
@@ -178,14 +168,8 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 // title pod logem -------------------------
 
 .title__gd {
-<<<<<<< HEAD
     fill: white;
-    max-width: 250px;
-=======
-    fill: colors.$gd;
-    stroke: colors.$gd;
     max-width: 200px;
->>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
     align-self: center;
     padding: 10px 0 20px 0;
     // padding: 0 0 30px 0;
@@ -204,14 +188,8 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 }
 
 .title__vv {
-<<<<<<< HEAD
     fill: black;
-    max-width: 300px;
-=======
-    fill: colors.$vv;
-    stroke: colors.$vv;
-    max-width: 210px;
->>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
+    max-width: 200px;
     align-self: center;
     // padding: 20px 0 30px 0;
     padding: 10px 0 20px 0;
@@ -235,42 +213,37 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 
 .aside-item {
     &--vv, &--gd {
-<<<<<<< HEAD
         max-width: 150px;
         // display: flex;
         // flex-direction: column;
         // align-items: center;
         margin: 20px;
         padding: 10px 15px 15px 15px;
-=======
-        max-width: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 5px;
-        padding: 15px;
->>>>>>> 3e87fea6b86d22eed8b00852f2e641b3db6f9bc8
         border-radius: 5px;
         position: relative;
 
     
         @include tablet {
-        width: 140px;
-        padding: 10px;
-        margin: 10px auto;
+        padding: 15px;
+        margin: 5px;
         flex-direction: row;
-        align-items: flex-start;      
+        align-items: flex-start;
+      
         }
     }
 
     &--vv {
         background-color: rgba(white, 0.4);
         box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.2);
+        max-width: 220px;
+
     }
 
     &--gd {
         background-color: rgba(colors.$grey-superdark, 0.5);
         box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.7);
+        max-width: 180px;
+
     }
 
     &__icon-gd, &__icon-vv {
@@ -281,12 +254,13 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
         font-size: 15px;
         text-align: center;
         padding: 0;
-        margin: 10px 0 0 0;
         display: block;
 
         @include tablet {
-          margin: 10px 0 10px 10px;  
+          margin: 0;  
           text-align: left;
+          width: 300px;
+
     }
     }
 }
@@ -329,7 +303,7 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 }
 
 .aside-item--vv:hover .aside-item__category-vv {
-    color: colors.$vv;
+    color: colors.$grey-middle;
 }
 // ----------------------------------------------
 
@@ -341,11 +315,11 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 } 
 
 .aside-item--vv:active .aside-item__icon-gd {
-    fill: colors.$vv2;
+    fill: colors.$grey-middle;
 }
 
 .aside-item--vv:active .aside-item__category-gd {
-    color: colors.$vv2;
+    color: colors.$grey-middle;
 }
 
 // -----------------------------------------
@@ -357,7 +331,7 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 
 .aside-item--gd {
     fill: white;
-    margin: 20px 10px;
+    
 }
 
 .aside-item__category-gd {
@@ -377,7 +351,7 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 }
 
 .aside-item--gd:hover .aside-item__category-gd {
-    color: colors.$gd;
+    color: colors.$grey-superlight;
 }
 
 // -----------------------------------------
@@ -390,11 +364,11 @@ background-image: linear-gradient(110deg, rgba(54, 26, 177, 0), rgba(149, 194, 1
 } 
 
 .aside-item--gd:active .aside-item__icon-gd {
-    fill: colors.$gd2;
+    fill: colors.$grey-light;
 }
 
 .aside-item--gd:active .aside-item__category-gd {
-    color: colors.$gd2;
+    color: colors.$grey-light;
 }
 
 // -----------------------------------------
