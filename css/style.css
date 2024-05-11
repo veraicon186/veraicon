@@ -991,17 +991,15 @@ strong {
 }
 
 .body--gd {
-  background-image: url(/images/gd_wall.jpg);
-  background-repeat: repeat;
-  background-color: rgb(32, 32, 32);
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
   padding: 0;
   margin: 0;
 }
 
 .body--vv {
-  background-image: url(/images/vv_wall.jpg);
-  background-repeat: repeat;
-  background-color: rgb(226, 226, 226);
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
   padding: 0;
   margin: 0;
 }
@@ -1053,7 +1051,8 @@ strong {
   width: 100%;
   height: 50px;
   margin: 0 auto;
-  background-image: url(/images/gd_wall-upto800.jpg);
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1076,6 +1075,7 @@ strong {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    background-color: rgba(0, 0, 0, 0);
     background-image: none;
   }
   .site-header-new :first-child {
@@ -1358,7 +1358,6 @@ strong {
 @media screen and (min-width: 840px) {
   .aside-nav {
     justify-content: right;
-    margin: 0;
   }
 }
 
@@ -1415,29 +1414,37 @@ strong {
 }
 
 .aside-item--vv, .aside-item--gd {
-  max-width: 150px;
+  min-width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
-  padding: 10px 15px 15px 15px;
+  padding: 10px;
   border-radius: 5px;
   position: relative;
 }
 @media screen and (min-width: 840px) {
   .aside-item--vv, .aside-item--gd {
-    padding: 15px;
-    margin: 5px;
     flex-direction: row;
-    align-items: flex-start;
   }
 }
 .aside-item--vv {
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 2px 2px 20px rgba(60, 60, 60, 0.2);
-  max-width: 220px;
+  min-width: 210px;
+}
+@media screen and (min-width: 840px) {
+  .aside-item--vv {
+    margin: 0px 0 0px 20px;
+    align-items: flex-end;
+  }
 }
 .aside-item--gd {
   background-color: rgba(36, 36, 36, 0.5);
   box-shadow: 2px 2px 20px rgba(60, 60, 60, 0.7);
-  max-width: 180px;
+  min-width: 180px;
+  align-items: flex-start;
 }
 .aside-item__icon-gd, .aside-item__icon-vv {
   width: 60px;
@@ -1452,7 +1459,6 @@ strong {
   .aside-item__category-gd, .aside-item__category-vv {
     margin: 0;
     text-align: left;
-    width: 300px;
   }
 }
 
@@ -1546,18 +1552,20 @@ strong {
 
 .section-hero {
   padding: 0;
+  margin: 0;
 }
 
 .main-regular {
   width: 100%;
   margin: 0 auto;
   padding-bottom: 40px;
-  background-image: url(/images/gd_wall-upto800.jpg);
-  background-size: repeat;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
 @media screen and (min-width: 840px) {
   .main-regular {
     max-width: 800px;
+    background-color: rgba(0, 0, 0, 0);
     background-image: none;
     padding: 0px;
   }
@@ -1572,6 +1580,7 @@ strong {
   .main-wide {
     max-width: 1100px;
     padding-bottom: 0px;
+    background-color: 0, 0, 0, 0;
   }
 }
 
@@ -1714,6 +1723,11 @@ html {
 
 .button-sign__vv:hover {
   transform: translate(10px, 0);
+}
+
+.box-vv .button-sign__vv, .box-gd .button-sign__gd {
+  max-width: 250px;
+  margin-left: 50px;
 }
 
 .grid-homepage .textbox {
@@ -2465,12 +2479,14 @@ html {
 @media screen and (min-width: 840px) {
   .section-offer-container {
     display: flex;
+    background-color: transparent;
   }
 }
 
 .offer__container--gd {
   padding: 80px 0 30px 0px;
-  background-image: url(/images/gd_wall-upto800.jpg);
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
 @media screen and (min-width: 840px) {
   .offer__container--gd {
@@ -2480,6 +2496,7 @@ html {
     grid-template-rows: repeat(8, 100px);
     gap: 15px;
     background-image: none;
+    background-color: transparent;
     flex: 1 1 50%;
     position: relative;
   }
@@ -2507,7 +2524,7 @@ html {
     grid-template-columns: 200px 1fr 1fr 1fr;
     grid-template-rows: repeat(12, 80px);
     gap: 15px;
-    background-color: rgba(255, 248, 248, 0);
+    background-color: transparent;
     background-image: none;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -2704,7 +2721,7 @@ html {
   width: 120px;
   padding: 10px;
   margin: 5px 0;
-  background-color: rgba(214, 214, 214, 0);
+  background-color: transparent;
   color: white;
   border: 1px solid white;
   border-radius: 2em;
@@ -2735,7 +2752,7 @@ html {
   width: 120px;
   padding: 10px;
   margin: 5px 0;
-  background-color: rgba(80, 78, 78, 0);
+  background-color: transparent;
   color: black;
   border: 1px solid black;
   border-radius: 2em;
@@ -2778,11 +2795,12 @@ html {
 }
 
 .section-offer-container {
-  background-image: url(/images/gd_wall-upto800.jpg);
-  background-repeat: repeat;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
 @media screen and (min-width: 840px) {
   .section-offer-container {
+    background-color: transparent;
     background-image: none;
     display: flex;
   }

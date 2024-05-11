@@ -76,8 +76,7 @@
 
     @include tablet {
         justify-content: right;
-        margin: 0;
-    }
+           }
 }
          
 .nav--gd {
@@ -104,6 +103,7 @@
     @include tablet {
         background-image: none;
         box-shadow: none;
+
         }
 }
 
@@ -213,21 +213,20 @@
 
 .aside-item {
     &--vv, &--gd {
-        max-width: 150px;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
+        min-width: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         margin: 20px;
-        padding: 10px 15px 15px 15px;
+        padding: 10px;
         border-radius: 5px;
         position: relative;
 
     
         @include tablet {
-        padding: 15px;
-        margin: 5px;
         flex-direction: row;
-        align-items: flex-start;
+
       
         }
     }
@@ -235,14 +234,22 @@
     &--vv {
         background-color: rgba(white, 0.4);
         box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.2);
-        max-width: 220px;
+        min-width: 210px;
+
+        @include tablet {
+        margin: 0px 0  0px  20px;
+        align-items: flex-end;
+        }
+
 
     }
 
     &--gd {
         background-color: rgba(colors.$grey-superdark, 0.5);
         box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.7);
-        max-width: 180px;
+        min-width: 180px;
+        align-items: flex-start;
+
 
     }
 
@@ -259,7 +266,6 @@
         @include tablet {
           margin: 0;  
           text-align: left;
-          width: 300px;
 
     }
     }

@@ -14,9 +14,11 @@
 
 
 .body--gd {
-    background-image: url(/images/gd_wall.jpg);
-    background-repeat: repeat;
-    background-color: rgb(32, 32, 32);
+    // background-image: url(/images/gd_wall.jpg);
+    // background-repeat: repeat;
+    // background-color: rgb(32, 32, 32);
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
     padding: 0;
     margin: 0;
 
@@ -31,9 +33,11 @@
 // }
 
 .body--vv {
-    background-image: url(/images/vv_wall.jpg);
-    background-repeat: repeat;
-    background-color: rgb(226, 226, 226);
+    // background-image: url(/images/vv_wall.jpg);
+    // background-repeat: repeat;
+    // background-color: rgb(226, 226, 226);
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
     padding: 0;
     margin: 0;
     
