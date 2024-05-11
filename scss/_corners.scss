@@ -13,9 +13,9 @@
     width: 0.5em;
 }
 
-.menu__item .item-corners, 
-.submenu .item-corners, 
-.submenu__item .item-corners {
+.menu__item-new .item-corners, 
+.submenu-new .item-corners, 
+.submenu__item-new.item-corners {
     opacity: 0%;
 
     @include tablet {
@@ -58,67 +58,72 @@
     left: 0;
 }
 
+// submenu calm
+
+
+
 //submenu hover a active - posun rohu
 
-.submenu:hover .item-corner3 {
+.submenu-new:hover .item-corner3 {
     @include tablet {
     right: -5px;
-    bottom: -107px;
+    bottom: -115px;
     }    
 }
 
-.submenu:active #subcorner3 {
+.submenu-new:active #subcorner3 {
     @include tablet {
     right: -10px;
-    bottom: -109px;
+    bottom: -117px;
     }    
 }
 
-.submenu:hover .item-corner4 {
+.submenu-new:hover .item-corner4 {
     @include tablet {
     left: -5px;
-    bottom: -107px;
+    bottom: -115px;
     }    
 }
 
-.submenu:active #subcorner4 {
+.submenu-new:active #subcorner4 {
     @include tablet {
     left: -10px;
-    bottom: -109px;
+    bottom: -117px;
     }    
 }
 
 // gd a vv
 
-.submenu--vv:hover .item-corner3,
-.submenu--gd:hover .item-corner3 {
+
+.submenu-new--vv:hover .item-corner3,
+.submenu-new--gd:hover .item-corner3 {
     @include tablet {
     right: -5px;
-    bottom: -53px;
+    bottom: -58px;
     }    
 }
 
-.submenu--vv:active #subcorner3,
-.submenu--gd:active #subcorner3 {
+.submenu-new--vv:active #subcorner3,
+.submenu-new--gd:active #subcorner3 {
     @include tablet {
-    right: -5px;
-    bottom: -53px;
+    right: -7px;
+    bottom: -60px;
     }    
 }
 
-.submenu--vv:hover .item-corner4,
-.submenu--gd:hover .item-corner4 {
-    @include tablet {
-    left: -5px;
-    bottom: -53px;
-    }    
-}
-
-.submenu--vv:active #subcorner4,
-.submenu--gd:active #subcorner4 {
+.submenu-new--vv:hover .item-corner4,
+.submenu-new--gd:hover .item-corner4 {
     @include tablet {
     left: -5px;
-    bottom: -53px;
+    bottom: -58px;
+    }    
+}
+
+.submenu-new--vv:active #subcorner4,
+.submenu-new--gd:active #subcorner4 {
+    @include tablet {
+    left: -7px;
+    bottom: -60px;
     }    
 }
 
@@ -127,75 +132,77 @@
 
 
 //  aktivni tlacitko - posun rohu
-.menu__item--active .item-corner1,
-.submenu--active .item-corner1,
-.submenu--gd .item-corner1,
-.submenu--vv .item-corner1 {
+.menu__item-new--active .item-corner1,
+.submenu-new--active .item-corner1,
+.submenu-new--gd .item-corner1,
+.submenu-new--vv .item-corner1 {
     @include tablet {
-    top: -5px;
-    left: -5px;
+    top: -3px;
+    left: -3px;
     }
 }
 
-.menu__item--active .item-corner2,
-.submenu--active .item-corner2,
-.submenu--gd .item-corner2,
-.submenu--vv .item-corner2 {
+
+
+.menu__item-new--active .item-corner2,
+.submenu-new--active .item-corner2,
+.submenu-new--gd .item-corner2,
+.submenu-new--vv .item-corner2 {
     @include tablet {
-    top: -5px;
-    right: -5px;
+    top: -3px;
+    right: -3px;
     }
 }
 
-.menu__item--active .item-corner3,
-.submenu--active .item-corner3,
-.submenu--gd .item-corner3,
-.submenu--vv .item-corner3 {
+.menu__item-new--active .item-corner3,
+.submenu-new--active .item-corner3,
+.submenu-new--gd .item-corner3,
+.submenu-new--vv .item-corner3 {
     @include tablet {
-    bottom: -5px;
-    right: -5px;
+    bottom: -3px;
+    right: -3px;
     }
 }
 
-.menu__item--active .item-corner4,
-.submenu--active .item-corner4,
-.submenu--gd .item-corner4,
-.submenu--vv .item-corner4 {
+.menu__item-new--active .item-corner4,
+.submenu-new--active .item-corner4,
+.submenu-new--gd .item-corner4,
+.submenu-new--vv .item-corner4 {
     @include tablet {
-    bottom: -5px;
-    left: -5px;
+    bottom: -3px;
+    left: -3px;
     }
 }
 
 
 
 // //  aktivni tlacitko - posun rohu
-.menu__item:active .item-corner1,
-.submenu:active .item-corner1 {
+.menu__item-new:active .item-corner1,
+.submenu-new:active .item-corner1 {
     @include tablet {
     top: -5px;
     left: -5px;
     }
 }
 
-.menu__item:active .item-corner2,
-.submenu:active .item-corner2 {
+.menu__item-new:active .item-corner2,
+.submenu-new:active .item-corner2 {
     @include tablet {
     top: -5px;
     right: -5px;
     }
 }
 
-.menu__item:active .item-corner3,
-.submenu:active .item-corner3 {
+.menu__item-new:active .item-corner3,
+.submenu-new:active .item-corner3 {
     @include tablet {
     bottom: -5px;
     right: -5px;
     }
 }
 
-.menu__item:active .item-corner4,
-.submenu:active .item-corner4 {
+.menu__item-new:active .item-corner4,
+.submenu-new:active .item-corner4 {
     @include tablet {
     bottom: -5px;
     left: -5px;
@@ -268,3 +275,4 @@
 // .offer__container--vv .item-corner4 {
 //     fill: colors.$vv;
 // }
+

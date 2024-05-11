@@ -161,6 +161,7 @@
 }
 
 
+
 .menu__link-new, .submenu-category__link-new, .submenu__link-new {  
     font-size: 16px;
     text-decoration: none;
@@ -224,6 +225,13 @@
 }
 }
 
+.menu__item-new--invert:active .item-corners, .submenu-new--invert:active .item-corners {
+    @include tablet {
+        display: block;
+        fill: colors.$grey-middle;
+}
+}
+
 
 
 // NEW rozsireni tlacitka
@@ -259,11 +267,6 @@
         } 
 }
 
-.menu__item-new--invert:hover .menu__link-new, .submenu-new:hover .menu__link-new {
-    @include tablet {
-    color: colors.$grey-dark;
-} 
-}
 
 
 
@@ -278,9 +281,7 @@
     }
 }
 
-// active menu   ---------------------------------------------------------
-
-// zobrazeni na aktualni strance
+// active button zobrazeni na aktualni strance
 .menu__item-new:active .menu__link-new, .menu__item-new:active .menu__link-new:hover, .menu__item-new--active .menu__link-new, .menu__item-new--active .menu__link-new:hover {
     @include tablet {
         color: white; 
@@ -294,30 +295,15 @@
 
 }
 
-.menu__item--active:hover .menu__link {
-    color: white;
+// VV stranka: item invert hover, active
+.menu-vv .menu__link-new--invert:hover {
+    color: colors.$grey-dark;
 }
 
-
-//// k predelani ===============
-
-// :active  menu__item - gd stranka
-
-.menu__item-new .menu__item-new--invert:active {
-    @include tablet { 
-        // background-color: white;
-        fill: colors.$grey-middle;
-    }
+.menu__item-new--invert:active .menu__link-new--invert:active, .menu__item-new--invert:active  .item-corners{
+    color: black;
+    fill: black;
 }
-
-.menu__item-new--invert:active .menu__link-new--invert:active,
-.menu__item-new--invert:active .menu__link-new--invert {
-    @include tablet { 
-        color: black;
-    }
-}
-
-///// ===========================
 
 
 // NEW submenu ------------------------------------
