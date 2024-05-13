@@ -52,6 +52,39 @@
     }
 }
 
+.category__picture {
+    padding: 50px 20px 0 20px;
+    margin: 0;
+        @include tablet { 
+        padding-top: 100px;
+        margin-left: 400px;
+        text-align: center;
+        max-width: 800px;
+        }
+}
+
+.category__picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.popiska { 
+    padding: 10px;
+    margin: 0 0 0 50px;
+    text-align: left;
+    width: 55px;
+    background-color: rgba(255, 255, 255, 0.621);
+    box-shadow: 1px 1px 5px rgba(colors.$grey-middle, 0.3);
+
+    
+}
+
+
+// .turn-left {
+//     transform: rotate(0deg);
+// }
+
 // kategorie s item-corne3 ------------- 
 
 
@@ -87,18 +120,18 @@
 // project vv - specifika
 .project--vv {
     position: relative;
-    margin: 30px 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 1px 1px 15px rgba(colors.$grey-middle, 0.5);
+    margin: 40px 0 0 0;
+    padding: 20px ;
+    // background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 1px 15px rgba(colors.$grey-middle, 0.3);
     
 
    @include tablet {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px;
-    // max-width: 550px;
+    margin: 30px 0 0 0; 
+    // max-width: 800px;
     }
 
 }
@@ -148,22 +181,25 @@
     border-bottom: none;
     margin: 0 0 20px 0;
     padding-left: 0px;
-    // flex: 0 0 100%
  
   
     }
 }
 
 .gallery__item-preview {
-    padding-right: 5px;
+     margin-right: 10px;
      min-width: 170px;
      height: 170px;
      overflow-y: hidden;
+     
    
 
      @include tablet {
         min-width: 240px;
-        height: 100%;
+        height: 240px;    
+        flex: 1 1 100%
+
+
      }
  }
  

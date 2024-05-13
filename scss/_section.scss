@@ -151,3 +151,13 @@ html {
        background-color: transparent;
    }
 }
+
+.background_pattern_dark {
+    background-image: url(/images/veraicon_pattern_dark2.png);
+}
+.background_pattern_light {
+    background-image: url(/images/veraicon_pattern_light2.png);
+    @include tablet {
+        background-image: none;
+    }
+}
