@@ -2,6 +2,7 @@
 @use 'mixin';
 @use 'corners';
 
+
 @mixin tablet {
     @media screen and (min-width: 840px) {
         @content;
@@ -10,36 +11,149 @@
 
 
 
-//portfolio
+// kategorie - v gd.html (.gd-identity, .gd-digi, .gd-print) a vv.html
 
 .category {
     padding: 0;
     margin: 0;
+
     @include tablet { 
     margin-left: 300px;
 }
 }
 
 .category__name--gd, .category__name--vv {
-    font-weight: 100;
     font-size: 30px;
+    font-weight: 400;
 
     @include tablet { 
-        font-size: 45px;
+        font-size: 40px;
+        margin: 0 0 0 10px;
+        font-weight: 400;
+
     }
 
 }
 
 .category__name--gd {
-    color: rgb(134, 134, 134);
-    border-bottom: 1px solid  rgb(134, 134, 134);
+    color: rgba(colors.$grey-middle, 0.5);
+    
+    @include tablet { 
+        color: rgb(25, 25, 25);
+        // border-bottom: 2px solid rgb(25, 25, 25);
+        text-shadow: 0px 0px 5px rgba(colors.$grey-light, 0.5);
+    }
 
 }
+
 
 .category__name--vv {
-    color: rgb(134, 134, 134);
-    border-bottom: 1px solid  rgb(134, 134, 134);
+    color: colors.$grey-middlelight;
+    // border-bottom: 1px solid  rgb(134, 134, 134);
+    @include tablet { 
+        color: rgb(182, 182, 182);
+        text-shadow: 0px 0px 2px rgba(colors.$grey-superlight, 0.8);
+    }
 }
+
+// kategorie s item-corne3
+
+
+.gd-identity, .gd-digi, .gd-print, .vv-projects, .vv-workshops, .vv-materials {
+    position: relative;
+}
+
+.gd-identity .item-corner3 {
+    position: absolute;
+    fill: rgba(colors.$grey-middle, 0.5);
+    top: 35px;
+    left: 305px;
+
+    @include tablet { 
+    fill: rgb(25, 25, 25);
+    filter: drop-shadow(0px 0px 4px rgba(colors.$grey-light, 0.9));
+    width: 12px; 
+    top: 40px;
+    left: 400px;
+    }
+}
+
+.gd-digi .item-corner3 {
+    position: absolute;
+    fill: rgba(colors.$grey-middle, 0.5);
+    top: 35px;
+    left: 305px;
+
+    @include tablet { 
+    fill: rgb(25, 25, 25);
+    filter: drop-shadow(0px 0px 4px rgba(colors.$grey-light, 0.9));
+    width: 12px; 
+    top: 40px;
+    left: 400px;
+    }
+}
+
+.gd-print .item-corner3 {
+    position: absolute;
+    fill: rgba(colors.$grey-middle, 0.5);
+    top: 35px;
+    left: 285px;
+
+    @include tablet { 
+    fill: rgb(25, 25, 25);
+    filter: drop-shadow(0px 0px 4px rgba(colors.$grey-light, 0.9));
+    width: 12px; 
+    top: 40px;
+    left: 375px;
+    }
+}
+
+.vv-projects .item-corner3 {
+    position: absolute;
+    fill: rgba(colors.$grey-middle, 0.5);
+    top: 35px;
+    left: 340px;
+
+    @include tablet { 
+    fill: rgb(182, 182, 182);
+    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-superlight, 0.8));
+    width: 12px; 
+    top: 40px;
+    left: 445px;
+    }
+}
+
+.vv-workshops .item-corner3 {
+    position: absolute;
+    fill: rgba(colors.$grey-middle, 0.5);
+    top: 35px;
+    left: 380px;
+
+    @include tablet { 
+    fill: rgb(182, 182, 182);
+    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-superlight, 0.8));
+    width: 12px; 
+    top: 40px;
+    left: 510px;
+    }
+}
+
+.vv-materials .item-corner3 {
+    position: absolute;
+    fill: rgba(colors.$grey-middle, 0.5);
+    top: 35px;
+    left: 350px;
+
+    @include tablet { 
+    fill: rgb(182, 182, 182);
+    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-superlight, 0.8));
+    width: 12px; 
+    top: 40px;
+    left: 460px;
+    }
+}
+
+
 
 
 
@@ -48,15 +162,15 @@
     position: relative;
     margin: 30px 20px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    // box-shadow: 1px 1px 15px rgba(colors.$vv, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 1px 1px 15px rgba(colors.$grey-middle, 0.3);
     
 
    @include tablet {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px;
+    margin: 30px 0;
     // max-width: 550px;
     }
 
@@ -72,8 +186,8 @@
     position: relative;
     margin: 30px 20px;
     padding: 20px;
-    background-color: rgba(27, 27, 27, 0.8);
-    // box-shadow: 1px 1px 15px rgba(colors.$gd, 0.2);
+    background-color: rgba(27, 27, 27, 0.4);
+    box-shadow: 1px 1px 15px rgba(colors.$grey-dark, 0.9);
 
 
 
@@ -81,7 +195,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px;
+    margin: 30px 0;
     max-width: 1200px;
     }
 
@@ -95,10 +209,10 @@
 .container-gallery {
     display: flex;
     overflow-x: auto;
-    // padding-bottom: 5px;
+    padding-bottom: 10px;
     // border-top: 1px solid rgb(201, 201, 201);
     // border-bottom: 1px solid rgb(201, 201, 201);
- 
+
 
     @include tablet { 
     overflow-x: none;
@@ -115,12 +229,13 @@
 .gallery__item-preview {
     padding-right: 5px;
      min-width: 170px;
-     height: 150px;
+     height: 170px;
+     overflow-y: hidden;
    
 
      @include tablet {
-        width: 240px;
-        height: 220px;
+        min-width: 240px;
+        height: 200px;
      }
  }
  
@@ -131,8 +246,11 @@
      width: 100%;
      height: 100%;
      object-position: center left;
+     
      // }
  }
+
+
 
 // ------------------------------------------------
 

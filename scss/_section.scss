@@ -16,15 +16,13 @@
     width: 100%;
     margin: 0 auto;
     padding-bottom: 40px;
-    // background-image: url(/images/gd_wall-upto800.jpg);
-    background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
-    // background-size: repeat;
+
+
 
 
     @include tablet {
      max-width: 800px;
-     background-color: rgb(0, 0, 0, 0);
+     background-color: transparent;
      background-image: none;
      padding: 0px;
 
@@ -35,13 +33,12 @@
     width: 100%;
     margin: 0 auto;
     padding-bottom: 20px;
-    // background-image: url(/images/wall_white_top.png);
-    // background-size: cover;
 
+ 
     @include tablet {
      max-width: 1100px;
      padding-bottom: 0px;
-     background-color: (0, 0, 0, 0);
+    
 
 
     }
@@ -87,7 +84,7 @@ section {
 
 .anchor {
     display: block;
-    height: 40px;
+    height: 60px;
     visibility: hidden; 
     
     @include tablet {
@@ -99,4 +96,58 @@ html {
     scroll-behavior: smooth;
 }
 
+// backgrounds
 
+.background__dark {
+    // background-color: #000000;
+    // background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+    background-image: url(/images/gd_wall-upto800.jpg);
+    background-repeat: repeat;
+    
+
+    @include tablet {
+        background-color: transparent;
+        background-image: none;
+    }
+}
+
+.background__dark2 {
+    // background-color: #000000;
+    // background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+
+    // background-image: url(/images/gd_wall-upto800-darker.jpg);
+    // background-repeat: repeat;
+
+    background-color: rgba(24, 24, 24, 0.9);
+    
+
+    @include tablet {
+        background-color: transparent;
+        background-image: none;
+    }
+}
+
+.background__light {
+    // background-color: #ffffff;
+    // background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+    background-image: url(/images/vv_wall.jpg);
+    background-repeat: repeat;
+
+
+   @include tablet {
+       background-color: transparent;
+       background-image: none;
+   }
+}
+
+
+.background__light2 {
+    // background-color: #ffffff;
+    // background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+    background-color: rgba(247, 247, 247, 0.9);    
+
+
+   @include tablet {
+       background-color: transparent;
+   }
+}

@@ -12,6 +12,7 @@
 
 .section-hero {
     padding-top: 40px;
+    max-width: 100%;
 
     
     @include tablet {
@@ -27,8 +28,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-width: 500px;
-    max-width: 600px;
+    max-width: 550px;
     padding: 0 0 20px 0;
     
     
@@ -52,6 +52,7 @@
 .container-homepage {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 
 
     @include tablet { 
@@ -64,6 +65,8 @@
     display: flex;  
     flex-direction: column-reverse;
     align-items: center;
+    max-width: 100%;
+  
 
     @include tablet { 
         flex-direction: column;
@@ -78,6 +81,8 @@
     background-image: url(/images/vv_wall-upto800.png);
     clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
     padding: 70px 0 0 0 ;
+    max-width: 100%;
+
 
 
 
@@ -95,6 +100,7 @@
 // cedule / sipky
 .button-sign__gd-link img {
     height: 70px;
+    max-width: 100%;
 
     @include tablet { 
     margin-right: 120px;
@@ -103,6 +109,8 @@
 }
 
 .button-sign__vv-link img {
+    max-width: 100%;
+
     max-height: 70px;
 
 
@@ -121,12 +129,22 @@
      } 
 
 .box-vv .button-sign__vv, .box-gd .button-sign__gd {
+    max-width: 100%;
+
+    @include tablet { 
     max-width: 250px;
     margin:0 auto;
+}
+
 
 }
 
 .grid-homepage .textbox  { 
+    max-width: 100%;
+
+    @include tablet { 
     max-width: 400px;
+}
+
 
 }

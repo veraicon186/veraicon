@@ -36,7 +36,6 @@
 // section title - uzsi --------
 
 .section-co-nabizim {
-    // background-color: colors.$grey-superlight;
     padding: 40px 0 0 0;
 
     @include tablet {
@@ -50,19 +49,6 @@
     padding: 20px 0 10px 0;
 } 
 
-
-.section-offer-container {
-    // background-image: url(/images/gd_wall-upto800.jpg);
-    // background-repeat: repeat;
-    background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
-   
-    @include tablet {
-        background-color: transparent;
-        background-image: none; 
-        display: flex;
-    }
-}
 
 .section-napiste-mi {
     position: relative;

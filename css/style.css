@@ -328,6 +328,8 @@ strong {
   display: none;
   position: absolute;
   margin: 0 15px;
+  top: 50px;
+  left: 50px;
   padding: 10px;
   z-index: 1;
 }
@@ -992,17 +994,28 @@ strong {
 }
 
 .body--gd {
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
   padding: 0;
   margin: 0;
 }
+@media screen and (min-width: 840px) {
+  .body--gd {
+    background-color: rgb(38, 38, 38);
+    background-image: url(/images/gd_wall.jpg);
+    background-repeat: repeat;
+    background-position: center;
+  }
+}
 
 .body--vv {
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 840px) {
+  .body--vv {
+    background-image: url(/images/vv_wall.jpg);
+    background-repeat: repeat;
+    background-position: center;
+  }
 }
 
 .site-header {
@@ -1050,10 +1063,10 @@ strong {
   z-index: 1;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: 50px;
   margin: 0 auto;
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1076,7 +1089,7 @@ strong {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     background-image: none;
   }
   .site-header-new :first-child {
@@ -1137,19 +1150,25 @@ strong {
   }
 }
 
-.site-header-new--homepage .hamburger-menu {
+@media screen and (min-width: 840px) {
+  .site-header-new .site-header__logo-new {
+    display: none;
+  }
+}
+
+.site-header-new--homepage .site-header__logo-new {
+  display: none;
+}
+
+.site-header-new--homepage .hamburger-menu, .site-header-new .hamburger-menu {
   fill: black;
 }
 
-.site-header-new--homepage .logo-new-black {
-  display: none;
-}
-
-.site-header-new--homepage .logo-new-white {
+.site-header-new--homepage .logo-new-white, .site-header-new .logo-new-white {
   display: none;
 }
 @media screen and (min-width: 840px) {
-  .site-header-new--homepage .logo-new-white {
+  .site-header-new--homepage .logo-new-white, .site-header-new .logo-new-white {
     display: inherit;
   }
 }
@@ -1180,8 +1199,8 @@ strong {
 @media screen and (min-width: 840px) {
   .site-header__logo-new {
     padding: 10px 10px 0px 0px;
-    margin: 10px 0 0 0;
-    width: 200px;
+    margin: 10px 0 0 20px;
+    width: 180px;
   }
 }
 
@@ -1361,13 +1380,13 @@ strong {
 }
 
 .nav--gd {
-  padding: 0;
+  padding: 20px 10px 10px 10px;
 }
 @media screen and (min-width: 840px) {
   .nav--gd {
+    padding: 0 20px 0 0;
     background-image: none;
     box-shadow: none;
-    margin-top: 20px;
   }
 }
 
@@ -1378,6 +1397,7 @@ strong {
   .nav--vv {
     background-image: none;
     box-shadow: none;
+    padding: 20px 20px 0 0;
   }
 }
 
@@ -1412,13 +1432,25 @@ strong {
   }
 }
 
+.gd-box, .vv-box {
+  text-align: center;
+  padding-bottom: 20px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+@media screen and (min-width: 840px) {
+  .gd-box, .vv-box {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
 .aside-item--vv, .aside-item--gd {
-  min-width: 150px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 30px;
   padding: 10px;
   border-radius: 5px;
   position: relative;
@@ -1428,28 +1460,27 @@ strong {
     flex-direction: row;
   }
 }
-.aside-item--vv {
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 2px 2px 20px rgba(60, 60, 60, 0.2);
-  min-width: 210px;
-}
 @media screen and (min-width: 840px) {
   .aside-item--vv {
+    width: 140px;
     margin: 0px 0 0px 20px;
-    align-items: flex-end;
+    margin: 0 auto 30px auto;
   }
 }
 .aside-item--gd {
-  background-color: rgba(36, 36, 36, 0.5);
-  box-shadow: 2px 2px 20px rgba(60, 60, 60, 0.7);
-  min-width: 180px;
   align-items: flex-start;
+  fill: white;
+}
+@media screen and (min-width: 840px) {
+  .aside-item--gd {
+    margin: 0 auto 30px auto;
+  }
 }
 .aside-item__icon-gd, .aside-item__icon-vv {
   width: 60px;
 }
 .aside-item__category-gd, .aside-item__category-vv {
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   padding: 0;
   display: block;
@@ -1461,14 +1492,13 @@ strong {
   }
 }
 
-.aside-item--vv .item-corner3, .aside-item--gd .item-corner3 {
-  right: 7px;
-  bottom: 7px;
+.aside-item__category-gd {
+  color: white;
 }
+
 @media screen and (min-width: 840px) {
-  .aside-item--vv .item-corner3, .aside-item--gd .item-corner3 {
-    right: 10px;
-    bottom: 10px;
+  .aside-item--vv .item-corner1, .aside-item--gd .item-corner1, .aside-item--vv .item-corner3, .aside-item--gd .item-corner3, .aside-item--vv .item-corner4, .aside-item--gd .item-corner4 {
+    display: none;
   }
 }
 
@@ -1478,22 +1508,19 @@ strong {
 }
 
 .aside-item--vv:hover {
-  background-color: white;
-  box-shadow: 2px 2px 10px rgba(60, 60, 60, 0.2);
-}
-
-.aside-item--vv:hover .aside-item__icon-vv {
-  fill: rgb(58, 107, 119);
-  stroke: rgb(58, 107, 119);
+  filter: drop-shadow(0px 0px 2px rgba(97, 97, 97, 0.6));
 }
 
 .aside-item--vv:hover .aside-item__category-vv {
-  color: #616161;
+  color: #3c3c3c;
+}
+
+.aside-item--vv:hover .item-corner1, .aside-item--vv:hover .item-corner3, .aside-item--vv:hover .item-corner4 {
+  display: inherit;
 }
 
 .aside-item--vv:active {
-  background-color: white;
-  box-shadow: 2px 2px 20px rgba(97, 97, 97, 0.3);
+  filter: drop-shadow(0px 0px 2px rgba(97, 97, 97, 0.9));
 }
 
 .aside-item--vv:active .aside-item__icon-gd {
@@ -1504,39 +1531,16 @@ strong {
   color: #616161;
 }
 
-.aside-item--gd {
-  fill: white;
-}
-
-.aside-item__category-gd {
-  color: white;
-  font-weight: 400;
-}
-
 .aside-item--gd:hover {
-  background-color: rgba(20, 20, 20, 0.5);
-  box-shadow: 2px 2px 20px rgba(97, 97, 97, 0.5);
+  filter: drop-shadow(0px 0px 2px #cccccc);
 }
 
-.aside-item--gd:hover .aside-item__icon-gd {
-  fill: rgb(172, 203, 209);
-}
-
-.aside-item--gd:hover .aside-item__category-gd {
-  color: #F6F6F6;
+.aside-item--gd:hover .item-corner1, .aside-item--gd:hover .item-corner3, .aside-item--gd:hover .item-corner4 {
+  display: inherit;
 }
 
 .aside-item--gd:active {
-  background-color: rgba(20, 20, 20, 0.5);
-  box-shadow: 2px 2px 20px rgba(97, 97, 97, 0.3);
-}
-
-.aside-item--gd:active .aside-item__icon-gd {
-  fill: #cccccc;
-}
-
-.aside-item--gd:active .aside-item__category-gd {
-  color: #cccccc;
+  filter: drop-shadow(0px 0px 5px #f6f6f6);
 }
 
 .inside-link {
@@ -1558,13 +1562,11 @@ strong {
   width: 100%;
   margin: 0 auto;
   padding-bottom: 40px;
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
 @media screen and (min-width: 840px) {
   .main-regular {
     max-width: 800px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     background-image: none;
     padding: 0px;
   }
@@ -1579,7 +1581,6 @@ strong {
   .main-wide {
     max-width: 1100px;
     padding-bottom: 0px;
-    background-color: 0, 0, 0, 0;
   }
 }
 
@@ -1616,7 +1617,7 @@ section {
 
 .anchor {
   display: block;
-  height: 40px;
+  height: 60px;
   visibility: hidden;
 }
 @media screen and (min-width: 840px) {
@@ -1629,8 +1630,50 @@ html {
   scroll-behavior: smooth;
 }
 
+.background__dark {
+  background-image: url(/images/gd_wall-upto800.jpg);
+  background-repeat: repeat;
+}
+@media screen and (min-width: 840px) {
+  .background__dark {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.background__dark2 {
+  background-color: rgba(24, 24, 24, 0.9);
+}
+@media screen and (min-width: 840px) {
+  .background__dark2 {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.background__light {
+  background-image: url(/images/vv_wall.jpg);
+  background-repeat: repeat;
+}
+@media screen and (min-width: 840px) {
+  .background__light {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.background__light2 {
+  background-color: rgba(247, 247, 247, 0.9);
+}
+@media screen and (min-width: 840px) {
+  .background__light2 {
+    background-color: transparent;
+  }
+}
+
 .section-hero {
   padding-top: 40px;
+  max-width: 100%;
 }
 @media screen and (min-width: 840px) {
   .section-hero {
@@ -1644,8 +1687,7 @@ html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  min-width: 500px;
-  max-width: 600px;
+  max-width: 550px;
   padding: 0 0 20px 0;
 }
 
@@ -1666,6 +1708,7 @@ html {
 .container-homepage {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 @media screen and (min-width: 840px) {
   .container-homepage {
@@ -1677,6 +1720,7 @@ html {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  max-width: 100%;
 }
 @media screen and (min-width: 840px) {
   .box-gd {
@@ -1690,6 +1734,7 @@ html {
   -webkit-clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
   padding: 70px 0 0 0;
+  max-width: 100%;
 }
 @media screen and (min-width: 840px) {
   .box-vv {
@@ -1700,6 +1745,7 @@ html {
 
 .button-sign__gd-link img {
   height: 70px;
+  max-width: 100%;
 }
 @media screen and (min-width: 840px) {
   .button-sign__gd-link img {
@@ -1708,6 +1754,7 @@ html {
 }
 
 .button-sign__vv-link img {
+  max-width: 100%;
   max-height: 70px;
 }
 
@@ -1724,12 +1771,22 @@ html {
 }
 
 .box-vv .button-sign__vv, .box-gd .button-sign__gd {
-  max-width: 250px;
-  margin: 0 auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 840px) {
+  .box-vv .button-sign__vv, .box-gd .button-sign__gd {
+    max-width: 250px;
+    margin: 0 auto;
+  }
 }
 
 .grid-homepage .textbox {
-  max-width: 400px;
+  max-width: 100%;
+}
+@media screen and (min-width: 840px) {
+  .grid-homepage .textbox {
+    max-width: 400px;
+  }
 }
 
 .textbox {
@@ -1781,37 +1838,150 @@ html {
 }
 
 .category__name--gd, .category__name--vv {
-  font-weight: 100;
   font-size: 30px;
+  font-weight: 400;
 }
 @media screen and (min-width: 840px) {
   .category__name--gd, .category__name--vv {
-    font-size: 45px;
+    font-size: 40px;
+    margin: 0 0 0 10px;
+    font-weight: 400;
   }
 }
 
 .category__name--gd {
-  color: rgb(134, 134, 134);
-  border-bottom: 1px solid rgb(134, 134, 134);
+  color: rgba(97, 97, 97, 0.5);
+}
+@media screen and (min-width: 840px) {
+  .category__name--gd {
+    color: rgb(25, 25, 25);
+    text-shadow: 0px 0px 5px rgba(204, 204, 204, 0.5);
+  }
 }
 
 .category__name--vv {
-  color: rgb(134, 134, 134);
-  border-bottom: 1px solid rgb(134, 134, 134);
+  color: #b9b9b9;
+}
+@media screen and (min-width: 840px) {
+  .category__name--vv {
+    color: rgb(182, 182, 182);
+    text-shadow: 0px 0px 2px rgba(246, 246, 246, 0.8);
+  }
+}
+
+.gd-identity, .gd-digi, .gd-print, .vv-projects, .vv-workshops, .vv-materials {
+  position: relative;
+}
+
+.gd-identity .item-corner3 {
+  position: absolute;
+  fill: rgba(97, 97, 97, 0.5);
+  top: 35px;
+  left: 305px;
+}
+@media screen and (min-width: 840px) {
+  .gd-identity .item-corner3 {
+    fill: rgb(25, 25, 25);
+    filter: drop-shadow(0px 0px 4px rgba(204, 204, 204, 0.9));
+    width: 12px;
+    top: 40px;
+    left: 400px;
+  }
+}
+
+.gd-digi .item-corner3 {
+  position: absolute;
+  fill: rgba(97, 97, 97, 0.5);
+  top: 35px;
+  left: 305px;
+}
+@media screen and (min-width: 840px) {
+  .gd-digi .item-corner3 {
+    fill: rgb(25, 25, 25);
+    filter: drop-shadow(0px 0px 4px rgba(204, 204, 204, 0.9));
+    width: 12px;
+    top: 40px;
+    left: 400px;
+  }
+}
+
+.gd-print .item-corner3 {
+  position: absolute;
+  fill: rgba(97, 97, 97, 0.5);
+  top: 35px;
+  left: 285px;
+}
+@media screen and (min-width: 840px) {
+  .gd-print .item-corner3 {
+    fill: rgb(25, 25, 25);
+    filter: drop-shadow(0px 0px 4px rgba(204, 204, 204, 0.9));
+    width: 12px;
+    top: 40px;
+    left: 375px;
+  }
+}
+
+.vv-projects .item-corner3 {
+  position: absolute;
+  fill: rgba(97, 97, 97, 0.5);
+  top: 35px;
+  left: 340px;
+}
+@media screen and (min-width: 840px) {
+  .vv-projects .item-corner3 {
+    fill: rgb(182, 182, 182);
+    filter: drop-shadow(0px 0px 2px rgba(246, 246, 246, 0.8));
+    width: 12px;
+    top: 40px;
+    left: 445px;
+  }
+}
+
+.vv-workshops .item-corner3 {
+  position: absolute;
+  fill: rgba(97, 97, 97, 0.5);
+  top: 35px;
+  left: 380px;
+}
+@media screen and (min-width: 840px) {
+  .vv-workshops .item-corner3 {
+    fill: rgb(182, 182, 182);
+    filter: drop-shadow(0px 0px 2px rgba(246, 246, 246, 0.8));
+    width: 12px;
+    top: 40px;
+    left: 510px;
+  }
+}
+
+.vv-materials .item-corner3 {
+  position: absolute;
+  fill: rgba(97, 97, 97, 0.5);
+  top: 35px;
+  left: 350px;
+}
+@media screen and (min-width: 840px) {
+  .vv-materials .item-corner3 {
+    fill: rgb(182, 182, 182);
+    filter: drop-shadow(0px 0px 2px rgba(246, 246, 246, 0.8));
+    width: 12px;
+    top: 40px;
+    left: 460px;
+  }
 }
 
 .project--vv {
   position: relative;
   margin: 30px 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 1px 1px 15px rgba(97, 97, 97, 0.3);
 }
 @media screen and (min-width: 840px) {
   .project--vv {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px;
+    margin: 30px 0;
   }
 }
 
@@ -1823,14 +1993,15 @@ html {
   position: relative;
   margin: 30px 20px;
   padding: 20px;
-  background-color: rgba(27, 27, 27, 0.8);
+  background-color: rgba(27, 27, 27, 0.4);
+  box-shadow: 1px 1px 15px rgba(60, 60, 60, 0.9);
 }
 @media screen and (min-width: 840px) {
   .project--gd {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px;
+    margin: 30px 0;
     max-width: 1200px;
   }
 }
@@ -1842,6 +2013,7 @@ html {
 .container-gallery {
   display: flex;
   overflow-x: auto;
+  padding-bottom: 10px;
 }
 @media screen and (min-width: 840px) {
   .container-gallery {
@@ -1856,12 +2028,13 @@ html {
 .gallery__item-preview {
   padding-right: 5px;
   min-width: 170px;
-  height: 150px;
+  height: 170px;
+  overflow-y: hidden;
 }
 @media screen and (min-width: 840px) {
   .gallery__item-preview {
-    width: 240px;
-    height: 220px;
+    min-width: 240px;
+    height: 200px;
   }
 }
 
@@ -2174,25 +2347,36 @@ html {
   padding: 20px;
   position: absolute;
   width: 180px;
-  left: -45px;
-  top: 0px;
+  left: 20px;
+  top: -40px;
+}
+@media screen and (min-width: 650px) {
+  .GD-VV_icon {
+    left: 0px;
+    top: 0px;
+  }
 }
 @media screen and (min-width: 840px) {
   .GD-VV_icon {
-    left: -85px;
+    left: -50px;
     top: 0px;
+    z-index: 3;
   }
 }
 
 .grid-o-mne {
+  -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
   padding: 10px 0 0 0;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat 6, auto;
 }
 @media screen and (min-width: 840px) {
   .grid-o-mne {
+    -webkit-clip-path: none;
+            clip-path: none;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 25px;
@@ -2214,9 +2398,7 @@ html {
 
 .cv-o-mne {
   margin: 0;
-  padding: 120px 0 0 0;
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+  padding: 0px 0 0 0;
   -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
   grid-column: 1/2;
@@ -2362,13 +2544,22 @@ html {
 }
 
 .section-contact-form {
-  padding: 40px 0 0 0;
+  margin-top: 20px;
+  padding: 40px 0 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-clip-path: polygon(0 6%, 100% 9%, 100% 92%, 0 100%);
+          clip-path: polygon(0 6%, 100% 9%, 100% 92%, 0 100%);
 }
 .section-contact-form :first-child {
   align-self: flex-start;
+}
+@media screen and (min-width: 840px) {
+  .section-contact-form {
+    margin: 0px;
+    padding: 0 0 80px 0;
+  }
 }
 
 .section__text {
@@ -2434,20 +2625,15 @@ html {
     grid-template-rows: auto;
     gap: 15px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 20px 0;
   }
 }
 
-.grid-contact-details {
-  background-image: url(/images/vv_wall-upto800.png);
-  -webkit-clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
-}
 @media screen and (min-width: 840px) {
   .grid-contact-details {
     background-image: none;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 .grid-contact-details :first-child {
@@ -2477,24 +2663,24 @@ html {
 @media screen and (min-width: 840px) {
   .section-offer-container {
     display: flex;
-    background-color: transparent;
   }
 }
 
 .offer__container--gd {
-  padding: 80px 0 30px 0px;
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+  margin-top: 5px;
+  padding: 100px 0 30px 0px;
+  -webkit-clip-path: polygon(0 6%, 100% 9%, 100% 92%, 0 100%);
+          clip-path: polygon(0 6%, 100% 9%, 100% 92%, 0 100%);
 }
 @media screen and (min-width: 840px) {
   .offer__container--gd {
+    -webkit-clip-path: none;
+            clip-path: none;
     padding: 40px 0 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 200px;
     grid-template-rows: repeat(8, 100px);
     gap: 15px;
-    background-image: none;
-    background-color: transparent;
     flex: 1 1 50%;
     position: relative;
   }
@@ -2509,11 +2695,7 @@ html {
 }
 .offer__container--vv {
   margin: 0 0 0 0;
-  padding: 100px 0 0 0;
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
-  -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  padding: 20px 0 0 0;
 }
 @media screen and (min-width: 840px) {
   .offer__container--vv {
@@ -2522,8 +2704,6 @@ html {
     grid-template-columns: 200px 1fr 1fr 1fr;
     grid-template-rows: repeat(12, 80px);
     gap: 15px;
-    background-color: transparent;
-    background-image: none;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     flex: 1 1 50%;
@@ -2551,13 +2731,12 @@ html {
   .sign-gd-offer {
     display: inline-block;
     text-align: right;
-    padding: 40px 0 0 80px;
-    max-width: 80px;
+    padding: 40px 70px 0 40px;
   }
 }
 
 .sign-vv-offer {
-  padding: 0 0 0 180px;
+  text-align: center;
 }
 @media screen and (min-width: 840px) {
   .sign-vv-offer {
@@ -2608,7 +2787,7 @@ html {
   position: relative;
   padding: 20px;
   margin: 0 auto 20px auto;
-  background-color: rgba(39, 39, 39, 0.6);
+  background-color: rgba(39, 39, 39, 0.7);
   box-shadow: 0px 0px 3px rgba(97, 97, 97, 0.3);
   max-width: 500px;
 }
@@ -2790,18 +2969,6 @@ html {
 
 .section-co-nabizim .section__title {
   padding: 20px 0 10px 0;
-}
-
-.section-offer-container {
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
-}
-@media screen and (min-width: 840px) {
-  .section-offer-container {
-    background-color: transparent;
-    background-image: none;
-    display: flex;
-  }
 }
 
 .section-napiste-mi {

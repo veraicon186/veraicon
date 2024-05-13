@@ -1,4 +1,8 @@
-@use 'mixin';
+@mixin tablet {
+    @media screen and (min-width: 840px) {
+        @content;
+    }
+}
 
 .body {
     background-image: url(/images/wall\ jing\ jang_web_1mb.png);
@@ -17,35 +21,28 @@
     // background-image: url(/images/gd_wall.jpg);
     // background-repeat: repeat;
     // background-color: rgb(32, 32, 32);
-    background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
     padding: 0;
     margin: 0;
 
+    @include tablet {
+    background-color: rgb(38, 38, 38);
+    background-image: url(/images/gd_wall.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    }
 }
-//     @media (min-width: 660px) {
-//     background-color: rgb(38, 38, 38);
-//     background-image: url(/images/space-gd.jpg);
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     }
-// }
 
 .body--vv {
     // background-image: url(/images/vv_wall.jpg);
     // background-repeat: repeat;
     // background-color: rgb(226, 226, 226);
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
     padding: 0;
     margin: 0;
     
+
+   @include tablet  {
+    background-image: url(/images/vv_wall.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    }
 }
-//     @media (min-width: 660px) {
-//     background-image: url(/images/space-vv.jpg);
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     }
-// }

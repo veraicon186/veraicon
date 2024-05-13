@@ -7,6 +7,7 @@
 @use 'mixin';
 
 
+
 @mixin tablet {
     @media screen and (min-width: 840px) {
         @content;
@@ -51,8 +52,6 @@
         background-position: center;
         background-size: cover;
         // position: fixed;
-
-    
     }
 }
 
@@ -76,20 +75,21 @@
 
     @include tablet {
         justify-content: right;
-           }
+        }
 }
          
 .nav--gd {
-    padding:  0;
+    
+    padding: 20px 10px 10px 10px;
+
     // background-image: linear-gradient(110deg, rgba(255, 0, 251, 0), rgba(246, 246, 246, 0.2), rgba(255, 0, 251, 0));
     // box-shadow: 1px 1px 15px rgba(white, 0.2);
 
    
-
         @include tablet {
+        padding:  0 20px 0 0;
         background-image: none;
         box-shadow: none;
-        margin-top: 20px;
 
         }
 }
@@ -103,6 +103,7 @@
     @include tablet {
         background-image: none;
         box-shadow: none;
+        padding:  20px 20px 0 0;
 
         }
 }
@@ -202,23 +203,31 @@
     padding: 0 0 15px 0;
     rotate: 0deg;
     }
-
-
 }
 
 
 // ----------------------------------------
 
+// horni box s nadpisem GD pro GD stranku
+.gd-box, .vv-box {
+    text-align: center;
+    padding-bottom: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 
+    @include tablet { 
+        clip-path: none;
+    }
+
+
+}
 
 .aside-item {
     &--vv, &--gd {
-        min-width: 150px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
-        margin: 20px;
+        margin: 30px;
         padding: 10px;
         border-radius: 5px;
         position: relative;
@@ -232,23 +241,31 @@
     }
 
     &--vv {
-        background-color: rgba(white, 0.4);
-        box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.2);
-        min-width: 210px;
+        // background-color: rgba(white, 0.4);
+        // box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.2);
 
         @include tablet {
+        width: 140px;
         margin: 0px 0  0px  20px;
-        align-items: flex-end;
+        margin: 0 auto 30px auto;
+
         }
 
 
     }
 
     &--gd {
-        background-color: rgba(colors.$grey-superdark, 0.5);
-        box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.7);
-        min-width: 180px;
+        // background-color: rgba(colors.$grey-superdark, 0.5);
+        // box-shadow: 2px 2px 20px rgba(colors.$grey-dark, 0.7);
+       
         align-items: flex-start;
+        fill: white;
+
+        @include tablet {
+        margin: 0 auto 30px auto;
+        }
+
+
 
 
     }
@@ -258,10 +275,11 @@
     }
 
     &__category-gd, &__category-vv {
-        font-size: 15px;
+        font-size: 20px;
         text-align: center;
         padding: 0;
         display: block;
+
 
         @include tablet {
           margin: 0;  
@@ -271,16 +289,18 @@
     }
 }
 
-.aside-item--vv .item-corner3, .aside-item--gd .item-corner3{
-    right: 7px;
-    bottom: 7px;
+.aside-item__category-gd {
+    color: white;
+}
 
+// aside item buttons - rohy-telefon, jeden roh-tablet, desktop
+
+.aside-item--vv .item-corner1, .aside-item--gd .item-corner1, .aside-item--vv .item-corner3, .aside-item--gd .item-corner3, .aside-item--vv .item-corner4, .aside-item--gd .item-corner4 {
     @include tablet {
-    right: 10px;
-    bottom: 10px; 
+        display: none;
+}
+}
 
-}
-}
 
 .aside-item__description {
         padding: 20px;
@@ -289,35 +309,31 @@
 
 
 
-
-
-
-
-
-
 //  :hover aside-item - vv -----------------------
 
 .aside-item--vv:hover {
-    background-color: white;
-    box-shadow: 2px 2px 10px rgba(colors.$grey-dark, 0.2);
+    // box-shadow: 2px 2px 10px rgba(colors.$grey-middle, 0.2);
+    // text-shadow: 0px 0px 3px rgba(colors.$grey-middle, 0.6);
+    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-middle, 0.6));
 } 
 
-
-.aside-item--vv:hover .aside-item__icon-vv {
-    fill: colors.$vv;
-    stroke: colors.$vv;
-}
-
 .aside-item--vv:hover .aside-item__category-vv {
-    color: colors.$grey-middle;
+    color: colors.$grey-dark;
 }
+
+.aside-item--vv:hover .item-corner1, .aside-item--vv:hover .item-corner3, .aside-item--vv:hover .item-corner4 {
+    display: inherit;
+}
+
 // ----------------------------------------------
 
 // :active aside-item vv------------------------
 
 .aside-item--vv:active {
-    background-color: white;
-    box-shadow: 2px 2px 20px rgba(colors.$grey-middle, 0.3);
+    // box-shadow: 2px 2px 20px rgba(colors.$grey-middle, 0.5);
+    // text-shadow: 2px 2px 10px rgba(colors.$grey-middle, 0.5);
+    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-middle, 0.9));
+
 } 
 
 .aside-item--vv:active .aside-item__icon-gd {
@@ -332,50 +348,31 @@
 
 
 
-
-
-
-.aside-item--gd {
-    fill: white;
-    
-}
-
-.aside-item__category-gd {
-    color: white;
-    font-weight: 400;
-}
-
 // :hover aside-item gd------------------------
 
 .aside-item--gd:hover {
-    background-color: rgba(rgb(20, 20, 20), 0.5);
-    box-shadow: 2px 2px 20px rgba(colors.$grey-middle, 0.5);
+    // background-color: rgba(rgb(20, 20, 20), 0.5);
+    // box-shadow: 2px 2px 20px rgba(colors.$grey-middle, 0.2);
+    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-light, 1));
+
 } 
 
-.aside-item--gd:hover .aside-item__icon-gd {
-    fill: colors.$gd;
+.aside-item--gd:hover .item-corner1, .aside-item--gd:hover .item-corner3, .aside-item--gd:hover .item-corner4 {
+    display: inherit;
 }
 
-.aside-item--gd:hover .aside-item__category-gd {
-    color: colors.$grey-superlight;
-}
 
 // -----------------------------------------
 
 // :active aside-item gd------------------------
 
 .aside-item--gd:active {
-    background-color: rgba(rgb(20, 20, 20), 0.5);
-    box-shadow: 2px 2px 20px rgba(colors.$grey-middle, 0.3);
+    // background-color: rgba(rgb(20, 20, 20), 0.5);
+    // box-shadow: 0px 0px 30px rgba(colors.$grey-light, 0.2);
+    // text-shadow: 0px 0px 10px rgba(colors.$grey-light, 0.5);
+    filter: drop-shadow( 0px 0px 5px rgba(colors.$grey-superlight, 1));
 } 
 
-.aside-item--gd:active .aside-item__icon-gd {
-    fill: colors.$grey-light;
-}
-
-.aside-item--gd:active .aside-item__category-gd {
-    color: colors.$grey-light;
-}
 
 // -----------------------------------------
 

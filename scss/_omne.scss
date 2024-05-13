@@ -76,16 +76,27 @@
 }
 }
 
+
  .GD-VV_icon {
     padding: 20px;
     position: absolute;
     width: 180px;
-    left: -45px;
-    top: 0px;
+    left: 20px;
+    top: -40px;
+
+   
+
+    
+    @media screen and (min-width: 650px) {
+        left: 0px;
+        top: 0px;
+    }
 
     @include tablet {
-        left: -85px;
+        left: -50px;
         top: 0px;
+        z-index: 3;
+
     }
 
 
@@ -99,13 +110,15 @@
 // grid --------------------
 
 .grid-o-mne {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
     padding: 10px 0 0 0;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat (6, auto);
 
     @include tablet {
+    clip-path: none;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 25px;
@@ -127,9 +140,7 @@
   
 .cv-o-mne {
     margin: 0;
-    padding: 120px 0 0 0;
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+    padding: 0px 0 0 0;
     clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
 
   
