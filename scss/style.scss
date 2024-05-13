@@ -48,6 +48,20 @@
 
 }
 
+// custom buttons lightbox
+
+.fslightbox-slide-btn svg {
+    display: none;
+  }
+  
+  .fslightbox-slide-btn:after {
+    content: ">";
+    color: white;
+  }
+
+ 
+  
+
 
 
 

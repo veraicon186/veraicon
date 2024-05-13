@@ -23,136 +23,63 @@
 }
 
 .category__name--gd, .category__name--vv {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
 
     @include tablet { 
-        font-size: 40px;
+        font-size: 30px;
         margin: 0 0 0 10px;
-        font-weight: 400;
+        font-weight: 300;
 
     }
 
 }
 
 .category__name--gd {
-    color: rgba(colors.$grey-middle, 0.5);
+    color: rgba(colors.$grey-light, 1);
     
     @include tablet { 
-        color: rgb(25, 25, 25);
-        // border-bottom: 2px solid rgb(25, 25, 25);
-        text-shadow: 0px 0px 5px rgba(colors.$grey-light, 0.5);
+        color:rgba(colors.$grey-light, 1);
     }
 
 }
 
 
 .category__name--vv {
-    color: colors.$grey-middlelight;
-    // border-bottom: 1px solid  rgb(134, 134, 134);
+    color: colors.$grey-middle;
     @include tablet { 
-        color: rgb(182, 182, 182);
-        text-shadow: 0px 0px 2px rgba(colors.$grey-superlight, 0.8);
+        color: colors.$grey-middle;
     }
 }
 
-// kategorie s item-corne3
+// kategorie s item-corne3 ------------- 
 
 
 .gd-identity, .gd-digi, .gd-print, .vv-projects, .vv-workshops, .vv-materials {
     position: relative;
+    display: inline;
+    padding: 0 10px 10px 0;
 }
 
-.gd-identity .item-corner3 {
+.gd-identity .item-corner3, .gd-digi .item-corner3, .gd-print .item-corner3 {
     position: absolute;
-    fill: rgba(colors.$grey-middle, 0.5);
-    top: 35px;
-    left: 305px;
-
-    @include tablet { 
-    fill: rgb(25, 25, 25);
-    filter: drop-shadow(0px 0px 4px rgba(colors.$grey-light, 0.9));
-    width: 12px; 
-    top: 40px;
-    left: 400px;
+    fill: rgba(colors.$grey-light, 1);
+   
+        @include tablet { 
+        fill: rgba(colors.$grey-light, 1);
+        width: 10px; 
     }
 }
 
-.gd-digi .item-corner3 {
+
+.vv-projects .item-corner3, .vv-workshops .item-corner, .vv-materials .item-corner {
     position: absolute;
-    fill: rgba(colors.$grey-middle, 0.5);
-    top: 35px;
-    left: 305px;
+    fill: colors.$grey-middle;
 
     @include tablet { 
-    fill: rgb(25, 25, 25);
-    filter: drop-shadow(0px 0px 4px rgba(colors.$grey-light, 0.9));
-    width: 12px; 
-    top: 40px;
-    left: 400px;
+    width: 10px; 
     }
 }
-
-.gd-print .item-corner3 {
-    position: absolute;
-    fill: rgba(colors.$grey-middle, 0.5);
-    top: 35px;
-    left: 285px;
-
-    @include tablet { 
-    fill: rgb(25, 25, 25);
-    filter: drop-shadow(0px 0px 4px rgba(colors.$grey-light, 0.9));
-    width: 12px; 
-    top: 40px;
-    left: 375px;
-    }
-}
-
-.vv-projects .item-corner3 {
-    position: absolute;
-    fill: rgba(colors.$grey-middle, 0.5);
-    top: 35px;
-    left: 340px;
-
-    @include tablet { 
-    fill: rgb(182, 182, 182);
-    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-superlight, 0.8));
-    width: 12px; 
-    top: 40px;
-    left: 445px;
-    }
-}
-
-.vv-workshops .item-corner3 {
-    position: absolute;
-    fill: rgba(colors.$grey-middle, 0.5);
-    top: 35px;
-    left: 380px;
-
-    @include tablet { 
-    fill: rgb(182, 182, 182);
-    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-superlight, 0.8));
-    width: 12px; 
-    top: 40px;
-    left: 510px;
-    }
-}
-
-.vv-materials .item-corner3 {
-    position: absolute;
-    fill: rgba(colors.$grey-middle, 0.5);
-    top: 35px;
-    left: 350px;
-
-    @include tablet { 
-    fill: rgb(182, 182, 182);
-    filter: drop-shadow(0px 0px 2px rgba(colors.$grey-superlight, 0.8));
-    width: 12px; 
-    top: 40px;
-    left: 460px;
-    }
-}
-
 
 
 
@@ -163,14 +90,14 @@
     margin: 30px 20px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 1px 1px 15px rgba(colors.$grey-middle, 0.3);
+    box-shadow: 1px 1px 15px rgba(colors.$grey-middle, 0.5);
     
 
    @include tablet {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px 0;
+    margin: 30px;
     // max-width: 550px;
     }
 
@@ -191,11 +118,12 @@
 
 
 
+
    @include tablet {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 30px 0;
+    margin: 30px;
     max-width: 1200px;
     }
 
@@ -235,7 +163,7 @@
 
      @include tablet {
         min-width: 240px;
-        height: 200px;
+        height: 100%;
      }
  }
  
