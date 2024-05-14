@@ -19,7 +19,6 @@
 
 .aside {
     display: flex;
-    
     flex-direction: column;
     justify-content: center;
     margin: 0;
@@ -302,7 +301,7 @@
 
 // aside item buttons - rohy-telefon, jeden roh-tablet, desktop
 
-.aside-item--vv .item-corner1, .aside-item--gd .item-corner1, .aside-item--vv .item-corner3, .aside-item--gd .item-corner3, .aside-item--vv .item-corner4, .aside-item--gd .item-corner4 {
+.aside-item--vv .item-corner1, .aside-item--gd .item-corner1, .aside-item--vv .item-corner2, .aside-item--gd .item-corner2, .aside-item--vv .item-corner4, .aside-item--gd .item-corner4 {
     @include tablet {
         display: none;
 }
@@ -327,7 +326,7 @@
     color: colors.$grey-dark;
 }
 
-.aside-item--vv:hover .item-corner1, .aside-item--vv:hover .item-corner3, .aside-item--vv:hover .item-corner4 {
+.aside-item--vv:hover .item-corner1, .aside-item--vv:hover .item-corner2, .aside-item--vv:hover .item-corner4 {
     display: inherit;
 }
 
@@ -359,7 +358,7 @@
 
 } 
 
-.aside-item--gd:hover .item-corner1, .aside-item--gd:hover .item-corner3, .aside-item--gd:hover .item-corner4 {
+.aside-item--gd:hover .item-corner1, .aside-item--gd:hover .item-corner2, .aside-item--gd:hover .item-corner4 {
     display: inherit;
 }
 
@@ -379,6 +378,8 @@
 // indside link
 
 .inside-link {
+    // background-color: rgba(white, 0.4);
+    margin: 10px;
     text-decoration: none;
     line-height: 1.3;
     color: black;
