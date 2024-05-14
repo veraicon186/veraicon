@@ -684,7 +684,7 @@ strong {
 }
 
 @media screen and (min-width: 840px) {
-  .submenu-new:hover .submenu-category__content-new {
+  .submenu-new:hover .submenu-category__content-new, .submenu-new:active .submenu-category__content-new {
     display: inherit;
   }
 }
@@ -2030,8 +2030,8 @@ html {
     overflow-x: none;
     border-top: none;
     border-bottom: none;
-    margin: 0 0 20px 0;
-    padding-left: 0px;
+    margin: 0 0px 20px 0;
+    padding: 0;
   }
 }
 

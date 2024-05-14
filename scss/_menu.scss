@@ -454,7 +454,7 @@
 }
 
 
-.submenu-new:hover .submenu-category__content-new {
+.submenu-new:hover .submenu-category__content-new, .submenu-new:active .submenu-category__content-new {
     @include tablet {
         display:inherit;
 
