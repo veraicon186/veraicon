@@ -2175,6 +2175,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0 20px 0;
+  align-items: center;
 }
 @media screen and (min-width: 840px) {
   .project__details--gd {
@@ -2219,6 +2220,7 @@ html {
 .container-video-buttons {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 @media screen and (min-width: 840px) {
   .container-video-buttons {
@@ -2247,7 +2249,7 @@ html {
 }
 @media screen and (min-width: 840px) {
   .project__video-link {
-    margin: 0px 10px 10px 0px;
+    margin: 0;
   }
 }
 .project__video-link:hover {
@@ -2302,17 +2304,13 @@ html {
 
 .project__details-type {
   display: flex;
+  align-self: center;
   margin: 10px 20px 10px 5px;
 }
 
 .project__details-type .project__details-text {
   margin: 0 0 0 10px;
   display: block;
-}
-
-.details-gd--one {
-  display: flex;
-  align-items: first baseline;
 }
 
 .container-video--buttons--gd {

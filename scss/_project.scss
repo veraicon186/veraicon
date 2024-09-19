@@ -378,6 +378,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: 10px 0 20px 0;
+    align-items: center;
+
     @include tablet {
     // border-left: 1px solid rgb(201, 201, 201);
     flex: 1 1 40%;
@@ -426,7 +428,8 @@
 .container-video-buttons {
     display: flex;
     flex-wrap: wrap;
-  
+    align-items: center;
+
 
 
     @include tablet { 
@@ -437,11 +440,13 @@
 .container-video-buttons--gd {
     display: flex;
     flex-wrap: wrap;
+
   
 
 
     @include tablet { 
     margin-left: 0px;
+
     }
 }
 
@@ -458,7 +463,7 @@
 
 
     @include tablet { 
-        margin: 0px 10px 10px 0px;
+        margin: 0;
         }
 
    
@@ -493,6 +498,7 @@
 
 .video-button--vv {
     // border: 1px solid rgba(colors.$gd, 0.6);
+
 
 
     &:hover {
@@ -539,6 +545,7 @@
 
 .project__details-type {
     display: flex;
+    align-self: center;
     margin: 10px 20px 10px 5px;
 }
 
@@ -547,10 +554,10 @@
     display: block;
 }
 
-.details-gd--one {
-    display: flex;
-    align-items: first baseline;
-}
+// .details-gd--one {
+//     display: flex;
+//     align-items: first baseline;
+// }
 
 .container-video--buttons--gd {
     display: flex;
