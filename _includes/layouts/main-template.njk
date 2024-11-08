@@ -1,8 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="cs">
 
   {% include 'partials/head.njk' %}
  
   {% include 'partials/body/body.njk' %}
+ 
 
-</html>
+</html> -->
+
+{% extends "layouts/base-template.njk" %}
+
+{% set bodyClass = "body" %}
+
+{% block header %}
+  {% include 'partials/header/header-home.njk' %}
+{% endblock %}
+
+{% block footer %}
+  {% include 'partials/footer.njk' %}
+{% endblock %}
+
+

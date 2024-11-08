@@ -188,8 +188,11 @@
     }    
 }
 
+
 .site-header-new--homepage .site-header__logo-new {
-    display: none;
+    @include tablet {
+        display: none;
+    }   
 }
 
 .site-header-new--homepage .hamburger-menu, .site-header-new .hamburger-menu {
@@ -205,10 +208,15 @@
 
 }
 
+
+
+
+
 // logo s ruzkem ----------
 .site-header__homelink {
     position: relative;
 }
+
 
 .site-header__homelink .item-corner2 {
     display: none;
@@ -231,9 +239,9 @@
         padding: 10px 10px 0px 0px;
         margin: 10px 0 0 20px;
         width: 180px;
-    }    
-
+    }
 }
+
 
 //-------------
 
@@ -338,7 +346,7 @@
     align-self: flex-start;
 
     //nevidelny
-    opacity: 0;
+    opacity: 1;
 
 
     @include tablet {
@@ -360,7 +368,7 @@
     align-self: flex-start;
 
     //nevidelny
-    opacity: 0;
+    opacity: 1;
 
 
     @include tablet {

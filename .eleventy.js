@@ -7,6 +7,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("siema.min.js"); 
     eleventyConfig.addPassthroughCopy("fslightbox.js");
     // eleventyConfig.addPassthroughCopy("glide.min.js");
+    eleventyConfig.addPassthroughCopy("languageToggle.js");
+    
+
   
 
 

@@ -1,8 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="cs">
     
     {% include 'partials/head.njk' %}
  
     {% include 'partials/body/body-vv.njk' %}
 
-</html>
+</html> -->
+
+{% extends "layouts/base-template.njk" %}
+
+{% set bodyClass = "body--vv" %}
+
+{% block header %}
+  {% include 'partials/header/header-vv.njk' %}
+{% endblock %}
+

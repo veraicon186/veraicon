@@ -93,14 +93,52 @@ strong {
 }
 
 
-// body na homepage, o mne, kontakt
+// button language
+#toggle-button {
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px 20px 10px 0;
+    border-radius: 20px;
+    border: 0;
+
+}
+
+.toggle-button--light {
+    color:  #3c3c3c;
+    background-color:#F6F6F6;
+    box-shadow: 0px 0px 5px  #cccccc;
+
+}
+
+.toggle-button--light:hover {
+    color: #F6F6F6;
+    background-color: #616161;
+    
+}
+
+.toggle-button--light:active {
+    background-color: #3c3c3c;
+}
 
 
+.toggle-button--dark {
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: none;
+    border: 0;
+    color: #F6F6F6;
+    background-color:#616161;
+}
 
+.toggle-button--dark:hover {
+    color: #3c3c3c;
+    background-color:  #cccccc;
+}
 
-
-
-
+.toggle-button--dark:active {
+    background-color: #F6F6F6;
+}
 
 
 

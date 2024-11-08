@@ -15,7 +15,7 @@
 }
 
 .menu__checkbox {
-	position:absolute;
+	position: absolute;
 	left: -9999px;
 }
 
@@ -25,19 +25,41 @@
     }
 }
 
-.hamburger-menu {
+.hamburger-menu, .cross-menu {
     width: 48px;
     padding: 7px 0 0 20px;
+    transition: opacity 0.3s ease;
 }
 
+.cross-menu {
+    display: none;
+}
+
+#cross-menu-gd {
+    fill: white;
+}
 
 .menu__toggler {
+    cursor: pointer;
     width: 30px;
-    fill: white;
     @include tablet {
         display: none;
     }   
 }
+
+
+.menu__checkbox:checked + .menu__toggler .hamburger-menu {
+    display: none;
+}
+
+.menu__checkbox:checked + .menu__toggler .cross-menu {
+    display: block;
+    fill: black;
+}
+
+
+
+
 
 .menu {
     display: none;
@@ -134,7 +156,7 @@
         background-color: rgb(243, 243, 243, 0);
         border-top: 0;
         margin: 0 10px;
-        padding: 5px 10px;
+        padding: 5px 8px;
         fill:#d1d1d1; 
         text-align: center;
         }
@@ -456,7 +478,7 @@
 
 .submenu-new:hover .submenu-category__content-new, .submenu-new:active .submenu-category__content-new {
     @include tablet {
-        display:inherit;
+        display: inherit;
 
     }
 }

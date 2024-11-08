@@ -95,7 +95,7 @@
 .popiska { 
     padding: 10px;
     margin: 0;
-    width: 160px;
+    max-width: 200px;
     background-color: rgba(255, 255, 255, 0.621);
     box-shadow: 1px 1px 5px rgba(colors.$grey-middle, 0.3);   
 }
@@ -414,6 +414,11 @@
     }
 }
 
+// .white {
+//     color: #F6F6F6;
+  
+// }
+
 
 //  project video links -----------------------
 
@@ -518,6 +523,7 @@
 
 .video-button--vv .project__icon-play {
         fill: white;
+        color: white;
     }
 
 
@@ -528,6 +534,14 @@
     color: colors.$grey-dark;
     font-size: 16px;
     font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.project__text-link--gd {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 }
@@ -552,6 +566,7 @@
 .project__details-type .project__details-text {
     margin: 0 0 0 10px;
     display: block;
+    color: white;
 }
 
 // .details-gd--one {
