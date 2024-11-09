@@ -2036,12 +2036,12 @@ html {
   }
 }
 
-.vv-projects .item-corner3, .vv-workshops .item-corner3, .vv-materials .item-corner3 {
+.vv-projects .item-corner3, .vv-workshops .item-corner3, .vv-materials .item-corner3git {
   position: absolute;
   fill: #616161;
 }
 @media screen and (min-width: 840px) {
-  .vv-projects .item-corner3, .vv-workshops .item-corner3, .vv-materials .item-corner3 {
+  .vv-projects .item-corner3, .vv-workshops .item-corner3, .vv-materials .item-corner3git {
     width: 10px;
   }
 }
