@@ -78,6 +78,7 @@
    
 
 .box-vv {
+
     background-image: url(/images/vv_wall-upto800.png);
     clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
     padding: 70px 0 0 0 ;
@@ -108,16 +109,28 @@
   
 }
 
+
+
+
 .button-sign__vv-link img {
     max-width: 100%;
-
     max-height: 70px;
 
 
 }
 
+.button-sign__vv {
+text-align: center;
+
+}
+
+
 .button-sign__gd, .button-sign__vv {
     transition: 0.3s;
+
+
+  
+
 } 
 
  .button-sign__gd:hover { 

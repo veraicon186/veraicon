@@ -1856,6 +1856,10 @@ html {
   max-height: 70px;
 }
 
+.button-sign__vv {
+  text-align: center;
+}
+
 .button-sign__gd, .button-sign__vv {
   transition: 0.3s;
 }
