@@ -9,13 +9,8 @@ module.exports = function(eleventyConfig) {
     // eleventyConfig.addPassthroughCopy("glide.min.js");
     eleventyConfig.addPassthroughCopy("languageToggle.js");
     //zkopírovat favicon soubory
-    eleventyConfig.addPassthroughCopy("web-app-manifest-512x512.png");
-    eleventyConfig.addPassthroughCopy("web-app-manifest-192x192.png");
-    eleventyConfig.addPassthroughCopy("site.webmanifest");
-    eleventyConfig.addPassthroughCopy("favicon.svg");  
-    eleventyConfig.addPassthroughCopy("favicon.ico");
-    eleventyConfig.addPassthroughCopy("favicon-96x96.png");
-    eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+    eleventyConfig.addPassthroughCopy("favicon");
+   
     
 
   
