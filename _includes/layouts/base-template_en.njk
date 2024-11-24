@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'partials/head_en.njk' %}
+   
+    <script src="/languageToggle.js"></script>
+
+
+ 
+  </head>
+  <body class="{{ bodyClass }}">
+    {% block header %}{% include 'partials/header/header_en.njk' %}{% endblock %}
+    
+    <main>
+      {{ content | safe }}
+    </main>
+    
+    {% block footer %}{% include 'partials/footer.njk' %}{% endblock %}
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const checkbox = document.getElementById('menu-checkbox');
+          const menu = document.querySelector('.menu');
+          const toggler = document.querySelector('.menu__toggler');
+  
+          // Zkontrolujeme, zda je checkbox zaškrtnutý
+          checkbox.addEventListener('change', function() {
+              if (checkbox.checked) {
+                  document.addEventListener('click', handleOutsideClick);
+              } else {
+                  document.removeEventListener('click', handleOutsideClick);
+              }
+          });
+  
+          // Funkce pro zavření menu při kliknutí mimo
+          function handleOutsideClick(event) {
+              if (!menu.contains(event.target) && !toggler.contains(event.target)) {
+                  checkbox.checked = false;
+                  document.removeEventListener('click', handleOutsideClick);
+              }
+          }
+      });
+  </script>
+
+<script src="/fslightbox.js"></script>
+
+<form
+action="https://example.demo"
+data-botpoison-public-key="pk_f9a4c075-6cc2-414b-8d72-8182c56e7e80"
+>
+<input type="text" name="message" />
+<button type="submit">Send</button>
+</form>
+  </body>
+</html>
+

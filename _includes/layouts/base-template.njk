@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ currentLanguage }}">
+<html lang="cs">
   <head>
     {% include 'partials/head.njk' %}
-    <script src="/languageToggle.js" defer></script>
+   
+    <script src="/languageToggle.js"></script>
+
 
  
   </head>
   <body class="{{ bodyClass }}">
-    {% block header %}{% include 'partials/header/default-header.njk' %}{% endblock %}
+    {% block header %}{% include 'partials/header/header.njk' %}{% endblock %}
     
     <main>
       {{ content | safe }}
@@ -50,7 +52,6 @@ data-botpoison-public-key="pk_f9a4c075-6cc2-414b-8d72-8182c56e7e80"
 <input type="text" name="message" />
 <button type="submit">Send</button>
 </form>
-
   </body>
 </html>
 
