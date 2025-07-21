@@ -55,4 +55,17 @@ function changeLanguage(lang) {
     });
 }
 
+    // přepínání jazyků ve formuláři
+  document.addEventListener('DOMContentLoaded', function () {
+    const lang = localStorage.getItem('lang'); // očekává 'cs' nebo 'en'
 
+    if (lang === 'en') {
+      document.getElementById('email').placeholder = 'Your email address';
+      document.getElementById('message').placeholder = 'Message';
+      document.getElementById('submit-button').value = 'Send';
+    } else {
+      document.getElementById('email').placeholder = 'Váš email';
+      document.getElementById('message').placeholder = 'Zpráva';
+      document.getElementById('submit-button').value = 'Odeslat';
+    }
+  });
