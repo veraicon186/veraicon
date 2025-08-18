@@ -35,16 +35,62 @@ title: Kontakt
   </div>
 
 
-    <form class="contact-form" action="https://submit-form.com/I6gxj5aG4" method="post">
+    <!-- <form class="contact-form" action="https://submit-form.com/I6gxj5aG4" method="post">
         
         <input class="contact-form__email" type="email" name="email" id="email" placeholder="Váš email" required="">
 
         <textarea class="contact-form__message" name="message" id="message" rows="10" placeholder="Zpráva" required=""></textarea>
 
-        <!-- <label for="message">Zpráva</label> -->
         <input class="contact-form__submit" type="submit" value="odeslat">
 
-    </form>
+    </form> -->
+
+    <form class="contact-form" 
+      action="https://submit-form.com/I6gxj5aG4" 
+      method="post" 
+      onsubmit="return validateForm()">
+        
+  <input class="contact-form__email" 
+         type="email" 
+         name="email" 
+         id="email" 
+         placeholder="Váš email" 
+         required>
+
+  <textarea class="contact-form__message" 
+            name="message" 
+            id="message" 
+            rows="10" 
+            placeholder="Zpráva" 
+            required></textarea>
+
+  <!-- 🔒 Honeypot – pro bota viditelné, pro uživatele ne -->
+  <input type="text" name="_honeypot" style="display:none">
+
+  <!-- ⏳ Timestamp -->
+  <input type="hidden" id="form-load-time" name="_form_load_time">
+
+  <input class="contact-form__submit" type="submit" value="odeslat">
+</form>
+
+<script>
+  // uloží čas načtení formuláře
+  document.getElementById("form-load-time").value = Date.now();
+
+  function validateForm() {
+    const loadTime = document.getElementById("form-load-time").value;
+    const now = Date.now();
+    const diff = (now - loadTime) / 1000; // v sekundách
+
+    // pokud byl formulář vyplněn příliš rychle → zablokuje se
+    if (diff < 3) {
+      alert("Formulář byl vyplněn podezřele rychle. Zkuste to prosím znovu.");
+      return false;
+    }
+    return true;
+  }
+</script>
+
 
 </section>
 
