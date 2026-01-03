@@ -15,5 +15,13 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veraicon186/veraicon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/veraicon186/veraicon/issues"
+  },
+  "homepage": "https://github.com/veraicon186/veraicon#readme"
 }
