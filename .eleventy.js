@@ -10,7 +10,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("languageToggle.js");
     //zkopírovat favicon soubory
     eleventyConfig.addPassthroughCopy("favicon");
-   
+    eleventyConfig.addPassthroughCopy("sitemap.xml");
+    eleventyConfig.addPassthroughCopy("robots.txt");
     
 
   
